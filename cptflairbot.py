@@ -63,13 +63,13 @@ class MainPage(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'text/xml'
         self.response.write(urllib2.urlopen("http://cptflairbot.appspot.com/set.xml").read())
     
-    def post(self, ):
+    def post(self):
         self.parse_xml()
         friend_code = self.request.get("fc")
         in_game_name = self.request.get("ign")
         css_class = self.request.get("pkmn")
         username = self.request.get("name")
-        if friend_code == '' or in_game_name == '' or css_class == '' or username == '':
+        if '' in [friend_code, in_game_name, css_class, username]:
             code = 1 # empty field
         else:
             regex = re.compile("^\d{4}-\d{4}-\d{4}$")
