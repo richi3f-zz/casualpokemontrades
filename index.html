@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Set your flair here!">
+    <meta name="viewport" content="width=360, initial-scale=1">
+    <title>/r/CasualPokemonTrades Flair Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article>
+        <header role="banner">
+            <h1><a href="http://reddit.com/r/casualpokemontrades">/r/CasualPokemonTrades</a> Flair Bot</h1>
+        </header>
+        {% if code == 0 %}
+        <p>Your flair has been set successfully!</p>
+        {% elif code == 2 %}
+        <p>You entered an invalid Friend Code!</p>
+        {% elif code == 3 %}
+        <p>You entered an invalid Pokémon name!</p>
+        {% elif code == 4 %}
+        <p>Login failure! Please try again in 10 minutes.</p>
+        {% elif code == 5 %}
+        <p>Due to security concerns you may not edit an existing flair. Please <a href="http://www.reddit.com/message/compose?to=%2Fr%2FCasualPokemonTrades">message the mods</a> if you want to modify your flair.</p>
+        {% else %}
+        <p>An error has ocurred! Did you fill all the fields correctly?</p>
+        {% endif %}
+        <a class="button" href="http://reddit.com/r/casualpokemontrades">Return to Reddit?</a>
+    </article>
+</body>
+</html>
+{% endautoescape %}
