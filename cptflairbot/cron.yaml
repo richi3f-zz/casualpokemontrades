@@ -1,0 +1,5 @@
+cron:
+- description: read and update flair via PM
+  url: /cptflairbot
+  schedule: every 5 minutes
+  timezone: America/Mexico_City
