@@ -1,15 +1,16 @@
 body,#header-bottom-right,.side,
-.commentarea .child .child,.commentarea .child .child .child .child{
+.commentarea .child .child,.commentarea .child .child .child .child,.commentarea .child .child .child .child .child .child,.commentarea .child .child .child .child .child .child .child .child{
   background-color:#f6f5f4
 }
 .listing-page .link.odd,.roundfield,.content.submit .info-notice,
-.commentarea .child,.commentarea .child .child .child,.commentarea .child .child .child .child .child{
+.commentarea .child,.commentarea .child .child .child,.commentarea .child .child .child .child .child,.commentarea .child .child .child .child .child .child .child,.commentarea .child .child .child .child .child .child .child .child .child{
   background-color:#edeceb
 }
+table{border-collapse:collapse;border-spacing:0}
 
 .sidebox.create, /* Create a subreddit blurb */
 .submit-text div .nub, /* Arrow in Submit Text Button */
-.expando-button,
+.expando-button, /* Preview/Expand Button */
 .link .rank,
 .subscribers .word, /* Replaced by "Pokémon Trainers" */
 .users-online:before, /* Replaced by "(~x here)"*/
@@ -19,8 +20,11 @@ body,#header-bottom-right,.side,
 #header-bottom-left .tabmenu li:last-child, /* Promoted */
 .submit-link, /* Submit a Link Button */
 .submit.content .tabmenu.formtab li:nth-child(1), /* Submit a Link Button */
-#text-desc{display:none}
-.nsfw-stamp{display:none !important}
+.link .arrow.down, /* Downvote */
+.title .domain, /* Domain Next to Link Flair */
+#wiki_faq ~ blockquote + hr, /* Quote Separator in Wiki */
+.side .flairselectbtn{display:none}
+.nsfw-stamp,#text-desc{display:none !important}
 
 /* Header
 ========================================================================== */
@@ -215,13 +219,13 @@ color:#ecedeb
 
 .side{color:#333}
 
-.side .md h2,.side .md h3,.single-page .content .md h2{
+.side .md h2,#wiki_headings + p + p strong,.side .md h3,.single-page .content .md h2{
   display:inline-block;
   text-transform:uppercase;
   background:#7d1935;
   color:#fff;
   text-align:center;
-  margin:12px 0 0;
+  margin:12px 0 6px;
   padding:10px 15px;
 }
 
@@ -229,7 +233,7 @@ color:#ecedeb
   margin:12px 0;
 }
 
-.side .md h3:after, .side .md h2:after{
+.side .md h3:after,.side .md h2:after{
   content:":"
 }
 
@@ -248,7 +252,8 @@ color:#ecedeb
   font-weight:700
 }
 
-.side .md h3 ~ ul strong {
+.side .md h2 ~ p strong,
+.side .md h3 + ul strong {
   color:#472f21
 }
 
@@ -305,14 +310,14 @@ color:#ecedeb
   position:absolute;right:12px;top:12px
 }
 
-.author.moderator, .userattrs .moderator{
-  color:#6433a6
+.submit_text{
+  max-width:500px
 }
 
 /* Link Flair
 ========================================================================== */
 
-.linkflair{border-left:12px solid #f6e226 !important}
+.link{border-left:12px solid transparent}
 
 .linkflair-mod-post{border-color:#77c14e !important}
 .linkflair-trade{border-color:#4982c2 !important}
@@ -332,17 +337,18 @@ color:#ecedeb
 .linkflair-item .title,.linkflair .linkflair-item .title{color:#995d24 !important}
 .linkflair-question .title,.linkflair .linkflair-question .title{color:#151f1f !important}
 .linkflair-battle .title,.linkflair .linkflair-battle .title{color:#991014 !important}
-.over18 .title{color:#bdbdbd !important}
+.over18 .title,.over18 .flair{color:#888 !important}
+.over18 .flair:before{opacity:0.5}
 
 .linkflair-mod-post .linkflairlabel,
-.linkflair-trade .linkflairlabel,
-.linkflair-tradeback .linkflairlabel,
-.linkflair-giveaway .linkflairlabel,
-.linkflair-info-post .linkflairlabel,
-.linkflair-item .linkflairlabel,
-.linkflair-question .linkflairlabel,
-.linkflair-battle .linkflairlabel,
-.over18 .linkflairlabel {
+.linkflair-trade .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=trade],
+.linkflair-tradeback .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=tradeback],
+.linkflair-giveaway .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=giveaway],
+.linkflair-info-post .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=info],
+.linkflair-item .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=item],
+.linkflair-question .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=question],
+.linkflair-battle .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=battle],
+.over18 .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=over18] {
   width:100px; height:30px;
   display:inline-block;
   padding:0; border:0;
@@ -351,16 +357,25 @@ color:#ecedeb
   background:url(%%linkflair%%) no-repeat;
   vertical-align:middle;
 }
-.linkflair .linkflair-mod-post .linkflairlabel{background-position:0 0}
-.linkflair-trade .linkflairlabel,.linkflair .linkflair-trade .linkflairlabel{background-position:-100px 0}
-.comments-page .linkflair-trade .linkflairlabel{background-position:-100px -120px}
-.linkflair-tradeback .linkflairlabel,.linkflair .linkflair-tradeback .linkflairlabel{background-position:-100px -30px}
-.linkflair-giveaway .linkflairlabel,.linkflair .linkflair-giveaway .linkflairlabel{background-position:-100px -90px}
-.linkflair-info-post .linkflairlabel,.linkflair .linkflair-info-post .linkflairlabel{background-position:0 -30px}
-.linkflair-item .linkflairlabel,.linkflair .linkflair-item .linkflairlabel{background-position:-100px -60px}
-.linkflair-question .linkflairlabel,.linkflair .linkflair-question .linkflairlabel{background-position:0 -60px}
-.linkflair-battle .linkflairlabel{background-position:0 -120px}
-.over18 .linkflairlabel{background-position:0 -90px}
+.linkflair .linkflair-mod-post .linkflairlabel{
+  background-position:0 0}
+.linkflair-trade .linkflairlabel,.linkflair .linkflair-trade .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=trade]{
+  background-position:-100px 0}
+.comments-page .linkflair-trade .linkflairlabel{
+  background-position:-100px -120px}
+.linkflair-tradeback .linkflairlabel,.linkflair .linkflair-tradeback .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=tradeback]{
+  background-position:-100px -30px}
+.linkflair-giveaway .linkflairlabel,.linkflair .linkflair-giveaway .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=giveaway]{
+  background-position:-100px -90px}
+.linkflair-info-post .linkflairlabel,.linkflair .linkflair-info-post .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=info]{
+  background-position:0 -30px}
+.linkflair-item .linkflairlabel,.linkflair .linkflair-item .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=item]{
+  background-position:-100px -60px}
+.linkflair-question .linkflairlabel,.linkflair .linkflair-question .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=question]{
+  background-position:0 -60px}
+.linkflair-battle .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=battle]{
+  background-position:0 -120px}
+.over18 .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=over18]{background-position:0 -90px!important}
 
 .single-page .content .linkflair .md blockquote{ border-color:#93b8e1 }
 .single-page .content .linkflair-mod-post .md blockquote{ border-color:#b0e097 }
@@ -372,7 +387,7 @@ color:#ecedeb
 .single-page .content .linkflair.over18 .md blockquote{ border-color:#bdbdbd }
 .single-page .content .linkflair-battle .md blockquote{ border-color:#f68b8e }
 
-.single-page .content .linkflair .md h2 { background:#4982c2 }
+.single-page .content .linkflair .md h2,#wiki_headings + p + p strong{ background:#4982c2 }
 .single-page .content .linkflair-mod-post .md h2{ background:#77c14e }
 .single-page .content .linkflair-tradeback .md h2{ background:#5956a3 }
 .single-page .content .linkflair-giveaway .md h2{ background:#bf529d }
@@ -388,12 +403,24 @@ color:#ecedeb
     color:#61438e;
 }
 .author[href$='richi3f'],
+.author[href$='faptastic_platypus'],
+.author[href$='HappinyOnSteroids'],
+.author[href$='Nice_Cali_girl'],
+.author[href$='HappyZombies'],
+.author[href$='philiflyest'],
+.author[href$='AutoModerator'],
 .thing.stickied .moderator{
     color:#61438e;
     border-bottom:1px solid rgba(164,141,199,0.5)
 }
 
 .author[href$='richi3f']:hover,
+.author[href$='faptastic_platypus']:hover,
+.author[href$='HappinyOnSteroids']:hover,
+.author[href$='Nice_Cali_girl']:hover,
+.author[href$='HappyZombies']:hover,
+.author[href$='philiflyest']:hover,
+.author[href$='AutoModerator']:hover,
 .userattrs .moderator:hover,
 .thing.stickied .moderator:hover{
     color:#61438e;
@@ -580,10 +607,10 @@ color:#ecedeb
 .flair-dratini:before,a[href^='#ms-dratini']{background-position:-330px -150px}
 .flair-dragonair:before,a[href^='#ms-dragonair']{background-position:-360px -150px}
 .flair-dragonite:before,a[href^='#ms-dragonite']{background-position:-390px -150px}
+.flair-mew:before,a[href^='#ms-mew']{background-position:-510px -150px}
 .flair-mewtwo:before,a[href^='#ms-mewtwo']{background-position:-420px -150px}
 .flair-mewtwo-mega-x:before,a[href^='#ms-mewtwo-mega-x']{background-position:-450px -150px}
 .flair-mewtwo-mega-y:before,a[href^='#ms-mewtwo-mega-y']{background-position:-480px -150px}
-.flair-mew:before,a[href^='#ms-mew']{background-position:-510px -150px}
 .flair-chikorita:before,a[href^='#ms-chikorita']{background-position:-540px -150px}
 .flair-bayleef:before,a[href^='#ms-bayleef']{background-position:-570px -150px}
 .flair-meganium:before,a[href^='#ms-meganium']{background-position:-600px -150px}
@@ -1033,8 +1060,8 @@ color:#ecedeb
 .flair-scraggy:before,a[href^='#ms-scraggy']{background-position:-600px -600px}
 .flair-scrafty:before,a[href^='#ms-scrafty']{background-position:-630px -600px}
 .flair-sigilyph:before,a[href^='#ms-sigilyph']{background-position:-660px -600px}
-.flair-yamask:before,a[href^='#ms-yamask']{background-position:-670px -600px}
-.flair-cofagrigus:before,a[href^='#ms-cofagrigus']{background-position:-690px -600px}
+.flair-yamask:before,a[href^='#ms-yamask']{background-position:-690px -600px}
+.flair-cofagrigus:before,a[href^='#ms-cofagrigus']{background-position:-720px -600px}
 .flair-tirtouga:before,a[href^='#ms-tirtouga']{background-position:-750px -600px}
 .flair-carracosta:before,a[href^='#ms-carracosta']{background-position:-780px -600px}
 .flair-archen:before,a[href^='#ms-archen']{background-position:-810px -600px}
@@ -1238,10 +1265,10 @@ color:#ecedeb
 .flair-zygarde:before,a[href^='#ms-zygarde']{background-position:-570px -810px}
 .flair-diancie:before,a[href^='#ms-diancie']{background-position:-600px -810px}
 .flair-charizard:before,a[href^='#ms-charizard'],
-.flair-charizard-mega-x:before,a[href^='#ms-charizard-mega-x'],
-.flair-charizard-mega-y:before,a[href^='#ms-charizard-mega-y'],
+.flair-charizard-mega-x:before,
+.flair-charizard-mega-y:before,
 .flair-nidoking:before,a[href^='#ms-nidoking'],
-.flair-alakazam:before,a[href^='#ms-alakazam'],
+.flair-alakazam:before,a[href='#ms-alakazam'],a[href='#ms-alakazam-shiny'],
 .flair-gengar-mega:before,a[href^='#ms-gengar-mega'],
 .flair-pinsir-mega:before,a[href^='#ms-pinsir-mega'],
 .flair-aerodactyl-mega:before,a[href^='#ms-aerodactyl-mega'],
@@ -1264,22 +1291,24 @@ color:#ecedeb
 .flair-samurott:before,a[href^='#ms-samurott'],
 .flair-conkeldurr:before,a[href^='#ms-conkeldurr'],
 .flair-thundurus:before,a[href^='#ms-thundurus'],
-.flair-thundurus-therian:before,a[href^='#ms-thundurus-therian'],
+.flair-thundurus-therian:before,
 .flair-reshiram:before,a[href^='#ms-reshiram'],
-.flair-landorus:before,a[href^='#ms-landorus'],
+.flair-landorus:before,a[href='#ms-landorus'],a[href='#ms-landorus-shiny'],
 .flair-kyurem:before,a[href^='#ms-kyurem'],
-.flair-kyurem-black:before,a[href^='#ms-kyurem-black'],
-.flair-kyurem-white:before,a[href^='#ms-kyurem-white'],
+.flair-kyurem-black:before,
+.flair-kyurem-white:before,
 .flair-pyroar-male:before,a[href^='#ms-pyroar-male'],
 .flair-doublade:before,a[href^='#ms-doublade'],
 .flair-aegislash-blade:before,a[href^='#ms-aegislash-blade'],
 .flair-dragalge:before,a[href^='#ms-dragalge'],
 .flair-clawitzer:before,a[href^='#ms-clawitzer']{width:40px;margin:0}
-.flair-charizard-mega-x:before,a[href^='#ms-charizard-mega-x'],
-.flair-charizard-mega-y:before,a[href^='#ms-charizard-mega-y']{margin:0 2px}
+.flair-charizard-mega-x:before,a[href^='#ms-charizard-mega'],
+.flair-charizard-mega-y:before{margin:0 2px}
 
 /* Miscellaneous
 ========================================================================== */
+
+.comment .child, .comment .showreplies{border-color:#ddd}
 
 .toggle.unmarknsfw-button .togglebutton:before,.toggle.marknsfw-button .togglebutton:before{
   display:inline-block;
@@ -1287,6 +1316,17 @@ color:#ecedeb
   color:#888;
   font-size:x-small;
   font-weight:bold
+}
+.linkflair-mod-post .toggle.unmarknsfw-button .togglebutton:before,
+.linkflair-info-post .toggle.unmarknsfw-button .togglebutton:before,
+.linkflair-question .toggle.unmarknsfw-button .togglebutton:before{
+  content:'open thread'
+}
+.linkflair-giveaway .toggle.unmarknsfw-button .togglebutton:before{
+  content:'open giveaway'
+}
+.linkflair-battle .toggle.unmarknsfw-button .togglebutton:before{
+  content:'open battle'
 }
 .toggle.marknsfw-button .togglebutton:before{
   content:'mark as completed'
@@ -1329,7 +1369,7 @@ a[href='#ps-dive']{background-position:-24px -24px}
 a[href='#ps-nest']{background-position:-48px -24px}
 a[href='#ps-repeat']{background-position:-72px -24px}
 a[href='#ps-timer']{background-position:-96px -24px}
-a[href='#ps-luxury']{background-position:0 -24px}
+a[href='#ps-luxury']{background-position:0 -48px}
 a[href='#ps-premier']{background-position:-24px -48px}
 a[href='#ps-dusk']{background-position:-48px -48px}
 a[href='#ps-heal']{background-position:-72px -48px}
@@ -1344,3 +1384,34 @@ a[href='#ps-friend']{background-position:-24px -96px}
 a[href='#ps-moon']{background-position:-48px -96px}
 a[href='#ps-sport']{background-position:-72px -96px}
 a[href='#ps-dream']{background-position:-96px -96px}
+
+/* Wiki */
+
+.wiki-page .wiki-page-content .md.wiki h1{font-size:1.6em}
+.wiki-page .wiki-page-content .md.wiki h2{font-size:1.4em}
+.wiki-page .wiki-page-content .md.wiki h3{font-size:1.3em}
+.wiki-page .wiki-page-content .md.wiki h4{font-size:1.2em}
+.wiki-page .wiki-page-content .md.wiki h5{font-size:1.1em}
+.wiki-page .wiki-page-content .md.wiki h6{font-size:1em}
+.wiki-page .wiki-page-content .md.wiki hr{margin:0 0 12px}
+.wiki-page .wiki-page-content .md.wiki table{width:70%}
+.wiki-page .wiki-page-content .md.wiki th{width:50%;background:#89c2d3;text-align:center}
+#wiki_link_flairs + p + ul{
+  margin:10px 0 20px;
+  list-style:none
+}
+#wiki_link_flairs + p + ul li{
+  margin:0 0 10px
+}
+#wiki_faq ~ blockquote{
+  padding:0;
+  border:0;
+  margin:10px
+}
+#wiki_faq ~ blockquote blockquote{
+  border-left: 2px solid #369;
+}
+#wiki_faq ~ blockquote blockquote ul:first-child{
+  margin:0;
+  list-style:none
+}
