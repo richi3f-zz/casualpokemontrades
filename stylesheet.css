@@ -328,6 +328,11 @@ color:#ecedeb
 .linkflair-question{border-color:#151f1f !important}
 .linkflair.over18{border-color:#bdbdbd !important}
 .linkflair-battle{border-color:#ec3237 !important}
+.linkflair-event{border-color:#f39801 !important}
+.linkflair-hacks{border-color:#84739c !important}
+.linkflair-shiny{border-color:#619ceb !important}
+.linkflair-legend{border-color:#4262ee !important}
+.listing-page .linkflair-legend{border-color:#d73e47 !important}
 
 .linkflair-mod-post .title,.linkflair .linkflair-mod-post .title{color:#3c7d19 !important}
 .linkflair-trade .title,.linkflair .linkflair-trade .title{color:#18487e !important}
@@ -337,18 +342,26 @@ color:#ecedeb
 .linkflair-item .title,.linkflair .linkflair-item .title{color:#995d24 !important}
 .linkflair-question .title,.linkflair .linkflair-question .title{color:#151f1f !important}
 .linkflair-battle .title,.linkflair .linkflair-battle .title{color:#991014 !important}
+.linkflair-event .title,.linkflair .linkflair-event .title{color:#f39801 !important}
+.linkflair-hacks .title,.linkflair .linkflair-hacks .title{color:#84739c !important}
+.linkflair-shiny .title,.linkflair .linkflair-shiny .title{color:#619ceb !important}
+.linkflair-legend .title,.linkflair .linkflair-legend .title{color:#d73e47 !important}
 .over18 .title,.over18 .flair{color:#888 !important}
 .over18 .flair:before{opacity:0.5}
 
-.linkflair-mod-post .linkflairlabel,
-.linkflair-trade .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=trade],
-.linkflair-tradeback .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=tradeback],
-.linkflair-giveaway .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=giveaway],
-.linkflair-info-post .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=info],
-.linkflair-item .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=item],
-.linkflair-question .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=question],
-.linkflair-battle .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=battle],
-.over18 .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=over18] {
+.linkflair-mod-post .linkflairlabel,[href*='%5Bmod%5D'],
+.linkflair-trade .linkflairlabel,[href*='%5Btrade%5D'],
+.linkflair-tradeback .linkflairlabel,[href*='%5Btradeback%5D'],
+.linkflair-giveaway .linkflairlabel,[href*='%5Bgiveaway%5D'],
+.linkflair-info-post .linkflairlabel,[href*='%5Binfo%5D'],
+.linkflair-item .linkflairlabel,[href*='%5Bitem%5D'],
+.linkflair-question .linkflairlabel,[href*='%5Bquestion%5D'],
+.linkflair-battle .linkflairlabel,[href*='%5Bbattle%5D'],
+.linkflair-event .linkflairlabel,[href*='%5Bevent%5D'],
+.linkflair-hacks .linkflairlabel,[href*='%5Bhacks%5D'],
+.linkflair-shiny .linkflairlabel,[href*='%5Bshiny%5D'],
+.linkflair-legend .linkflairlabel,[href*='%5Blegend%5D'],
+.over18 .linkflairlabel {
   width:100px; height:30px;
   display:inline-block;
   padding:0; border:0;
@@ -359,23 +372,33 @@ color:#ecedeb
 }
 .linkflair .linkflair-mod-post .linkflairlabel{
   background-position:0 0}
-.linkflair-trade .linkflairlabel,.linkflair .linkflair-trade .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=trade]{
+.linkflair-trade .linkflairlabel,.linkflair .linkflair-trade .linkflairlabel,[href*='%5Btrade%5D']{
   background-position:-100px 0}
 .comments-page .linkflair-trade .linkflairlabel{
   background-position:-100px -120px}
-.linkflair-tradeback .linkflairlabel,.linkflair .linkflair-tradeback .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=tradeback]{
+.linkflair-tradeback .linkflairlabel,.linkflair .linkflair-tradeback .linkflairlabel,[href*='%5Btradeback%5D']{
   background-position:-100px -30px}
-.linkflair-giveaway .linkflairlabel,.linkflair .linkflair-giveaway .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=giveaway]{
+.linkflair-giveaway .linkflairlabel,.linkflair .linkflair-giveaway .linkflairlabel,[href*='%5Bgiveaway%5D']{
   background-position:-100px -90px}
-.linkflair-info-post .linkflairlabel,.linkflair .linkflair-info-post .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=info]{
+.linkflair-info-post .linkflairlabel,.linkflair .linkflair-info-post .linkflairlabel,[href*='%5Binfo%5D']{
   background-position:0 -30px}
-.linkflair-item .linkflairlabel,.linkflair .linkflair-item .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=item]{
+.linkflair-item .linkflairlabel,.linkflair .linkflair-item .linkflairlabel,[href*='%5Bitem%5D']{
   background-position:-100px -60px}
-.linkflair-question .linkflairlabel,.linkflair .linkflair-question .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=question]{
+.linkflair-question .linkflairlabel,.linkflair .linkflair-question .linkflairlabel,[href*='%5Bquestion%5D']{
   background-position:0 -60px}
-.linkflair-battle .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=battle]{
+.linkflair-battle .linkflairlabel,[href*='%5Bbattle%5D']{
   background-position:0 -120px}
-.over18 .linkflairlabel,#wiki_link_flairs ~ p ~ ul [href*=over18]{background-position:0 -90px!important}
+.linkflair-event .linkflairlabel,[href*='%5Bevent%5D']{
+  background-position:0 -210px}
+.linkflair-hacks .linkflairlabel,[href*='%5Bhacks%5D']{
+  background-position:0 -150px}
+.linkflair-shiny .linkflairlabel,[href*='%5Bshiny%5D']{
+  background-position:-100px -150px}
+.linkflair-legend .linkflairlabel,[href*='%5Blegend%5D']{
+  background-position:0 -180px}
+.comments-page .linkflair-legend .linkflairlabel{
+  background-position:-100px -180px}
+.over18 .linkflairlabel{background-position:0 -90px!important}
 
 .single-page .content .linkflair .md blockquote{ border-color:#93b8e1 }
 .single-page .content .linkflair-mod-post .md blockquote{ border-color:#b0e097 }
@@ -386,6 +409,10 @@ color:#ecedeb
 .single-page .content .linkflair-question .md blockquote{ border-color:#768f8f }
 .single-page .content .linkflair.over18 .md blockquote{ border-color:#bdbdbd }
 .single-page .content .linkflair-battle .md blockquote{ border-color:#f68b8e }
+.single-page .content .linkflair-hacks .md blockquote{ border-color:#84739c }
+.single-page .content .linkflair-shiny .md blockquote{ border-color:#619ceb }
+.single-page .content .linkflair-legend .md blockquote{ border-color:#d73e47 }
+.single-page .content .linkflair-event .md blockquote{ border-color:#f39801 }
 
 .single-page .content .linkflair .md h2,#wiki_headings + p + p strong{ background:#4982c2 }
 .single-page .content .linkflair-mod-post .md h2{ background:#77c14e }
@@ -396,6 +423,10 @@ color:#ecedeb
 .single-page .content .linkflair-question .md h2{ background:#151f1f }
 .single-page .content .linkflair.over18 .md h2{ background:#bdbdbd }
 .single-page .content .linkflair-battle .md h2{ background:#ec3237 }
+.single-page .content .linkflair-hacks .md h2{ background:#84739c }
+.single-page .content .linkflair-shiny .md h2{ background:#619ceb }
+.single-page .content .linkflair-legend .md h2{ background:#d73e47 }
+.single-page .content .linkflair-event .md h2{ background:#f39801 }
 
 /* User Flair
 ========================================================================== */
@@ -436,8 +467,12 @@ color:#ecedeb
   border:0
 }
 .flair-shiny{
-  background:url(%%icons%%) -134px -63px no-repeat
+  background:url(%%icons%%) -151px -81px no-repeat
 }
+.over18 .flair-shiny{
+  background-position:-151px -111px
+}
+.over18 .flair-shiny{background:url(%%icons%%) -151px -111px no-repeat}
 .flair:before,a[href^='#ms-'],a[href^='#ps-'],a[href$='-shiny']:after{
   content:"";
   display:inline-block;
@@ -467,9 +502,11 @@ color:#ecedeb
 .flair-weedle:before,a[href^='#ms-weedle']{background-position:-540px 0}
 .flair-kakuna:before,a[href^='#ms-kakuna']{background-position:-570px 0}
 .flair-beedrill:before,a[href^='#ms-beedrill']{background-position:-600px 0}
+.flair-beedrill-mega:before,a[href^='#ms-beedrill-mega']{background-position:-420px -840px}
 .flair-pidgey:before,a[href^='#ms-pidgey']{background-position:-630px 0}
 .flair-pidgeotto:before,a[href^='#ms-pidgeotto']{background-position:-660px 0}
 .flair-pidgeot:before,a[href^='#ms-pidgeot']{background-position:-690px 0}
+.flair-pidgeot-mega:before,a[href^='#ms-pidgeot-mega']{background-position:-860px -810px}
 .flair-rattata:before,a[href^='#ms-rattata']{background-position:-720px 0}
 .flair-raticate:before,a[href^='#ms-raticate']{background-position:-750px 0}
 .flair-spearow:before,a[href^='#ms-spearow']{background-position:-780px 0}
@@ -533,6 +570,7 @@ color:#ecedeb
 .flair-rapidash:before,a[href^='#ms-rapidash']{background-position:-780px -60px}
 .flair-slowpoke:before,a[href^='#ms-slowpoke']{background-position:-810px -60px}
 .flair-slowbro:before,a[href^='#ms-slowbro']{background-position:-840px -60px}
+.flair-slowbro-mega:before,a[href^='#ms-slowbro-mega']{background-position:-450px -840px}
 .flair-magnemite:before,a[href^='#ms-magnemite']{background-position:-870px -60px}
 .flair-magneton:before,a[href^='#ms-magneton']{background-position:0 -90px}
 .flair-farfetchd:before,a[href^='#ms-farfetchd']{background-position:-30px -90px}
@@ -559,7 +597,7 @@ color:#ecedeb
 .flair-exeggutor:before,a[href^='#ms-exeggutor']{background-position:-630px -90px}
 .flair-cubone:before,a[href^='#ms-cubone']{background-position:-660px -90px}
 .flair-marowak:before,a[href^='#ms-marowak']{background-position:-690px -90px}
-.flair-hitmonlee:before,a[href^='#ms-hitmonlee']{background-position:-710px -90px}
+.flair-hitmonlee:before,a[href^='#ms-hitmonlee']{background-position:-720px -90px}
 .flair-hitmonchan:before,a[href^='#ms-hitmonchan']{background-position:-750px -90px}
 .flair-lickitung:before,a[href^='#ms-lickitung']{background-position:-780px -90px}
 .flair-koffing:before,a[href^='#ms-koffing']{background-position:-810px -90px}
@@ -669,6 +707,7 @@ color:#ecedeb
 .flair-dunsparce:before,a[href^='#ms-dunsparce']{background-position:-360px -210px}
 .flair-gligar:before,a[href^='#ms-gligar']{background-position:-390px -210px}
 .flair-steelix:before,a[href^='#ms-steelix']{background-position:-420px -210px}
+.flair-steelix-mega:before,a[href^='#ms-steelix-mega']{background-position:-710px -780px}
 .flair-snubbull:before,a[href^='#ms-snubbull']{background-position:-540px -210px}
 .flair-granbull:before,a[href^='#ms-granbull']{background-position:-570px -210px}
 .flair-qwilfish:before,a[href^='#ms-qwilfish']{background-position:-600px -210px}
@@ -719,6 +758,7 @@ color:#ecedeb
 .flair-treecko:before,a[href^='#ms-treecko']{background-position:-90px -270px}
 .flair-grovyle:before,a[href^='#ms-grovyle']{background-position:-120px -270px}
 .flair-sceptile:before,a[href^='#ms-sceptile']{background-position:-150px -270px}
+.flair-sceptile-mega:before,a[href^='#ms-sceptile-mega']{background-position:-630px -810px}
 .flair-torchic:before,a[href^='#ms-torchic']{background-position:-180px -270px}
 .flair-combusken:before,a[href^='#ms-combusken']{background-position:-210px -270px}
 .flair-blaziken:before,a[href^='#ms-blaziken']{background-position:-240px -270px}
@@ -726,6 +766,7 @@ color:#ecedeb
 .flair-mudkip:before,a[href^='#ms-mudkip']{background-position:-390px -270px}
 .flair-marshtomp:before,a[href^='#ms-marshtomp']{background-position:-420px -270px}
 .flair-swampert:before,a[href^='#ms-swampert']{background-position:-450px -270px}
+.flair-swampert-mega:before,a[href^='#ms-swampert-mega']{background-position:-670px -810px}
 .flair-poochyena:before,a[href^='#ms-poochyena']{background-position:-480px -270px}
 .flair-mightyena:before,a[href^='#ms-mightyena']{background-position:-510px -270px}
 .flair-zigzagoon:before,a[href^='#ms-zigzagoon']{background-position:-540px -270px}
@@ -769,6 +810,7 @@ color:#ecedeb
 .flair-skitty:before,a[href^='#ms-skitty']{background-position:-780px -300px}
 .flair-delcatty:before,a[href^='#ms-delcatty']{background-position:-810px -300px}
 .flair-sableye:before,a[href^='#ms-sableye']{background-position:-840px -300px}
+.flair-sableye-mega:before,a[href^='#ms-sableye-mega']{background-position:-480px -840px}
 .flair-mawile:before,a[href^='#ms-mawile']{background-position:-870px -300px}
 .flair-mawile-mega:before,a[href^='#ms-mawile-mega']{background-position:0 -330px}
 .flair-aron:before,a[href^='#ms-aron']{background-position:-30px -330px}
@@ -790,10 +832,12 @@ color:#ecedeb
 .flair-swalot:before,a[href^='#ms-swalot']{background-position:-480px -330px}
 .flair-carvanha:before,a[href^='#ms-carvanha']{background-position:-510px -330px}
 .flair-sharpedo:before,a[href^='#ms-sharpedo']{background-position:-540px -330px}
+.flair-sharpedo-mega:before,a[href^='#ms-sharpedo-mega']{background-position:-510px -840px}
 .flair-wailmer:before,a[href^='#ms-wailmer']{background-position:-570px -330px}
 .flair-wailord:before,a[href^='#ms-wailord']{background-position:-600px -330px}
 .flair-numel:before,a[href^='#ms-numel']{background-position:-630px -330px}
 .flair-camerupt:before,a[href^='#ms-camerupt']{background-position:-660px -330px}
+.flair-camerupt-mega:before,a[href^='#ms-camerupt-mega']{background-position:-540px -840px}
 .flair-torkoal:before,a[href^='#ms-torkoal']{background-position:-690px -330px}
 .flair-spoink:before,a[href^='#ms-spoink']{background-position:-720px -330px}
 .flair-grumpig:before,a[href^='#ms-grumpig']{background-position:-750px -330px}
@@ -805,6 +849,7 @@ color:#ecedeb
 .flair-cacturne:before,a[href^='#ms-cacturne']{background-position:-30px -360px}
 .flair-swablu:before,a[href^='#ms-swablu']{background-position:-60px -360px}
 .flair-altaria:before,a[href^='#ms-altaria']{background-position:-90px -360px}
+.flair-altaria-mega:before,a[href^='#ms-altaria-mega']{background-position:-580px -840px}
 .flair-zangoose:before,a[href^='#ms-zangoose']{background-position:-120px -360px}
 .flair-seviper:before,a[href^='#ms-seviper']{background-position:-150px -360px}
 .flair-lunatone:before,a[href^='#ms-lunatone']{background-position:-180px -360px}
@@ -838,6 +883,8 @@ color:#ecedeb
 .flair-wynaut:before,a[href^='#ms-wynaut']{background-position:-90px -390px}
 .flair-snorunt:before,a[href^='#ms-snorunt']{background-position:-120px -390px}
 .flair-glalie:before,a[href^='#ms-glalie']{background-position:-150px -390px}
+.flair-glalie-mega:before,a[href^='#ms-glalie-mega']{background-position:-710px -810px}
+.flair-glalie-mega:before,a[href^='#ms-glalie-mega']{background-position:-710px -810px}
 .flair-spheal:before,a[href^='#ms-spheal']{background-position:-180px -390px}
 .flair-sealeo:before,a[href^='#ms-sealeo']{background-position:-210px -390px}
 .flair-walrein:before,a[href^='#ms-walrein']{background-position:-240px -390px}
@@ -849,17 +896,24 @@ color:#ecedeb
 .flair-bagon:before,a[href^='#ms-bagon']{background-position:-420px -390px}
 .flair-shelgon:before,a[href^='#ms-shelgon']{background-position:-450px -390px}
 .flair-salamence:before,a[href^='#ms-salamence']{background-position:-480px -390px}
+.flair-salamence-mega:before,a[href^='#ms-salamence-mega']{background-position:-610px -840px}
 .flair-beldum:before,a[href^='#ms-beldum']{background-position:-520px -390px}
 .flair-metang:before,a[href^='#ms-metang']{background-position:-550px -390px}
 .flair-metagross:before,a[href^='#ms-metagross']{background-position:-580px -390px}
+.flair-metagross-mega:before,a[href^='#ms-metagross-mega']{background-position:-740px -810px}
 .flair-regirock:before,a[href^='#ms-regirock']{background-position:-620px -390px}
 .flair-regice:before,a[href^='#ms-regice']{background-position:-650px -390px}
 .flair-registeel:before,a[href^='#ms-registeel']{background-position:-680px -390px}
 .flair-latias:before,a[href^='#ms-latias']{background-position:-710px -390px}
+.flair-latias-mega:before,a[href^='#ms-latias-mega']{background-position:-780px -810px}
 .flair-latios:before,a[href^='#ms-latios']{background-position:-740px -390px}
+.flair-latios-mega:before,a[href^='#ms-latios-mega']{background-position:-820px -810px}
 .flair-kyogre:before,a[href^='#ms-kyogre']{background-position:-770px -390px}
+.flair-kyogre-primal:before,a[href^='#ms-kyogre-primal']{background-position:-650px -840px}
 .flair-groudon:before,a[href^='#ms-groudon']{background-position:0 -420px}
+.flair-groudon-primal:before,a[href^='#ms-groudon-primal']{background-position:-690px -840px}
 .flair-rayquaza:before,a[href^='#ms-rayquaza']{background-position:-40px -420px}
+.flair-rayquaza-mega:before,a[href^='#ms-rayquaza-mega']{background-position:-730px -840px}
 .flair-jirachi:before,a[href^='#ms-jirachi']{background-position:-810px -390px}
 .flair-deoxys:before,a[href^='#ms-deoxys']{background-position:-840px -390px}
 .flair-deoxys-attack:before,a[href^='#ms-deoxys-attack']{background-position:-870px -390px}
@@ -914,6 +968,7 @@ color:#ecedeb
 .flair-drifblim:before,a[href^='#ms-drifblim']{background-position:-660px -450px}
 .flair-buneary:before,a[href^='#ms-buneary']{background-position:-690px -450px}
 .flair-lopunny:before,a[href^='#ms-lopunny']{background-position:-720px -450px}
+.flair-lopunny-mega:before,a[href^='#ms-lopunny-mega']{background-position:-770px -840px}
 .flair-mismagius:before,a[href^='#ms-mismagius']{background-position:-750px -450px}
 .flair-honchkrow:before,a[href^='#ms-honchkrow']{background-position:-780px -450px}
 .flair-glameow:before,a[href^='#ms-glameow']{background-position:-810px -450px}
@@ -964,6 +1019,7 @@ color:#ecedeb
 .flair-mamoswine:before,a[href^='#ms-mamoswine']{background-position:-330px -510px}
 .flair-porygon-z:before,a[href^='#ms-porygon-z']{background-position:-360px -510px}
 .flair-gallade:before,a[href^='#ms-gallade']{background-position:-390px -510px}
+.flair-gallade-mega:before,a[href^='#ms-gallade-mega']{background-position:-810px -840px}
 .flair-probopass:before,a[href^='#ms-probopass']{background-position:-420px -510px}
 .flair-dusknoir:before,a[href^='#ms-dusknoir']{background-position:-450px -510px}
 .flair-froslass:before,a[href^='#ms-froslass']{background-position:-480px -510px}
@@ -1028,6 +1084,7 @@ color:#ecedeb
 .flair-drilbur:before,a[href^='#ms-drilbur']{background-position:-570px -570px}
 .flair-excadrill:before,a[href^='#ms-excadrill']{background-position:-600px -570px}
 .flair-audino:before,a[href^='#ms-audino']{background-position:-630px -570px}
+.flair-audino-mega:before,a[href^='#ms-audino-mega']{background-position:-840px -840px}
 .flair-timburr:before,a[href^='#ms-timburr']{background-position:-660px -570px}
 .flair-gurdurr:before,a[href^='#ms-gurdurr']{background-position:-690px -570px}
 .flair-conkeldurr:before,a[href^='#ms-conkeldurr']{background-position:-610px -540px}
@@ -1264,9 +1321,15 @@ color:#ecedeb
 .flair-yveltal:before,a[href^='#ms-yveltal']{background-position:-540px -810px}
 .flair-zygarde:before,a[href^='#ms-zygarde']{background-position:-570px -810px}
 .flair-diancie:before,a[href^='#ms-diancie']{background-position:-600px -810px}
+.flair-diancie-mega:before,a[href^='#ms-diancie-mega']{background-position:-870px -840px}
+.flair-hoopa:before,a[href^='#ms-hoopa']{background-position:0 -840px}
+.flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{background-position:0 -870px}
+.flair-volcanion:before,a[href^='#ms-volcanion']{background-position:-30px -840px}
+
 .flair-charizard:before,a[href^='#ms-charizard'],
 .flair-charizard-mega-x:before,
 .flair-charizard-mega-y:before,
+.flair-pidgeot-mega:before,a[href^='#ms-pidgeot-mega'],
 .flair-nidoking:before,a[href^='#ms-nidoking'],
 .flair-alakazam:before,a[href='#ms-alakazam'],a[href='#ms-alakazam-shiny'],
 .flair-gengar-mega:before,a[href^='#ms-gengar-mega'],
@@ -1274,16 +1337,28 @@ color:#ecedeb
 .flair-aerodactyl-mega:before,a[href^='#ms-aerodactyl-mega'],
 .flair-feraligatr:before,a[href^='#ms-feraligatr'],
 .flair-steelix:before,a[href^='#ms-steelix'],
+.flair-steelix-mega:before,
 .flair-heracross-mega:before,a[href^='#ms-heracross-mega'],
 .flair-lugia:before,a[href^='#ms-lugia'],
+.flair-sceptile-mega:before,a[href^='#ms-sceptile-mega'],
 .flair-blaziken-mega:before,a[href^='#ms-blaziken-mega'],
+.flair-swampert-mega:before,a[href^='#ms-swampert-mega'],
 .flair-aggron-mega:before,a[href^='#ms-aggron-mega'],
+.flair-camerupt-mega:before,a[href^='#ms-camerupt-mega'],
 .flair-tropius:before,a[href^='#ms-tropius'],
 .flair-salamence:before,a[href^='#ms-salamence'],
+.flair-salamence-mega:before,
 .flair-metagross:before,a[href^='#ms-metagross'],
+.flair-metagross-mega:before,
 .flair-kyogre:before,a[href^='#ms-kyogre'],
+.flair-kyogre-primal:before,
 .flair-groudon:before,a[href^='#ms-groudon'],
+.flair-groudon-primal:before,
 .flair-rayquaza:before,a[href^='#ms-rayquaza'],
+.flair-rayquaza-mega:before,
+.flair-latias-mega:before,a[href^='#ms-latias-mega'],
+.flair-latios-mega:before,a[href^='#ms-latios-mega'],
+.flair-lopunny-mega:before,a[href^='#ms-lopunny-mega'],
 .flair-gliscor:before,a[href^='#ms-gliscor'],
 .flair-heatran:before,a[href^='#ms-heatran'],
 .flair-regigigas:before,a[href^='#ms-regigigas'],
@@ -1301,9 +1376,22 @@ color:#ecedeb
 .flair-doublade:before,a[href^='#ms-doublade'],
 .flair-aegislash-blade:before,a[href^='#ms-aegislash-blade'],
 .flair-dragalge:before,a[href^='#ms-dragalge'],
-.flair-clawitzer:before,a[href^='#ms-clawitzer']{width:40px;margin:0}
+.flair-clawitzer:before,a[href^='#ms-clawitzer'],
+.flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{width:40px;margin:0}
+
 .flair-charizard-mega-x:before,a[href^='#ms-charizard-mega'],
-.flair-charizard-mega-y:before{margin:0 2px}
+.flair-charizard-mega-y:before,
+.flair-steelix-mega:before,a[href^='#ms-steelix-mega'],
+.flair-sceptile-mega:before,a[href^='#ms-sceptile-mega'],
+.flair-salamence-mega:before,a[href^='#ms-salamence-mega'],
+.flair-kyogre-primal:before,a[href^='#ms-kyogre-primal'],
+.flair-groudon-primal:before,a[href^='#ms-groudon-primal'],
+.flair-rayquaza-mega:before,a[href^='#ms-rayquaza-mega'],
+.flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{margin:0 2px}
+
+del a[href^="#ms-"],del a[href^="#ps-"]{
+  opacity:0.5
+}
 
 /* Miscellaneous
 ========================================================================== */
@@ -1395,7 +1483,8 @@ a[href='#ps-dream']{background-position:-96px -96px}
 .wiki-page .wiki-page-content .md.wiki h6{font-size:1em}
 .wiki-page .wiki-page-content .md.wiki hr{margin:0 0 12px}
 .wiki-page .wiki-page-content .md.wiki table{width:70%}
-.wiki-page .wiki-page-content .md.wiki th{width:50%;background:#89c2d3;text-align:center}
+.wiki-page .wiki-page-content .md.wiki th{background:#89c2d3;text-align:center}
+.wiki-page-formatting .wiki-page-content .md.wiki th{width:50%}
 #wiki_link_flairs + p + ul{
   margin:10px 0 20px;
   list-style:none
@@ -1414,4 +1503,27 @@ a[href='#ps-dream']{background-position:-96px -96px}
 #wiki_faq ~ blockquote blockquote ul:first-child{
   margin:0;
   list-style:none
+}
+
+/* Old Feel Theme */
+
+#header:lang(at) {
+  height:168px;
+  background-image:url(%%cpt-banner%%);
+}
+
+.submit-text div:lang(at),
+.side .md ul:first-child a:lang(at),
+.submit-text div:lang(at):hover:before {
+  background:#5b92fa;
+}
+.submit-text div:lang(at):hover {
+  background:#7ba8ff
+}
+
+.side .md h2:lang(at),
+#wiki_headings + p + p strong:lang(at),
+.side .md h3:lang(at),
+.single-page .content .md h2:lang(at){
+  background:#3863b6
 }
