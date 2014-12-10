@@ -1,1242 +1,913 @@
-body,#header-bottom-right,.side,
-.commentarea .child .child,.commentarea .child .child .child .child,.commentarea .child .child .child .child .child .child,.commentarea .child .child .child .child .child .child .child .child{
-  background-color:#f6f5f4
-}
-.listing-page .link.odd,.roundfield,.content.submit .info-notice,
-.commentarea .child,.commentarea .child .child .child,.commentarea .child .child .child .child .child,.commentarea .child .child .child .child .child .child .child,.commentarea .child .child .child .child .child .child .child .child .child{
-  background-color:#edeceb
-}
-table{border-collapse:collapse;border-spacing:0}
+@charset "utf-8";
 
-.sidebox.create, /* Create a subreddit blurb */
-.submit-text div .nub, /* Arrow in Submit Text Button */
-.expando-button, /* Preview/Expand Button */
-.link .rank,
-.subscribers .word, /* Replaced by "Pokémon Trainers" */
-.users-online:before, /* Replaced by "(~x here)"*/
-.users-online .word,
-#header-bottom-left .tabmenu li:nth-child(3), /* Rising */
-#header-bottom-left .tabmenu li:nth-child(4), /* Controversial */
-#header-bottom-left .tabmenu li:last-child, /* Promoted */
-.submit-link, /* Submit a Link Button */
-.submit.content .tabmenu.formtab li:nth-child(1), /* Submit a Link Button */
-.link .arrow.down, /* Downvote */
-.title .domain, /* Domain Next to Link Flair */
-#wiki_faq ~ blockquote + hr, /* Quote Separator in Wiki */
-.side .flairselectbtn{display:none}
-.nsfw-stamp,#text-desc{display:none !important}
-
-/* Header
-========================================================================== */
-#sr-header-area {
-  font-size:x-small;
-  line-height:1.8;
-  background:#333;
-}
-#sr-more-link {
-  background:#333
-}
-#sr-more-link,
-#sr-header-area a,
-#sr-header-area .srdrop .title { color:#fff; }
-#sr-header-area .srdrop .choice {
-  color:#333
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-#header {
-  height:243px;
-  border:0;
-  background:url(%%banner%%) no-repeat center top fixed;
+article, aside, details, figcaption, figure, 
+footer, header, main, menu, nav, section {
+    display: block;
 }
 
-#header-bottom-left{
-  position:absolute;
-  bottom:0;
+input,optgroup,select {
+    color: inherit;
+    font: inherit;
+    margin: 0;
 }
 
-#header-img-a{
-  position:absolute;
-  bottom:-14px;left:5px;
-  background:#f6f5f4;
-  width:80px;
-  border-radius:80px 80px 0 0;
-}
-#header-img-a img{
-  width:80px;height:63px;
+form select {
+    text-transform: none;
+    width: 10em;
 }
 
-#header-bottom-left .redditname{
-  background:#f6f5f4;
-  padding:1px 6px 0 0;
-  margin-left:80px
-}
-#header-bottom-left .redditname:before,.titlebox h1 a:before{
-  content:"/r/"
-}
-.titlebox h1{
-    display:inline-block;
-}
-.titlebox h1 a:after{
-    content:"Casual Pokémon Trades";
-    display:inline-block;
-    color:#7D1935
+input {
+    line-height: normal;
 }
 
-#header-bottom-left li a{
-  background:#f6f5f4;
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
 }
 
-/* Content
-========================================================================== */
-
-[role=main]{margin-top:14px}
-
-.comments-page .linkflair .md {
-  background:transparent;
-  border:0
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
 }
 
-/* Sidebar
-========================================================================== */
-
-.side {
-  padding:0 10px;
-  margin:0 0 0 5px;
-}
-.leavemoderator, .side .toggle.flairtoggle{background:#edeceb}
-
-#moderation_tools .content,.sidecontentbox .content,.linkinfo{background-color:#edeceb}
-.linkinfo{border-color:#808080}
-#moderation_tools .icon-menu a,.sidecontentbox .content a{background-color:#edeceb}
-
-/* Submit Button */
-
-.submit-text div,.side .md ul:first-child a {
-  background:#4996ab/*#ff514f*/;
-  border:none;
-  height:31px;line-height:31px;
-  transition:background 0.2s
-}
-.submit-text div:hover {
-  background:#4996ab/*#e62524*/
-}
-.submit-text div a, .submit-text div a:hover, .submit-text div a:focus,.side .md ul:first-child a {
-  color:#fff/*#edeceb*/;
-  text-decoration:none
-}
-.submit-text div:hover:before {
-  display:block;width:200px;height:73px;line-height:36px;
-  border-radius:3px;
-  position:absolute;
-  right:310px; top:-21px;
-  content:"New user? Set your flair before posting!";
-  font-size:18px;color:#fff;
-  background:#4996ab/*#ff514f*/
+body {
+    /*background-color: #43b2e0;*/
+	background-color: #f6f5f4;
+    color: #333;
+    font: 16px/1.5 Verdana, Helvetica, Arial, sans-serif;
 }
 
-.subscribers .number:after{
-  content:" Pokémon Trainers"
+h1 {
+    color: #ff514f;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1em;
 }
-.users-online {
-  display:inline
+h1 a{
+    color: #ff514f;
+    text-decoration: none;
+    transition:color 0.25s
 }
-.users-online .number:before{
-  content:"("
-}
-.users-online .number:after{
-  content:" here)"
-}
-
-.content .md a{
-  color:#3d8fa6;
-}
-.content .md a:hover{
-  text-decoration:underline
+h1 a:focus, h1 a:hover {
+    color:#e62524
 }
 
-.author,.side a{
-  color:#3d8fa6;
-  border-bottom:1px solid rgba(61,143,166,0.5);
-}
-.side a:hover, .author:hover, #moderation_tools .icon-menu a:hover, #moderation_tools .icon-menu a:hover{
-  color:#3d8fa6;
-  background:rgba(137,194,211,0.15);
-  border-bottom:1px solid #3d8fa6;
-  text-decoration:none !important;
-}
-#header-bottom-left li a{
-  color:#fd8201
-}
-#header-bottom-left li a:hover,#header-bottom-left li a:focus{
-  border-top:2px solid #fd8201
-}
-#header-bottom-left li.selected a{
-  color:#ff514f;
-  border:0;border-top:2px solid #ff514f
+article {
+    width: 41em;
+    padding: 1.25em;
+    margin: 0 auto;
 }
 
-.side .md ul:first-child{
-  padding:0;
-  margin:0;
-  list-style:none
-} 
+form { overflow: hidden; }
 
-.side .md ul:first-child a{
-  font-weight:bold;
-  display:blocK;
-  text-align:center;
-  margin:0 0 12px
+label, input, select {
+    display: inline-block;
+	margin: 0 0 0.5em;    
 }
 
-.titlebox h1 a{
-  color:#ecedeb;
-  font-variant:small-caps
+label { font-weight: 700; width: 10.5em; cursor: pointer; text-indent: 0.5em; }
+input, select { font: inherit; vertical-align: middle; }
+
+input[type=text], select {
+    width: 9.625em;
+    padding: 0.125em;
+	border: 0.0625em solid #dedede;
+	background-color: #e6e6e6;
 }
 
-.titlebox .subscribe-button a{
-  background:#6fc38f none;
+[type=submit], .button {
+    background-color: #ff514f;
+    transition: background-color 0.5s;
+    color: #f0f0f0;
+    font-weight: 700;
+    text-align: center;
+    width: 6.25em;
+    padding: 0.5em 0;
+    margin: 3.0625em 0 0;
+    border: medium none;
+    border-radius: 0.25em;
+    transition:background 0.25s;
+    float: left
 }
-.titlebox .subscribe-button a:hover,.titlebox .subscribe-button a:focus{
-  background-color:#77c14e;  
-color:#ecedeb
+[type=submit]:hover, .button:hover, .button:focus {
+    background:#e62524
+}
+[disabled],[disabled]:hover,[disabled]:focus{background-color:darkgray}
+
+.button{
+    width: 15em;
+    margin:2em 0 0;
+    display: inline-block;
+    text-decoration: none
 }
 
-.side h2{
-  color:#ecedeb;
-  font-size:110%
+optgroup {
+    font-weight: bold;
 }
 
-.side hr{
-  border:0;
-  height:1px;
-  background:#808080;
-  margin:0 0 12px
+#preview{
+    width: 34.25em;
+    float: left;
+    margin: 1em 0 0.5em 0.5em;
 }
 
-.side strong em{
-  text-transform:uppercase
+h2{
+    color:#ff514f;
+    font-weight: bold;
+    margin:0 0 1em;
 }
-
-.side{color:#333}
-
-.side .md h2,#wiki_headings + p + p strong,.side .md h3,.single-page .content .md h2{
-  display:inline-block;
-  text-transform:uppercase;
-  background:#7d1935;
-  color:#fff;
-  text-align:center;
-  margin:12px 0 6px;
-  padding:10px 15px;
-}
-
-.side .md h2 {
-  margin:12px 0;
-}
-
-.side .md h3:after,.side .md h2:after{
-  content:":"
-}
-
-.side .md h3 ~ ul {
-  margin:0 0 6px;
-  padding:10px 2em;
-}
-
-.side .md h3 ~ ul li {
-  margin:0 0 6px
-}
-
-.side .md p a,
-.side .md h3 ~ ul a {
-  color:#3d8fa6;
-  font-weight:700
-}
-
-.side .md h2 ~ p strong,
-.side .md h3 + ul strong {
-  color:#472f21
-}
-
-.side .md ul:first-child a {
-  background-color:#4996ab;
-  padding:0 2em;
-  text-align:left;
-  transition:text-indent 0.3s
-}
-
-.side .md ul:first-child a:hover,.side .md ul:first-child a:focus{
-  text-indent:2em
-}
-
-/* Submit Page
-========================================================================== */
-.submit-page .content a{
-  color:#3d8fa6
-}
-.submit-page .content a:hover,.submit-page .content a:focus{
-  text-decoration:underline
-}
-.content.submit .info-notice{
-  border:0;
-  border-radius:0
-}
-.submit_text h1{
-  color:#7d1935
-}
-.submit-page .tabmenu.formtab .selected a{
-  background-color:#3e4095
-}
-.submit-page .formtabs-content{
-  border-color:#3e4095
-}
-.submit-page .captcha {
-  position:relative
-}
-.submit-page .captcha .gray:before{
-  content:"are you a bot or a human?";
-  display:inline-block;
-  color:#000;
-  margin:0 7px 0 -7px
-}
-.submit-page .captcha .title,
-.titlebox h1 a{
-  display:inline-block;
-  text-indent:-999em
-}
-.submit-page .captcha .title:after{
-  content:"";
-  width:40px;height:63px;
-  background:url(%%icons%%) -120px 0 no-repeat;
-  position:absolute;right:12px;top:12px
-}
-
-.submit_text{
-  max-width:500px
-}
-
-/* Link Flair
-========================================================================== */
-
-.link{border-left:12px solid transparent}
-
-.linkflair-mod-post{border-color:#77c14e !important}
-.linkflair-trade{border-color:#4982c2 !important}
-.linkflair-tradeback{border-color:#5956a3 !important}
-.linkflair-giveaway{border-color:#bf529d !important}
-.linkflair-info-post{border-color:#6fc38f !important}
-.linkflair-item{border-color:#ebab6e !important}
-.linkflair-question{border-color:#151f1f !important}
-.linkflair.over18{border-color:#bdbdbd !important}
-.linkflair-battle{border-color:#ec3237 !important}
-.linkflair-event{border-color:#f39801 !important}
-.linkflair-hacks{border-color:#84739c !important}
-.linkflair-shiny{border-color:#619ceb !important}
-.linkflair-legend{border-color:#4262ee !important}
-.listing-page .linkflair-legend{border-color:#d73e47 !important}
-
-.linkflair-mod-post .title,.linkflair .linkflair-mod-post .title{color:#3c7d19 !important}
-.linkflair-trade .title,.linkflair .linkflair-trade .title{color:#18487e !important}
-.linkflair-tradeback .title,.linkflair .linkflair-tradeback .title{color:#1f1c6a !important}
-.linkflair-giveaway .title,.linkflair .linkflair-giveaway .title{color:#7c1b5f !important}
-.linkflair-info-post .title,.linkflair .linkflair-info-post .title{color:#247f46 !important}
-.linkflair-item .title,.linkflair .linkflair-item .title{color:#995d24 !important}
-.linkflair-question .title,.linkflair .linkflair-question .title{color:#151f1f !important}
-.linkflair-battle .title,.linkflair .linkflair-battle .title{color:#991014 !important}
-.linkflair-event .title,.linkflair .linkflair-event .title{color:#f39801 !important}
-.linkflair-hacks .title,.linkflair .linkflair-hacks .title{color:#84739c !important}
-.linkflair-shiny .title,.linkflair .linkflair-shiny .title{color:#619ceb !important}
-.linkflair-legend .title,.linkflair .linkflair-legend .title{color:#d73e47 !important}
-.over18 .title,.over18 .flair{color:#888 !important}
-.over18 .flair:before{opacity:0.5}
-
-.linkflair-mod-post .linkflairlabel,[href*='%5Bmod%5D'],
-.linkflair-trade .linkflairlabel,[href*='%5Btrade%5D'],
-.linkflair-tradeback .linkflairlabel,[href*='%5Btradeback%5D'],
-.linkflair-giveaway .linkflairlabel,[href*='%5Bgiveaway%5D'],
-.linkflair-info-post .linkflairlabel,[href*='%5Binfo%5D'],
-.linkflair-item .linkflairlabel,[href*='%5Bitem%5D'],
-.linkflair-question .linkflairlabel,[href*='%5Bquestion%5D'],
-.linkflair-battle .linkflairlabel,[href*='%5Bbattle%5D'],
-.linkflair-event .linkflairlabel,[href*='%5Bevent%5D'],
-.linkflair-hacks .linkflairlabel,[href*='%5Bhacks%5D'],
-.linkflair-shiny .linkflairlabel,[href*='%5Bshiny%5D'],
-.linkflair-legend .linkflairlabel,[href*='%5Blegend%5D'],
-.over18 .linkflairlabel {
-  width:100px; height:30px;
-  display:inline-block;
-  padding:0; border:0;
-  text-align:left;
-  text-indent:-999em;
-  background:url(%%linkflair%%) no-repeat;
-  vertical-align:middle;
-}
-.linkflair .linkflair-mod-post .linkflairlabel{
-  background-position:0 0}
-.linkflair-trade .linkflairlabel,.linkflair .linkflair-trade .linkflairlabel,[href*='%5Btrade%5D']{
-  background-position:-100px 0}
-.comments-page .linkflair-trade .linkflairlabel{
-  background-position:-100px -120px}
-.linkflair-tradeback .linkflairlabel,.linkflair .linkflair-tradeback .linkflairlabel,[href*='%5Btradeback%5D']{
-  background-position:-100px -30px}
-.linkflair-giveaway .linkflairlabel,.linkflair .linkflair-giveaway .linkflairlabel,[href*='%5Bgiveaway%5D']{
-  background-position:-100px -90px}
-.linkflair-info-post .linkflairlabel,.linkflair .linkflair-info-post .linkflairlabel,[href*='%5Binfo%5D']{
-  background-position:0 -30px}
-.linkflair-item .linkflairlabel,.linkflair .linkflair-item .linkflairlabel,[href*='%5Bitem%5D']{
-  background-position:-100px -60px}
-.linkflair-question .linkflairlabel,.linkflair .linkflair-question .linkflairlabel,[href*='%5Bquestion%5D']{
-  background-position:0 -60px}
-.linkflair-battle .linkflairlabel,[href*='%5Bbattle%5D']{
-  background-position:0 -120px}
-.linkflair-event .linkflairlabel,[href*='%5Bevent%5D']{
-  background-position:0 -210px}
-.linkflair-hacks .linkflairlabel,[href*='%5Bhacks%5D']{
-  background-position:0 -150px}
-.linkflair-shiny .linkflairlabel,[href*='%5Bshiny%5D']{
-  background-position:-100px -150px}
-.linkflair-legend .linkflairlabel,[href*='%5Blegend%5D']{
-  background-position:0 -180px}
-.comments-page .linkflair-legend .linkflairlabel{
-  background-position:-100px -180px}
-.over18 .linkflairlabel{background-position:0 -90px!important}
-
-.single-page .content .linkflair .md blockquote{ border-color:#93b8e1 }
-.single-page .content .linkflair-mod-post .md blockquote{ border-color:#b0e097 }
-.single-page .content .linkflair-tradeback .md blockquote{ border-color:#9d9bd1 }
-.single-page .content .linkflair-giveaway .md blockquote{ border-color:#df99ca }
-.single-page .content .linkflair-info-post .md blockquote{ border-color:#ace1c0 }
-.single-page .content .linkflair-item .md blockquote{ border-color:#f5d0ad }
-.single-page .content .linkflair-question .md blockquote{ border-color:#768f8f }
-.single-page .content .linkflair.over18 .md blockquote{ border-color:#bdbdbd }
-.single-page .content .linkflair-battle .md blockquote{ border-color:#f68b8e }
-.single-page .content .linkflair-hacks .md blockquote{ border-color:#84739c }
-.single-page .content .linkflair-shiny .md blockquote{ border-color:#619ceb }
-.single-page .content .linkflair-legend .md blockquote{ border-color:#d73e47 }
-.single-page .content .linkflair-event .md blockquote{ border-color:#f39801 }
-
-.single-page .content .linkflair .md h2,#wiki_headings + p + p strong{ background:#4982c2 }
-.single-page .content .linkflair-mod-post .md h2{ background:#77c14e }
-.single-page .content .linkflair-tradeback .md h2{ background:#5956a3 }
-.single-page .content .linkflair-giveaway .md h2{ background:#bf529d }
-.single-page .content .linkflair-info-post .md h2{ background:#6fc38f }
-.single-page .content .linkflair-item .md h2{ background:#ebab6e }
-.single-page .content .linkflair-question .md h2{ background:#151f1f }
-.single-page .content .linkflair.over18 .md h2{ background:#bdbdbd }
-.single-page .content .linkflair-battle .md h2{ background:#ec3237 }
-.single-page .content .linkflair-hacks .md h2{ background:#84739c }
-.single-page .content .linkflair-shiny .md h2{ background:#619ceb }
-.single-page .content .linkflair-legend .md h2{ background:#d73e47 }
-.single-page .content .linkflair-event .md h2{ background:#f39801 }
-
-/* User Flair
-========================================================================== */
-.userattrs .moderator{
-    color:#61438e;
-}
-.author[href$='richi3f'],
-.author[href$='faptastic_platypus'],
-.author[href$='HappinyOnSteroids'],
-.author[href$='Nice_Cali_girl'],
-.author[href$='HappyZombies'],
-.author[href$='philiflyest'],
-.author[href$='AutoModerator'],
-.thing.stickied .moderator{
-    color:#61438e;
-    border-bottom:1px solid rgba(164,141,199,0.5)
-}
-
-.author[href$='richi3f']:hover,
-.author[href$='faptastic_platypus']:hover,
-.author[href$='HappinyOnSteroids']:hover,
-.author[href$='Nice_Cali_girl']:hover,
-.author[href$='HappyZombies']:hover,
-.author[href$='philiflyest']:hover,
-.author[href$='AutoModerator']:hover,
-.userattrs .moderator:hover,
-.thing.stickied .moderator:hover{
-    color:#61438e;
-    background:rgba(164,141,199,0.15);
-    border-bottom-color:rgba(164,141,199,1);
-    text-decoration:none
-}
-
-.link .flair { margin:0; }
 
 .flair {
-  background:transparent;
-  border:0
+  background:#fff;
+  font-size:12px;
+  padding: 10px 10px 10px 5px;
+  border-radius: 2px;
+  border: 1px solid #E5E5E5;
+  color: #555;
 }
-.flair-shiny{
-  background:url(%%icons%%) -151px -81px no-repeat
-}
-.over18 .flair-shiny{
-  background-position:-151px -111px
-}
-.over18 .flair-shiny{background:url(%%icons%%) -151px -111px no-repeat}
-.flair:before,a[href^='#ms-'],a[href^='#ps-'],a[href$='-shiny']:after{
+.flair:before{
   content:"";
   display:inline-block;
-  background:url(%%pkmnflair%%) no-repeat content-box;
+  background:url(pkmnflair.png) no-repeat content-box;
   width:30px;height:30px;margin:0 5px;
   vertical-align:middle
 }
-.flair-shiny:before,a[href$='-shiny']{
-  background-image:url(%%shinyflair%%)
-}
-.flair-bulbasaur:before,a[href^='#ms-bulbasaur']{background-position:-30px 0}
-.flair-ivysaur:before,a[href^='#ms-ivysaur']{background-position:-60px 0}
-.flair-venusaur:before,a[href^='#ms-venusaur']{background-position:-90px 0}
+.flair-bulbasaur:before,{background-position:-30px 0}
+.flair-ivysaur:before,{background-position:-60px 0}
+.flair-venusaur:before,{background-position:-90px 0}
 .flair-venusaur-mega:before,a[href^='#ms-venusaur-mega']{background-position:-120px 0}
-.flair-charmander:before,a[href^='#ms-charmander']{background-position:-150px 0}
-.flair-charmeleon:before,a[href^='#ms-charmeleon']{background-position:-180px 0}
-.flair-charizard:before,a[href^='#ms-charizard']{background-position:-210px 0}
+.flair-charmander:before,{background-position:-150px 0}
+.flair-charmeleon:before,{background-position:-180px 0}
+.flair-charizard:before,{background-position:-210px 0}
 .flair-charizard-mega-x:before,a[href^='#ms-charizard-mega-x']{background-position:-250px 0}
 .flair-charizard-mega-y:before,a[href^='#ms-charizard-mega-y']{background-position:-290px 0}
-.flair-squirtle:before,a[href^='#ms-squirtle']{background-position:-330px 0}
-.flair-wartortle:before,a[href^='#ms-wartortle']{background-position:-360px 0}
-.flair-blastoise:before,a[href^='#ms-blastoise']{background-position:-390px 0}
+.flair-squirtle:before,{background-position:-330px 0}
+.flair-wartortle:before,{background-position:-360px 0}
+.flair-blastoise:before,{background-position:-390px 0}
 .flair-blastoise-mega:before,a[href^='#ms-blastoise-mega']{background-position:-420px 0}
-.flair-caterpie:before,a[href^='#ms-caterpie']{background-position:-450px 0}
-.flair-metapod:before,a[href^='#ms-metapod']{background-position:-480px 0}
-.flair-butterfree:before,a[href^='#ms-butterfree']{background-position:-510px 0}
-.flair-weedle:before,a[href^='#ms-weedle']{background-position:-540px 0}
-.flair-kakuna:before,a[href^='#ms-kakuna']{background-position:-570px 0}
-.flair-beedrill:before,a[href^='#ms-beedrill']{background-position:-600px 0}
+.flair-caterpie:before,{background-position:-450px 0}
+.flair-metapod:before,{background-position:-480px 0}
+.flair-butterfree:before,{background-position:-510px 0}
+.flair-weedle:before,{background-position:-540px 0}
+.flair-kakuna:before,{background-position:-570px 0}
+.flair-beedrill:before,{background-position:-600px 0}
 .flair-beedrill-mega:before,a[href^='#ms-beedrill-mega']{background-position:-420px -840px}
-.flair-pidgey:before,a[href^='#ms-pidgey']{background-position:-630px 0}
-.flair-pidgeotto:before,a[href^='#ms-pidgeotto']{background-position:-660px 0}
-.flair-pidgeot:before,a[href^='#ms-pidgeot']{background-position:-690px 0}
+.flair-pidgey:before,{background-position:-630px 0}
+.flair-pidgeotto:before,{background-position:-660px 0}
+.flair-pidgeot:before,{background-position:-690px 0}
 .flair-pidgeot-mega:before,a[href^='#ms-pidgeot-mega']{background-position:-860px -810px}
-.flair-rattata:before,a[href^='#ms-rattata']{background-position:-720px 0}
-.flair-raticate:before,a[href^='#ms-raticate']{background-position:-750px 0}
-.flair-spearow:before,a[href^='#ms-spearow']{background-position:-780px 0}
-.flair-fearow:before,a[href^='#ms-fearow']{background-position:-810px 0}
-.flair-ekans:before,a[href^='#ms-ekans']{background-position:-840px 0}
-.flair-arbok:before,a[href^='#ms-arbok']{background-position:-870px 0}
-.flair-pikachu:before,a[href^='#ms-pikachu']{background-position:0 -30px}
-.flair-raichu:before,a[href^='#ms-raichu']{background-position:-30px -30px}
-.flair-sandshrew:before,a[href^='#ms-sandshrew']{background-position:-60px -30px}
-.flair-sandslash:before,a[href^='#ms-sandslash']{background-position:-90px -30px}
+.flair-rattata:before,{background-position:-720px 0}
+.flair-raticate:before,{background-position:-750px 0}
+.flair-spearow:before,{background-position:-780px 0}
+.flair-fearow:before,{background-position:-810px 0}
+.flair-ekans:before,{background-position:-840px 0}
+.flair-arbok:before,{background-position:-870px 0}
+.flair-pikachu:before,{background-position:0 -30px}
+.flair-raichu:before,{background-position:-30px -30px}
+.flair-sandshrew:before,{background-position:-60px -30px}
+.flair-sandslash:before,{background-position:-90px -30px}
 .flair-nidoran-f:before,a[href^='#ms-nidoran-f']{background-position:-120px -30px}
-.flair-nidorina:before,a[href^='#ms-nidorina']{background-position:-150px -30px}
-.flair-nidoqueen:before,a[href^='#ms-nidoqueen']{background-position:-180px -30px}
+.flair-nidorina:before,{background-position:-150px -30px}
+.flair-nidoqueen:before,{background-position:-180px -30px}
 .flair-nidoran-m:before,a[href^='#ms-nidoran-m']{background-position:-210px -30px}
-.flair-nidorino:before,a[href^='#ms-nidorino']{background-position:-240px -30px}
-.flair-nidoking:before,a[href^='#ms-nidoking']{background-position:-270px -30px}
-.flair-clefairy:before,a[href^='#ms-clefairy']{background-position:-390px -30px}
-.flair-clefable:before,a[href^='#ms-clefable']{background-position:-420px -30px}
-.flair-vulpix:before,a[href^='#ms-vulpix']{background-position:-450px -30px}
-.flair-ninetales:before,a[href^='#ms-ninetales']{background-position:-480px -30px}
-.flair-jigglypuff:before,a[href^='#ms-jigglypuff']{background-position:-510px -30px}
-.flair-wigglytuff:before,a[href^='#ms-wigglytuff']{background-position:-540px -30px}
-.flair-zubat:before,a[href^='#ms-zubat']{background-position:-570px -30px}
-.flair-golbat:before,a[href^='#ms-golbat']{background-position:-600px -30px}
-.flair-oddish:before,a[href^='#ms-oddish']{background-position:-630px -30px}
-.flair-gloom:before,a[href^='#ms-gloom']{background-position:-660px -30px}
-.flair-vileplume:before,a[href^='#ms-vileplume']{background-position:-690px -30px}
-.flair-paras:before,a[href^='#ms-paras']{background-position:-720px -30px}
-.flair-parasect:before,a[href^='#ms-parasect']{background-position:-750px -30px}
-.flair-venonat:before,a[href^='#ms-venonat']{background-position:-780px -30px}
-.flair-venomoth:before,a[href^='#ms-venomoth']{background-position:-810px -30px}
-.flair-diglett:before,a[href^='#ms-diglett']{background-position:-840px -30px}
-.flair-dugtrio:before,a[href^='#ms-dugtrio']{background-position:-870px -30px}
-.flair-meowth:before,a[href^='#ms-meowth']{background-position:0 -60px}
-.flair-persian:before,a[href^='#ms-persian']{background-position:-30px -60px}
-.flair-psyduck:before,a[href^='#ms-psyduck']{background-position:-60px -60px}
-.flair-golduck:before,a[href^='#ms-golduck']{background-position:-90px -60px}
-.flair-mankey:before,a[href^='#ms-mankey']{background-position:-120px -60px}
-.flair-primeape:before,a[href^='#ms-primeape']{background-position:-150px -60px}
-.flair-growlithe:before,a[href^='#ms-growlithe']{background-position:-180px -60px}
-.flair-arcanine:before,a[href^='#ms-arcanine']{background-position:-210px -60px}
-.flair-poliwag:before,a[href^='#ms-poliwag']{background-position:-240px -60px}
-.flair-poliwhirl:before,a[href^='#ms-poliwhirl']{background-position:-270px -60px}
-.flair-poliwrath:before,a[href^='#ms-poliwrath']{background-position:-300px -60px}
-.flair-abra:before,a[href^='#ms-abra']{background-position:-330px -60px}
-.flair-kadabra:before,a[href^='#ms-kadabra']{background-position:-360px -60px}
-.flair-alakazam:before,a[href^='#ms-alakazam']{background-position:-310px -30px}
+.flair-nidorino:before,{background-position:-240px -30px}
+.flair-nidoking:before,{background-position:-270px -30px}
+.flair-clefairy:before,{background-position:-390px -30px}
+.flair-clefable:before,{background-position:-420px -30px}
+.flair-vulpix:before,{background-position:-450px -30px}
+.flair-ninetales:before,{background-position:-480px -30px}
+.flair-jigglypuff:before,{background-position:-510px -30px}
+.flair-wigglytuff:before,{background-position:-540px -30px}
+.flair-zubat:before,{background-position:-570px -30px}
+.flair-golbat:before,{background-position:-600px -30px}
+.flair-oddish:before,{background-position:-630px -30px}
+.flair-gloom:before,{background-position:-660px -30px}
+.flair-vileplume:before,{background-position:-690px -30px}
+.flair-paras:before,{background-position:-720px -30px}
+.flair-parasect:before,{background-position:-750px -30px}
+.flair-venonat:before,{background-position:-780px -30px}
+.flair-venomoth:before,{background-position:-810px -30px}
+.flair-diglett:before,{background-position:-840px -30px}
+.flair-dugtrio:before,{background-position:-870px -30px}
+.flair-meowth:before,{background-position:0 -60px}
+.flair-persian:before,{background-position:-30px -60px}
+.flair-psyduck:before,{background-position:-60px -60px}
+.flair-golduck:before,{background-position:-90px -60px}
+.flair-mankey:before,{background-position:-120px -60px}
+.flair-primeape:before,{background-position:-150px -60px}
+.flair-growlithe:before,{background-position:-180px -60px}
+.flair-arcanine:before,{background-position:-210px -60px}
+.flair-poliwag:before,{background-position:-240px -60px}
+.flair-poliwhirl:before,{background-position:-270px -60px}
+.flair-poliwrath:before,{background-position:-300px -60px}
+.flair-abra:before,{background-position:-330px -60px}
+.flair-kadabra:before,{background-position:-360px -60px}
+.flair-alakazam:before,{background-position:-310px -30px}
 .flair-alakazam-mega:before,a[href^='#ms-alakazam-mega']{background-position:-390px -60px}
-.flair-machop:before,a[href^='#ms-machop']{background-position:-420px -60px}
-.flair-machoke:before,a[href^='#ms-machoke']{background-position:-450px -60px}
-.flair-machamp:before,a[href^='#ms-machamp']{background-position:-480px -60px}
-.flair-bellsprout:before,a[href^='#ms-bellsprout']{background-position:-510px -60px}
-.flair-weepinbell:before,a[href^='#ms-weepinbell']{background-position:-540px -60px}
-.flair-victreebel:before,a[href^='#ms-victreebel']{background-position:-570px -60px}
-.flair-tentacool:before,a[href^='#ms-tentacool']{background-position:-600px -60px}
-.flair-tentacruel:before,a[href^='#ms-tentacruel']{background-position:-630px -60px}
-.flair-geodude:before,a[href^='#ms-geodude']{background-position:-660px -60px}
-.flair-graveler:before,a[href^='#ms-graveler']{background-position:-690px -60px}
-.flair-golem:before,a[href^='#ms-golem']{background-position:-720px -60px}
-.flair-ponyta:before,a[href^='#ms-ponyta']{background-position:-750px -60px}
-.flair-rapidash:before,a[href^='#ms-rapidash']{background-position:-780px -60px}
-.flair-slowpoke:before,a[href^='#ms-slowpoke']{background-position:-810px -60px}
-.flair-slowbro:before,a[href^='#ms-slowbro']{background-position:-840px -60px}
+.flair-machop:before,{background-position:-420px -60px}
+.flair-machoke:before,{background-position:-450px -60px}
+.flair-machamp:before,{background-position:-480px -60px}
+.flair-bellsprout:before,{background-position:-510px -60px}
+.flair-weepinbell:before,{background-position:-540px -60px}
+.flair-victreebel:before,{background-position:-570px -60px}
+.flair-tentacool:before,{background-position:-600px -60px}
+.flair-tentacruel:before,{background-position:-630px -60px}
+.flair-geodude:before,{background-position:-660px -60px}
+.flair-graveler:before,{background-position:-690px -60px}
+.flair-golem:before,{background-position:-720px -60px}
+.flair-ponyta:before,{background-position:-750px -60px}
+.flair-rapidash:before,{background-position:-780px -60px}
+.flair-slowpoke:before,{background-position:-810px -60px}
+.flair-slowbro:before,{background-position:-840px -60px}
 .flair-slowbro-mega:before,a[href^='#ms-slowbro-mega']{background-position:-450px -840px}
-.flair-magnemite:before,a[href^='#ms-magnemite']{background-position:-870px -60px}
-.flair-magneton:before,a[href^='#ms-magneton']{background-position:0 -90px}
-.flair-farfetchd:before,a[href^='#ms-farfetchd']{background-position:-30px -90px}
-.flair-doduo:before,a[href^='#ms-doduo']{background-position:-60px -90px}
-.flair-dodrio:before,a[href^='#ms-dodrio']{background-position:-90px -90px}
-.flair-seel:before,a[href^='#ms-seel']{background-position:-120px -90px}
-.flair-dewgong:before,a[href^='#ms-dewgong']{background-position:-150px -90px}
-.flair-grimer:before,a[href^='#ms-grimer']{background-position:-180px -90px}
-.flair-muk:before,a[href^='#ms-muk']{background-position:-210px -90px}
-.flair-shellder:before,a[href^='#ms-shellder']{background-position:-240px -90px}
-.flair-cloyster:before,a[href^='#ms-cloyster']{background-position:-270px -90px}
-.flair-gastly:before,a[href^='#ms-gastly']{background-position:-300px -90px}
-.flair-haunter:before,a[href^='#ms-haunter']{background-position:-330px -90px}
-.flair-gengar:before,a[href^='#ms-gengar']{background-position:-360px -90px}
+.flair-magnemite:before,{background-position:-870px -60px}
+.flair-magneton:before,{background-position:0 -90px}
+.flair-farfetchd:before,{background-position:-30px -90px}
+.flair-doduo:before,{background-position:-60px -90px}
+.flair-dodrio:before,{background-position:-90px -90px}
+.flair-seel:before,{background-position:-120px -90px}
+.flair-dewgong:before,{background-position:-150px -90px}
+.flair-grimer:before,{background-position:-180px -90px}
+.flair-muk:before,{background-position:-210px -90px}
+.flair-shellder:before,{background-position:-240px -90px}
+.flair-cloyster:before,{background-position:-270px -90px}
+.flair-gastly:before,{background-position:-300px -90px}
+.flair-haunter:before,{background-position:-330px -90px}
+.flair-gengar:before,{background-position:-360px -90px}
 .flair-gengar-mega:before,a[href^='#ms-gengar-mega']{background-position:-350px -30px}
-.flair-onix:before,a[href^='#ms-onix']{background-position:-390px -90px}
-.flair-drowzee:before,a[href^='#ms-drowzee']{background-position:-420px -90px}
-.flair-hypno:before,a[href^='#ms-hypno']{background-position:-450px -90px}
-.flair-krabby:before,a[href^='#ms-krabby']{background-position:-480px -90px}
-.flair-kingler:before,a[href^='#ms-kingler']{background-position:-510px -90px}
-.flair-voltorb:before,a[href^='#ms-voltorb']{background-position:-540px -90px}
-.flair-electrode:before,a[href^='#ms-electrode']{background-position:-570px -90px}
-.flair-exeggcute:before,a[href^='#ms-exeggcute']{background-position:-600px -90px}
-.flair-exeggutor:before,a[href^='#ms-exeggutor']{background-position:-630px -90px}
-.flair-cubone:before,a[href^='#ms-cubone']{background-position:-660px -90px}
-.flair-marowak:before,a[href^='#ms-marowak']{background-position:-690px -90px}
-.flair-hitmonlee:before,a[href^='#ms-hitmonlee']{background-position:-720px -90px}
-.flair-hitmonchan:before,a[href^='#ms-hitmonchan']{background-position:-750px -90px}
-.flair-lickitung:before,a[href^='#ms-lickitung']{background-position:-780px -90px}
-.flair-koffing:before,a[href^='#ms-koffing']{background-position:-810px -90px}
-.flair-weezing:before,a[href^='#ms-weezing']{background-position:-840px -90px}
-.flair-rhyhorn:before,a[href^='#ms-rhyhorn']{background-position:-870px -90px}
-.flair-rhydon:before,a[href^='#ms-rhydon']{background-position:0 -120px}
-.flair-chansey:before,a[href^='#ms-chansey']{background-position:-30px -120px}
-.flair-tangela:before,a[href^='#ms-tangela']{background-position:-60px -120px}
-.flair-kangaskhan:before,a[href^='#ms-kangaskhan']{background-position:-90px -120px}
+.flair-onix:before,{background-position:-390px -90px}
+.flair-drowzee:before,{background-position:-420px -90px}
+.flair-hypno:before,{background-position:-450px -90px}
+.flair-krabby:before,{background-position:-480px -90px}
+.flair-kingler:before,{background-position:-510px -90px}
+.flair-voltorb:before,{background-position:-540px -90px}
+.flair-electrode:before,{background-position:-570px -90px}
+.flair-exeggcute:before,{background-position:-600px -90px}
+.flair-exeggutor:before,{background-position:-630px -90px}
+.flair-cubone:before,{background-position:-660px -90px}
+.flair-marowak:before,{background-position:-690px -90px}
+.flair-hitmonlee:before,{background-position:-720px -90px}
+.flair-hitmonchan:before,{background-position:-750px -90px}
+.flair-lickitung:before,{background-position:-780px -90px}
+.flair-koffing:before,{background-position:-810px -90px}
+.flair-weezing:before,{background-position:-840px -90px}
+.flair-rhyhorn:before,{background-position:-870px -90px}
+.flair-rhydon:before,{background-position:0 -120px}
+.flair-chansey:before,{background-position:-30px -120px}
+.flair-tangela:before,{background-position:-60px -120px}
+.flair-kangaskhan:before,{background-position:-90px -120px}
 .flair-kangaskhan-mega:before,a[href^='#ms-kangaskhan-mega']{background-position:-120px -120px}
-.flair-horsea:before,a[href^='#ms-horsea']{background-position:-150px -120px}
-.flair-seadra:before,a[href^='#ms-seadra']{background-position:-180px -120px}
-.flair-goldeen:before,a[href^='#ms-goldeen']{background-position:-210px -120px}
-.flair-seaking:before,a[href^='#ms-seaking']{background-position:-240px -120px}
-.flair-staryu:before,a[href^='#ms-staryu']{background-position:-270px -120px}
-.flair-starmie:before,a[href^='#ms-starmie']{background-position:-300px -120px}
+.flair-horsea:before,{background-position:-150px -120px}
+.flair-seadra:before,{background-position:-180px -120px}
+.flair-goldeen:before,{background-position:-210px -120px}
+.flair-seaking:before,{background-position:-240px -120px}
+.flair-staryu:before,{background-position:-270px -120px}
+.flair-starmie:before,{background-position:-300px -120px}
 .flair-mr-mime:before,a[href^='#ms-mr-mime']{background-position:-330px -120px}
-.flair-scyther:before,a[href^='#ms-scyther']{background-position:-360px -120px}
-.flair-jynx:before,a[href^='#ms-jynx']{background-position:-390px -120px}
-.flair-electabuzz:before,a[href^='#ms-electabuzz']{background-position:-420px -120px}
-.flair-magmar:before,a[href^='#ms-magmar']{background-position:-450px -120px}
-.flair-pinsir:before,a[href^='#ms-pinsir']{background-position:-480px -120px}
+.flair-scyther:before,{background-position:-360px -120px}
+.flair-jynx:before,{background-position:-390px -120px}
+.flair-electabuzz:before,{background-position:-420px -120px}
+.flair-magmar:before,{background-position:-450px -120px}
+.flair-pinsir:before,{background-position:-480px -120px}
 .flair-pinsir-mega:before,a[href^='#ms-pinsir-mega']{background-position:-510px -120px}
-.flair-tauros:before,a[href^='#ms-tauros']{background-position:-630px -120px}
-.flair-magikarp:before,a[href^='#ms-magikarp']{background-position:-660px -120px}
-.flair-gyarados:before,a[href^='#ms-gyarados']{background-position:-690px -120px}
+.flair-tauros:before,{background-position:-630px -120px}
+.flair-magikarp:before,{background-position:-660px -120px}
+.flair-gyarados:before,{background-position:-690px -120px}
 .flair-gyarados-mega:before,a[href^='#ms-gyarados-mega']{background-position:-720px -120px}
-.flair-lapras:before,a[href^='#ms-lapras']{background-position:-750px -120px}
-.flair-ditto:before,a[href^='#ms-ditto']{background-position:-780px -120px}
-.flair-eevee:before,a[href^='#ms-eevee']{background-position:-810px -120px}
-.flair-vaporeon:before,a[href^='#ms-vaporeon']{background-position:-840px -120px}
-.flair-jolteon:before,a[href^='#ms-jolteon']{background-position:-870px -120px}
-.flair-flareon:before,a[href^='#ms-flareon']{background-position:0 -150px}
-.flair-porygon:before,a[href^='#ms-porygon']{background-position:-30px -150px}
-.flair-omanyte:before,a[href^='#ms-omanyte']{background-position:-60px -150px}
-.flair-omastar:before,a[href^='#ms-omastar']{background-position:-90px -150px}
-.flair-kabuto:before,a[href^='#ms-kabuto']{background-position:-120px -150px}
-.flair-kabutops:before,a[href^='#ms-kabutops']{background-position:-150px -150px}
-.flair-aerodactyl:before,a[href^='#ms-aerodactyl']{background-position:-180px -150px}
+.flair-lapras:before,{background-position:-750px -120px}
+.flair-ditto:before,{background-position:-780px -120px}
+.flair-eevee:before,{background-position:-810px -120px}
+.flair-vaporeon:before,{background-position:-840px -120px}
+.flair-jolteon:before,{background-position:-870px -120px}
+.flair-flareon:before,{background-position:0 -150px}
+.flair-porygon:before,{background-position:-30px -150px}
+.flair-omanyte:before,{background-position:-60px -150px}
+.flair-omastar:before,{background-position:-90px -150px}
+.flair-kabuto:before,{background-position:-120px -150px}
+.flair-kabutops:before,{background-position:-150px -150px}
+.flair-aerodactyl:before,{background-position:-180px -150px}
 .flair-aerodactyl-mega:before,a[href^='#ms-aerodactyl-mega']{background-position:-550px -120px}
-.flair-snorlax:before,a[href^='#ms-snorlax']{background-position:-210px -150px}
-.flair-articuno:before,a[href^='#ms-articuno']{background-position:-240px -150px}
-.flair-zapdos:before,a[href^='#ms-zapdos']{background-position:-270px -150px}
-.flair-moltres:before,a[href^='#ms-moltres']{background-position:-300px -150px}
-.flair-dratini:before,a[href^='#ms-dratini']{background-position:-330px -150px}
-.flair-dragonair:before,a[href^='#ms-dragonair']{background-position:-360px -150px}
-.flair-dragonite:before,a[href^='#ms-dragonite']{background-position:-390px -150px}
-.flair-mew:before,a[href^='#ms-mew']{background-position:-510px -150px}
-.flair-mewtwo:before,a[href^='#ms-mewtwo']{background-position:-420px -150px}
+.flair-snorlax:before,{background-position:-210px -150px}
+.flair-articuno:before,{background-position:-240px -150px}
+.flair-zapdos:before,{background-position:-270px -150px}
+.flair-moltres:before,{background-position:-300px -150px}
+.flair-dratini:before,{background-position:-330px -150px}
+.flair-dragonair:before,{background-position:-360px -150px}
+.flair-dragonite:before,{background-position:-390px -150px}
+.flair-mew:before,{background-position:-510px -150px}
+.flair-mewtwo:before,{background-position:-420px -150px}
 .flair-mewtwo-mega-x:before,a[href^='#ms-mewtwo-mega-x']{background-position:-450px -150px}
 .flair-mewtwo-mega-y:before,a[href^='#ms-mewtwo-mega-y']{background-position:-480px -150px}
-.flair-chikorita:before,a[href^='#ms-chikorita']{background-position:-540px -150px}
-.flair-bayleef:before,a[href^='#ms-bayleef']{background-position:-570px -150px}
-.flair-meganium:before,a[href^='#ms-meganium']{background-position:-600px -150px}
-.flair-cyndaquil:before,a[href^='#ms-cyndaquil']{background-position:-630px -150px}
-.flair-quilava:before,a[href^='#ms-quilava']{background-position:-660px -150px}
-.flair-typhlosion:before,a[href^='#ms-typhlosion']{background-position:-690px -150px}
-.flair-totodile:before,a[href^='#ms-totodile']{background-position:-720px -150px}
-.flair-croconaw:before,a[href^='#ms-croconaw']{background-position:-750px -150px}
-.flair-feraligatr:before,a[href^='#ms-feraligatr']{background-position:-590px -120px}
-.flair-sentret:before,a[href^='#ms-sentret']{background-position:-780px -150px}
-.flair-furret:before,a[href^='#ms-furret']{background-position:-810px -150px}
-.flair-hoothoot:before,a[href^='#ms-hoothoot']{background-position:-840px -150px}
-.flair-noctowl:before,a[href^='#ms-noctowl']{background-position:-870px -150px}
-.flair-ledyba:before,a[href^='#ms-ledyba']{background-position:0 -180px}
-.flair-ledian:before,a[href^='#ms-ledian']{background-position:-30px -180px}
-.flair-spinarak:before,a[href^='#ms-spinarak']{background-position:-60px -180px}
-.flair-ariados:before,a[href^='#ms-ariados']{background-position:-90px -180px}
-.flair-crobat:before,a[href^='#ms-crobat']{background-position:-120px -180px}
-.flair-chinchou:before,a[href^='#ms-chinchou']{background-position:-150px -180px}
-.flair-lanturn:before,a[href^='#ms-lanturn']{background-position:-180px -180px}
-.flair-pichu:before,a[href^='#ms-pichu']{background-position:-210px -180px}
-.flair-cleffa:before,a[href^='#ms-cleffa']{background-position:-240px -180px}
-.flair-igglybuff:before,a[href^='#ms-igglybuff']{background-position:-270px -180px}
-.flair-togepi:before,a[href^='#ms-togepi']{background-position:-300px -180px}
-.flair-togetic:before,a[href^='#ms-togetic']{background-position:-330px -180px}
-.flair-natu:before,a[href^='#ms-natu']{background-position:-360px -180px}
-.flair-xatu:before,a[href^='#ms-xatu']{background-position:-390px -180px}
-.flair-mareep:before,a[href^='#ms-mareep']{background-position:-420px -180px}
-.flair-flaaffy:before,a[href^='#ms-flaaffy']{background-position:-450px -180px}
-.flair-ampharos:before,a[href^='#ms-ampharos']{background-position:-480px -180px}
+.flair-chikorita:before,{background-position:-540px -150px}
+.flair-bayleef:before,{background-position:-570px -150px}
+.flair-meganium:before,{background-position:-600px -150px}
+.flair-cyndaquil:before,{background-position:-630px -150px}
+.flair-quilava:before,{background-position:-660px -150px}
+.flair-typhlosion:before,{background-position:-690px -150px}
+.flair-totodile:before,{background-position:-720px -150px}
+.flair-croconaw:before,{background-position:-750px -150px}
+.flair-feraligatr:before,{background-position:-590px -120px}
+.flair-sentret:before,{background-position:-780px -150px}
+.flair-furret:before,{background-position:-810px -150px}
+.flair-hoothoot:before,{background-position:-840px -150px}
+.flair-noctowl:before,{background-position:-870px -150px}
+.flair-ledyba:before,{background-position:0 -180px}
+.flair-ledian:before,{background-position:-30px -180px}
+.flair-spinarak:before,{background-position:-60px -180px}
+.flair-ariados:before,{background-position:-90px -180px}
+.flair-crobat:before,{background-position:-120px -180px}
+.flair-chinchou:before,{background-position:-150px -180px}
+.flair-lanturn:before,{background-position:-180px -180px}
+.flair-pichu:before,{background-position:-210px -180px}
+.flair-cleffa:before,{background-position:-240px -180px}
+.flair-igglybuff:before,{background-position:-270px -180px}
+.flair-togepi:before,{background-position:-300px -180px}
+.flair-togetic:before,{background-position:-330px -180px}
+.flair-natu:before,{background-position:-360px -180px}
+.flair-xatu:before,{background-position:-390px -180px}
+.flair-mareep:before,{background-position:-420px -180px}
+.flair-flaaffy:before,{background-position:-450px -180px}
+.flair-ampharos:before,{background-position:-480px -180px}
 .flair-ampharos-mega:before,a[href^='#ms-ampharos-mega']{background-position:-510px -180px}
-.flair-bellossom:before,a[href^='#ms-bellossom']{background-position:-540px -180px}
-.flair-marill:before,a[href^='#ms-marill']{background-position:-570px -180px}
-.flair-azumarill:before,a[href^='#ms-azumarill']{background-position:-600px -180px}
-.flair-sudowoodo:before,a[href^='#ms-sudowoodo']{background-position:-630px -180px}
-.flair-politoed:before,a[href^='#ms-politoed']{background-position:-660px -180px}
-.flair-hoppip:before,a[href^='#ms-hoppip']{background-position:-690px -180px}
-.flair-skiploom:before,a[href^='#ms-skiploom']{background-position:-720px -180px}
-.flair-jumpluff:before,a[href^='#ms-jumpluff']{background-position:-750px -180px}
-.flair-aipom:before,a[href^='#ms-aipom']{background-position:-780px -180px}
-.flair-sunkern:before,a[href^='#ms-sunkern']{background-position:-810px -180px}
-.flair-sunflora:before,a[href^='#ms-sunflora']{background-position:-840px -180px}
-.flair-yanma:before,a[href^='#ms-yanma']{background-position:-870px -180px}
-.flair-wooper:before,a[href^='#ms-wooper']{background-position:0 -210px}
-.flair-quagsire:before,a[href^='#ms-quagsire']{background-position:-30px -210px}
-.flair-espeon:before,a[href^='#ms-espeon']{background-position:-60px -210px}
-.flair-umbreon:before,a[href^='#ms-umbreon']{background-position:-90px -210px}
-.flair-murkrow:before,a[href^='#ms-murkrow']{background-position:-120px -210px}
-.flair-slowking:before,a[href^='#ms-slowking']{background-position:-150px -210px}
-.flair-misdreavus:before,a[href^='#ms-misdreavus']{background-position:-180px -210px}
-.flair-unown:before,a[href^='#ms-unown']{background-position:-210px -210px}
-.flair-wobbuffet:before,a[href^='#ms-wobbuffet']{background-position:-240px -210px}
-.flair-girafarig:before,a[href^='#ms-girafarig']{background-position:-270px -210px}
-.flair-pineco:before,a[href^='#ms-pineco']{background-position:-300px -210px}
-.flair-forretress:before,a[href^='#ms-forretress']{background-position:-330px -210px}
-.flair-dunsparce:before,a[href^='#ms-dunsparce']{background-position:-360px -210px}
-.flair-gligar:before,a[href^='#ms-gligar']{background-position:-390px -210px}
-.flair-steelix:before,a[href^='#ms-steelix']{background-position:-420px -210px}
+.flair-bellossom:before,{background-position:-540px -180px}
+.flair-marill:before,{background-position:-570px -180px}
+.flair-azumarill:before,{background-position:-600px -180px}
+.flair-sudowoodo:before,{background-position:-630px -180px}
+.flair-politoed:before,{background-position:-660px -180px}
+.flair-hoppip:before,{background-position:-690px -180px}
+.flair-skiploom:before,{background-position:-720px -180px}
+.flair-jumpluff:before,{background-position:-750px -180px}
+.flair-aipom:before,{background-position:-780px -180px}
+.flair-sunkern:before,{background-position:-810px -180px}
+.flair-sunflora:before,{background-position:-840px -180px}
+.flair-yanma:before,{background-position:-870px -180px}
+.flair-wooper:before,{background-position:0 -210px}
+.flair-quagsire:before,{background-position:-30px -210px}
+.flair-espeon:before,{background-position:-60px -210px}
+.flair-umbreon:before,{background-position:-90px -210px}
+.flair-murkrow:before,{background-position:-120px -210px}
+.flair-slowking:before,{background-position:-150px -210px}
+.flair-misdreavus:before,{background-position:-180px -210px}
+.flair-unown:before,{background-position:-210px -210px}
+.flair-wobbuffet:before,{background-position:-240px -210px}
+.flair-girafarig:before,{background-position:-270px -210px}
+.flair-pineco:before,{background-position:-300px -210px}
+.flair-forretress:before,{background-position:-330px -210px}
+.flair-dunsparce:before,{background-position:-360px -210px}
+.flair-gligar:before,{background-position:-390px -210px}
+.flair-steelix:before,{background-position:-420px -210px}
 .flair-steelix-mega:before,a[href^='#ms-steelix-mega']{background-position:-710px -780px}
-.flair-snubbull:before,a[href^='#ms-snubbull']{background-position:-540px -210px}
-.flair-granbull:before,a[href^='#ms-granbull']{background-position:-570px -210px}
-.flair-qwilfish:before,a[href^='#ms-qwilfish']{background-position:-600px -210px}
-.flair-scizor:before,a[href^='#ms-scizor']{background-position:-630px -210px}
+.flair-snubbull:before,{background-position:-540px -210px}
+.flair-granbull:before,{background-position:-570px -210px}
+.flair-qwilfish:before,{background-position:-600px -210px}
+.flair-scizor:before,{background-position:-630px -210px}
 .flair-scizor-mega:before,a[href^='#ms-scizor-mega']{background-position:-660px -210px}
-.flair-shuckle:before,a[href^='#ms-shuckle']{background-position:-690px -210px}
-.flair-heracross:before,a[href^='#ms-heracross']{background-position:-720px -210px}
+.flair-shuckle:before,{background-position:-690px -210px}
+.flair-heracross:before,{background-position:-720px -210px}
 .flair-heracross-mega:before,a[href^='#ms-heracross-mega']{background-position:-460px -210px}
-.flair-sneasel:before,a[href^='#ms-sneasel']{background-position:-750px -210px}
-.flair-teddiursa:before,a[href^='#ms-teddiursa']{background-position:-780px -210px}
-.flair-ursaring:before,a[href^='#ms-ursaring']{background-position:-810px -210px}
-.flair-slugma:before,a[href^='#ms-slugma']{background-position:-840px -210px}
-.flair-magcargo:before,a[href^='#ms-magcargo']{background-position:-870px -210px}
-.flair-swinub:before,a[href^='#ms-swinub']{background-position:0 -240px}
-.flair-piloswine:before,a[href^='#ms-piloswine']{background-position:-30px -240px}
-.flair-corsola:before,a[href^='#ms-corsola']{background-position:-60px -240px}
-.flair-remoraid:before,a[href^='#ms-remoraid']{background-position:-90px -240px}
-.flair-octillery:before,a[href^='#ms-octillery']{background-position:-120px -240px}
-.flair-delibird:before,a[href^='#ms-delibird']{background-position:-150px -240px}
-.flair-mantine:before,a[href^='#ms-mantine']{background-position:-180px -240px}
-.flair-skarmory:before,a[href^='#ms-skarmory']{background-position:-210px -240px}
-.flair-houndour:before,a[href^='#ms-houndour']{background-position:-240px -240px}
-.flair-houndoom:before,a[href^='#ms-houndoom']{background-position:-270px -240px}
+.flair-sneasel:before,{background-position:-750px -210px}
+.flair-teddiursa:before,{background-position:-780px -210px}
+.flair-ursaring:before,{background-position:-810px -210px}
+.flair-slugma:before,{background-position:-840px -210px}
+.flair-magcargo:before,{background-position:-870px -210px}
+.flair-swinub:before,{background-position:0 -240px}
+.flair-piloswine:before,{background-position:-30px -240px}
+.flair-corsola:before,{background-position:-60px -240px}
+.flair-remoraid:before,{background-position:-90px -240px}
+.flair-octillery:before,{background-position:-120px -240px}
+.flair-delibird:before,{background-position:-150px -240px}
+.flair-mantine:before,{background-position:-180px -240px}
+.flair-skarmory:before,{background-position:-210px -240px}
+.flair-houndour:before,{background-position:-240px -240px}
+.flair-houndoom:before,{background-position:-270px -240px}
 .flair-houndoom-mega:before,a[href^='#ms-houndoom-mega']{background-position:-300px -240px}
-.flair-kingdra:before,a[href^='#ms-kingdra']{background-position:-330px -240px}
-.flair-phanpy:before,a[href^='#ms-phanpy']{background-position:-360px -240px}
-.flair-donphan:before,a[href^='#ms-donphan']{background-position:-390px -240px}
+.flair-kingdra:before,{background-position:-330px -240px}
+.flair-phanpy:before,{background-position:-360px -240px}
+.flair-donphan:before,{background-position:-390px -240px}
 .flair-porygon2:before,a[href^='#ms-porygon2']{background-position:-420px -240px}
-.flair-stantler:before,a[href^='#ms-stantler']{background-position:-450px -240px}
-.flair-smeargle:before,a[href^='#ms-smeargle']{background-position:-480px -240px}
-.flair-tyrogue:before,a[href^='#ms-tyrogue']{background-position:-510px -240px}
-.flair-hitmontop:before,a[href^='#ms-hitmontop']{background-position:-540px -240px}
-.flair-smoochum:before,a[href^='#ms-smoochum']{background-position:-570px -240px}
-.flair-elekid:before,a[href^='#ms-elekid']{background-position:-600px -240px}
-.flair-magby:before,a[href^='#ms-magby']{background-position:-630px -240px}
-.flair-miltank:before,a[href^='#ms-miltank']{background-position:-660px -240px}
-.flair-blissey:before,a[href^='#ms-blissey']{background-position:-690px -240px}
-.flair-raikou:before,a[href^='#ms-raikou']{background-position:-720px -240px}
-.flair-entei:before,a[href^='#ms-entei']{background-position:-750px -240px}
-.flair-suicune:before,a[href^='#ms-suicune']{background-position:-780px -240px}
-.flair-larvitar:before,a[href^='#ms-larvitar']{background-position:-810px -240px}
-.flair-pupitar:before,a[href^='#ms-pupitar']{background-position:-840px -240px}
-.flair-tyranitar:before,a[href^='#ms-tyranitar']{background-position:-870px -240px}
+.flair-stantler:before,{background-position:-450px -240px}
+.flair-smeargle:before,{background-position:-480px -240px}
+.flair-tyrogue:before,{background-position:-510px -240px}
+.flair-hitmontop:before,{background-position:-540px -240px}
+.flair-smoochum:before,{background-position:-570px -240px}
+.flair-elekid:before,{background-position:-600px -240px}
+.flair-magby:before,{background-position:-630px -240px}
+.flair-miltank:before,{background-position:-660px -240px}
+.flair-blissey:before,{background-position:-690px -240px}
+.flair-raikou:before,{background-position:-720px -240px}
+.flair-entei:before,{background-position:-750px -240px}
+.flair-suicune:before,{background-position:-780px -240px}
+.flair-larvitar:before,{background-position:-810px -240px}
+.flair-pupitar:before,{background-position:-840px -240px}
+.flair-tyranitar:before,{background-position:-870px -240px}
 .flair-tyranitar-mega:before,a[href^='#ms-tyranitar-mega']{background-position:0 -270px}
-.flair-lugia:before,a[href^='#ms-lugia']{background-position:-500px -210px}
+.flair-lugia:before,{background-position:-500px -210px}
 .flair-ho-oh:before,a[href^='#ms-ho-oh']{background-position:-30px -270px}
-.flair-celebi:before,a[href^='#ms-celebi']{background-position:-60px -270px}
-.flair-treecko:before,a[href^='#ms-treecko']{background-position:-90px -270px}
-.flair-grovyle:before,a[href^='#ms-grovyle']{background-position:-120px -270px}
-.flair-sceptile:before,a[href^='#ms-sceptile']{background-position:-150px -270px}
+.flair-celebi:before,{background-position:-60px -270px}
+.flair-treecko:before,{background-position:-90px -270px}
+.flair-grovyle:before,{background-position:-120px -270px}
+.flair-sceptile:before,{background-position:-150px -270px}
 .flair-sceptile-mega:before,a[href^='#ms-sceptile-mega']{background-position:-630px -810px}
-.flair-torchic:before,a[href^='#ms-torchic']{background-position:-180px -270px}
-.flair-combusken:before,a[href^='#ms-combusken']{background-position:-210px -270px}
-.flair-blaziken:before,a[href^='#ms-blaziken']{background-position:-240px -270px}
+.flair-torchic:before,{background-position:-180px -270px}
+.flair-combusken:before,{background-position:-210px -270px}
+.flair-blaziken:before,{background-position:-240px -270px}
 .flair-blaziken-mega:before,a[href^='#ms-blaziken-mega']{background-position:-270px -270px}
-.flair-mudkip:before,a[href^='#ms-mudkip']{background-position:-390px -270px}
-.flair-marshtomp:before,a[href^='#ms-marshtomp']{background-position:-420px -270px}
-.flair-swampert:before,a[href^='#ms-swampert']{background-position:-450px -270px}
+.flair-mudkip:before,{background-position:-390px -270px}
+.flair-marshtomp:before,{background-position:-420px -270px}
+.flair-swampert:before,{background-position:-450px -270px}
 .flair-swampert-mega:before,a[href^='#ms-swampert-mega']{background-position:-670px -810px}
-.flair-poochyena:before,a[href^='#ms-poochyena']{background-position:-480px -270px}
-.flair-mightyena:before,a[href^='#ms-mightyena']{background-position:-510px -270px}
-.flair-zigzagoon:before,a[href^='#ms-zigzagoon']{background-position:-540px -270px}
-.flair-linoone:before,a[href^='#ms-linoone']{background-position:-570px -270px}
-.flair-wurmple:before,a[href^='#ms-wurmple']{background-position:-600px -270px}
-.flair-silcoon:before,a[href^='#ms-silcoon']{background-position:-630px -270px}
-.flair-beautifly:before,a[href^='#ms-beautifly']{background-position:-660px -270px}
-.flair-cascoon:before,a[href^='#ms-cascoon']{background-position:-690px -270px}
-.flair-dustox:before,a[href^='#ms-dustox']{background-position:-720px -270px}
-.flair-lotad:before,a[href^='#ms-lotad']{background-position:-750px -270px}
-.flair-lombre:before,a[href^='#ms-lombre']{background-position:-780px -270px}
-.flair-ludicolo:before,a[href^='#ms-ludicolo']{background-position:-810px -270px}
-.flair-seedot:before,a[href^='#ms-seedot']{background-position:-840px -270px}
-.flair-nuzleaf:before,a[href^='#ms-nuzleaf']{background-position:-870px -270px}
-.flair-shiftry:before,a[href^='#ms-shiftry']{background-position:0 -300px}
-.flair-taillow:before,a[href^='#ms-taillow']{background-position:-30px -300px}
-.flair-swellow:before,a[href^='#ms-swellow']{background-position:-60px -300px}
-.flair-wingull:before,a[href^='#ms-wingull']{background-position:-90px -300px}
-.flair-pelipper:before,a[href^='#ms-pelipper']{background-position:-120px -300px}
-.flair-ralts:before,a[href^='#ms-ralts']{background-position:-150px -300px}
-.flair-kirlia:before,a[href^='#ms-kirlia']{background-position:-180px -300px}
-.flair-gardevoir:before,a[href^='#ms-gardevoir']{background-position:-210px -300px}
+.flair-poochyena:before,{background-position:-480px -270px}
+.flair-mightyena:before,{background-position:-510px -270px}
+.flair-zigzagoon:before,{background-position:-540px -270px}
+.flair-linoone:before,{background-position:-570px -270px}
+.flair-wurmple:before,{background-position:-600px -270px}
+.flair-silcoon:before,{background-position:-630px -270px}
+.flair-beautifly:before,{background-position:-660px -270px}
+.flair-cascoon:before,{background-position:-690px -270px}
+.flair-dustox:before,{background-position:-720px -270px}
+.flair-lotad:before,{background-position:-750px -270px}
+.flair-lombre:before,{background-position:-780px -270px}
+.flair-ludicolo:before,{background-position:-810px -270px}
+.flair-seedot:before,{background-position:-840px -270px}
+.flair-nuzleaf:before,{background-position:-870px -270px}
+.flair-shiftry:before,{background-position:0 -300px}
+.flair-taillow:before,{background-position:-30px -300px}
+.flair-swellow:before,{background-position:-60px -300px}
+.flair-wingull:before,{background-position:-90px -300px}
+.flair-pelipper:before,{background-position:-120px -300px}
+.flair-ralts:before,{background-position:-150px -300px}
+.flair-kirlia:before,{background-position:-180px -300px}
+.flair-gardevoir:before,{background-position:-210px -300px}
 .flair-gardevoir-mega:before,a[href^='#ms-gardevoir-mega']{background-position:-240px -300px}
-.flair-surskit:before,a[href^='#ms-surskit']{background-position:-270px -300px}
-.flair-masquerain:before,a[href^='#ms-masquerain']{background-position:-300px -300px}
-.flair-shroomish:before,a[href^='#ms-shroomish']{background-position:-330px -300px}
-.flair-breloom:before,a[href^='#ms-breloom']{background-position:-360px -300px}
-.flair-slakoth:before,a[href^='#ms-slakoth']{background-position:-390px -300px}
-.flair-vigoroth:before,a[href^='#ms-vigoroth']{background-position:-420px -300px}
-.flair-slaking:before,a[href^='#ms-slaking']{background-position:-450px -300px}
-.flair-nincada:before,a[href^='#ms-nincada']{background-position:-480px -300px}
-.flair-ninjask:before,a[href^='#ms-ninjask']{background-position:-510px -300px}
-.flair-shedinja:before,a[href^='#ms-shedinja']{background-position:-540px -300px}
-.flair-whismur:before,a[href^='#ms-whismur']{background-position:-570px -300px}
-.flair-loudred:before,a[href^='#ms-loudred']{background-position:-600px -300px}
-.flair-exploud:before,a[href^='#ms-exploud']{background-position:-630px -300px}
-.flair-makuhita:before,a[href^='#ms-makuhita']{background-position:-660px -300px}
-.flair-hariyama:before,a[href^='#ms-hariyama']{background-position:-690px -300px}
-.flair-azurill:before,a[href^='#ms-azurill']{background-position:-720px -300px}
-.flair-nosepass:before,a[href^='#ms-nosepass']{background-position:-750px -300px}
-.flair-skitty:before,a[href^='#ms-skitty']{background-position:-780px -300px}
-.flair-delcatty:before,a[href^='#ms-delcatty']{background-position:-810px -300px}
-.flair-sableye:before,a[href^='#ms-sableye']{background-position:-840px -300px}
+.flair-surskit:before,{background-position:-270px -300px}
+.flair-masquerain:before,{background-position:-300px -300px}
+.flair-shroomish:before,{background-position:-330px -300px}
+.flair-breloom:before,{background-position:-360px -300px}
+.flair-slakoth:before,{background-position:-390px -300px}
+.flair-vigoroth:before,{background-position:-420px -300px}
+.flair-slaking:before,{background-position:-450px -300px}
+.flair-nincada:before,{background-position:-480px -300px}
+.flair-ninjask:before,{background-position:-510px -300px}
+.flair-shedinja:before,{background-position:-540px -300px}
+.flair-whismur:before,{background-position:-570px -300px}
+.flair-loudred:before,{background-position:-600px -300px}
+.flair-exploud:before,{background-position:-630px -300px}
+.flair-makuhita:before,{background-position:-660px -300px}
+.flair-hariyama:before,{background-position:-690px -300px}
+.flair-azurill:before,{background-position:-720px -300px}
+.flair-nosepass:before,{background-position:-750px -300px}
+.flair-skitty:before,{background-position:-780px -300px}
+.flair-delcatty:before,{background-position:-810px -300px}
+.flair-sableye:before,{background-position:-840px -300px}
 .flair-sableye-mega:before,a[href^='#ms-sableye-mega']{background-position:-480px -840px}
-.flair-mawile:before,a[href^='#ms-mawile']{background-position:-870px -300px}
+.flair-mawile:before,{background-position:-870px -300px}
 .flair-mawile-mega:before,a[href^='#ms-mawile-mega']{background-position:0 -330px}
-.flair-aron:before,a[href^='#ms-aron']{background-position:-30px -330px}
-.flair-lairon:before,a[href^='#ms-lairon']{background-position:-60px -330px}
-.flair-aggron:before,a[href^='#ms-aggron']{background-position:-90px -330px}
+.flair-aron:before,{background-position:-30px -330px}
+.flair-lairon:before,{background-position:-60px -330px}
+.flair-aggron:before,{background-position:-90px -330px}
 .flair-aggron-mega:before,a[href^='#ms-aggron-mega']{background-position:-310px -270px}
-.flair-meditite:before,a[href^='#ms-meditite']{background-position:-120px -330px}
-.flair-medicham:before,a[href^='#ms-medicham']{background-position:-150px -330px}
+.flair-meditite:before,{background-position:-120px -330px}
+.flair-medicham:before,{background-position:-150px -330px}
 .flair-medicham-mega:before,a[href^='#ms-medicham-mega']{background-position:-180px -330px}
-.flair-electrike:before,a[href^='#ms-electrike']{background-position:-210px -330px}
-.flair-manectric:before,a[href^='#ms-manectric']{background-position:-240px -330px}
+.flair-electrike:before,{background-position:-210px -330px}
+.flair-manectric:before,{background-position:-240px -330px}
 .flair-manectric-mega:before,a[href^='#ms-manectric-mega']{background-position:-270px -330px}
-.flair-plusle:before,a[href^='#ms-plusle']{background-position:-300px -330px}
-.flair-minun:before,a[href^='#ms-minun']{background-position:-330px -330px}
-.flair-volbeat:before,a[href^='#ms-volbeat']{background-position:-360px -330px}
-.flair-illumise:before,a[href^='#ms-illumise']{background-position:-390px -330px}
-.flair-roselia:before,a[href^='#ms-roselia']{background-position:-420px -330px}
-.flair-gulpin:before,a[href^='#ms-gulpin']{background-position:-450px -330px}
-.flair-swalot:before,a[href^='#ms-swalot']{background-position:-480px -330px}
-.flair-carvanha:before,a[href^='#ms-carvanha']{background-position:-510px -330px}
-.flair-sharpedo:before,a[href^='#ms-sharpedo']{background-position:-540px -330px}
+.flair-plusle:before,{background-position:-300px -330px}
+.flair-minun:before,{background-position:-330px -330px}
+.flair-volbeat:before,{background-position:-360px -330px}
+.flair-illumise:before,{background-position:-390px -330px}
+.flair-roselia:before,{background-position:-420px -330px}
+.flair-gulpin:before,{background-position:-450px -330px}
+.flair-swalot:before,{background-position:-480px -330px}
+.flair-carvanha:before,{background-position:-510px -330px}
+.flair-sharpedo:before,{background-position:-540px -330px}
 .flair-sharpedo-mega:before,a[href^='#ms-sharpedo-mega']{background-position:-510px -840px}
-.flair-wailmer:before,a[href^='#ms-wailmer']{background-position:-570px -330px}
-.flair-wailord:before,a[href^='#ms-wailord']{background-position:-600px -330px}
-.flair-numel:before,a[href^='#ms-numel']{background-position:-630px -330px}
-.flair-camerupt:before,a[href^='#ms-camerupt']{background-position:-660px -330px}
+.flair-wailmer:before,{background-position:-570px -330px}
+.flair-wailord:before,{background-position:-600px -330px}
+.flair-numel:before,{background-position:-630px -330px}
+.flair-camerupt:before,{background-position:-660px -330px}
 .flair-camerupt-mega:before,a[href^='#ms-camerupt-mega']{background-position:-540px -840px}
-.flair-torkoal:before,a[href^='#ms-torkoal']{background-position:-690px -330px}
-.flair-spoink:before,a[href^='#ms-spoink']{background-position:-720px -330px}
-.flair-grumpig:before,a[href^='#ms-grumpig']{background-position:-750px -330px}
-.flair-spinda:before,a[href^='#ms-spinda']{background-position:-780px -330px}
-.flair-trapinch:before,a[href^='#ms-trapinch']{background-position:-810px -330px}
-.flair-vibrava:before,a[href^='#ms-vibrava']{background-position:-840px -330px}
-.flair-flygon:before,a[href^='#ms-flygon']{background-position:-870px -330px}
-.flair-cacnea:before,a[href^='#ms-cacnea']{background-position:0 -360px}
-.flair-cacturne:before,a[href^='#ms-cacturne']{background-position:-30px -360px}
-.flair-swablu:before,a[href^='#ms-swablu']{background-position:-60px -360px}
-.flair-altaria:before,a[href^='#ms-altaria']{background-position:-90px -360px}
+.flair-torkoal:before,{background-position:-690px -330px}
+.flair-spoink:before,{background-position:-720px -330px}
+.flair-grumpig:before,{background-position:-750px -330px}
+.flair-spinda:before,{background-position:-780px -330px}
+.flair-trapinch:before,{background-position:-810px -330px}
+.flair-vibrava:before,{background-position:-840px -330px}
+.flair-flygon:before,{background-position:-870px -330px}
+.flair-cacnea:before,{background-position:0 -360px}
+.flair-cacturne:before,{background-position:-30px -360px}
+.flair-swablu:before,{background-position:-60px -360px}
+.flair-altaria:before,{background-position:-90px -360px}
 .flair-altaria-mega:before,a[href^='#ms-altaria-mega']{background-position:-580px -840px}
-.flair-zangoose:before,a[href^='#ms-zangoose']{background-position:-120px -360px}
-.flair-seviper:before,a[href^='#ms-seviper']{background-position:-150px -360px}
-.flair-lunatone:before,a[href^='#ms-lunatone']{background-position:-180px -360px}
-.flair-solrock:before,a[href^='#ms-solrock']{background-position:-210px -360px}
-.flair-barboach:before,a[href^='#ms-barboach']{background-position:-240px -360px}
-.flair-whiscash:before,a[href^='#ms-whiscash']{background-position:-270px -360px}
-.flair-corphish:before,a[href^='#ms-corphish']{background-position:-300px -360px}
-.flair-crawdaunt:before,a[href^='#ms-crawdaunt']{background-position:-330px -360px}
-.flair-baltoy:before,a[href^='#ms-baltoy']{background-position:-360px -360px}
-.flair-claydol:before,a[href^='#ms-claydol']{background-position:-390px -360px}
-.flair-lileep:before,a[href^='#ms-lileep']{background-position:-420px -360px}
-.flair-cradily:before,a[href^='#ms-cradily']{background-position:-450px -360px}
-.flair-anorith:before,a[href^='#ms-anorith']{background-position:-480px -360px}
-.flair-armaldo:before,a[href^='#ms-armaldo']{background-position:-510px -360px}
-.flair-feebas:before,a[href^='#ms-feebas']{background-position:-540px -360px}
-.flair-milotic:before,a[href^='#ms-milotic']{background-position:-570px -360px}
-.flair-castform:before,a[href^='#ms-castform']{background-position:-600px -360px}
+.flair-zangoose:before,{background-position:-120px -360px}
+.flair-seviper:before,{background-position:-150px -360px}
+.flair-lunatone:before,{background-position:-180px -360px}
+.flair-solrock:before,{background-position:-210px -360px}
+.flair-barboach:before,{background-position:-240px -360px}
+.flair-whiscash:before,{background-position:-270px -360px}
+.flair-corphish:before,{background-position:-300px -360px}
+.flair-crawdaunt:before,{background-position:-330px -360px}
+.flair-baltoy:before,{background-position:-360px -360px}
+.flair-claydol:before,{background-position:-390px -360px}
+.flair-lileep:before,{background-position:-420px -360px}
+.flair-cradily:before,{background-position:-450px -360px}
+.flair-anorith:before,{background-position:-480px -360px}
+.flair-armaldo:before,{background-position:-510px -360px}
+.flair-feebas:before,{background-position:-540px -360px}
+.flair-milotic:before,{background-position:-570px -360px}
+.flair-castform:before,{background-position:-600px -360px}
 .flair-castform-sunny:before{background-position:-630px -360px}
 .flair-castform-rainy:before{background-position:-660px -360px}
 .flair-castform-snowy:before{background-position:-690px -360px}
-.flair-kecleon:before,a[href^='#ms-kecleon']{background-position:-720px -360px}
-.flair-shuppet:before,a[href^='#ms-shuppet']{background-position:-750px -360px}
-.flair-banette:before,a[href^='#ms-banette']{background-position:-780px -360px}
+.flair-kecleon:before,{background-position:-720px -360px}
+.flair-shuppet:before,{background-position:-750px -360px}
+.flair-banette:before,{background-position:-780px -360px}
 .flair-banette-mega:before,a[href^='#ms-banette-mega']{background-position:-810px -360px}
-.flair-duskull:before,a[href^='#ms-duskull']{background-position:-840px -360px}
-.flair-dusclops:before,a[href^='#ms-dusclops']{background-position:-870px -360px}
-.flair-tropius:before,a[href^='#ms-tropius']{background-position:-350px -270px}
-.flair-chimecho:before,a[href^='#ms-chimecho']{background-position:0 -390px}
-.flair-absol:before,a[href^='#ms-absol']{background-position:-30px -390px}
+.flair-duskull:before,{background-position:-840px -360px}
+.flair-dusclops:before,{background-position:-870px -360px}
+.flair-tropius:before,{background-position:-350px -270px}
+.flair-chimecho:before,{background-position:0 -390px}
+.flair-absol:before,{background-position:-30px -390px}
 .flair-absol-mega:before,a[href^='#ms-absol-mega']{background-position:-60px -390px}
-.flair-wynaut:before,a[href^='#ms-wynaut']{background-position:-90px -390px}
-.flair-snorunt:before,a[href^='#ms-snorunt']{background-position:-120px -390px}
-.flair-glalie:before,a[href^='#ms-glalie']{background-position:-150px -390px}
+.flair-wynaut:before,{background-position:-90px -390px}
+.flair-snorunt:before,{background-position:-120px -390px}
+.flair-glalie:before,{background-position:-150px -390px}
 .flair-glalie-mega:before,a[href^='#ms-glalie-mega']{background-position:-710px -810px}
 .flair-glalie-mega:before,a[href^='#ms-glalie-mega']{background-position:-710px -810px}
-.flair-spheal:before,a[href^='#ms-spheal']{background-position:-180px -390px}
-.flair-sealeo:before,a[href^='#ms-sealeo']{background-position:-210px -390px}
-.flair-walrein:before,a[href^='#ms-walrein']{background-position:-240px -390px}
-.flair-clamperl:before,a[href^='#ms-clamperl']{background-position:-270px -390px}
-.flair-huntail:before,a[href^='#ms-huntail']{background-position:-300px -390px}
-.flair-gorebyss:before,a[href^='#ms-gorebyss']{background-position:-330px -390px}
-.flair-relicanth:before,a[href^='#ms-relicanth']{background-position:-360px -390px}
-.flair-luvdisc:before,a[href^='#ms-luvdisc']{background-position:-390px -390px}
-.flair-bagon:before,a[href^='#ms-bagon']{background-position:-420px -390px}
-.flair-shelgon:before,a[href^='#ms-shelgon']{background-position:-450px -390px}
-.flair-salamence:before,a[href^='#ms-salamence']{background-position:-480px -390px}
+.flair-spheal:before,{background-position:-180px -390px}
+.flair-sealeo:before,{background-position:-210px -390px}
+.flair-walrein:before,{background-position:-240px -390px}
+.flair-clamperl:before,{background-position:-270px -390px}
+.flair-huntail:before,{background-position:-300px -390px}
+.flair-gorebyss:before,{background-position:-330px -390px}
+.flair-relicanth:before,{background-position:-360px -390px}
+.flair-luvdisc:before,{background-position:-390px -390px}
+.flair-bagon:before,{background-position:-420px -390px}
+.flair-shelgon:before,{background-position:-450px -390px}
+.flair-salamence:before,{background-position:-480px -390px}
 .flair-salamence-mega:before,a[href^='#ms-salamence-mega']{background-position:-610px -840px}
-.flair-beldum:before,a[href^='#ms-beldum']{background-position:-520px -390px}
-.flair-metang:before,a[href^='#ms-metang']{background-position:-550px -390px}
-.flair-metagross:before,a[href^='#ms-metagross']{background-position:-580px -390px}
+.flair-beldum:before,{background-position:-520px -390px}
+.flair-metang:before,{background-position:-550px -390px}
+.flair-metagross:before,{background-position:-580px -390px}
 .flair-metagross-mega:before,a[href^='#ms-metagross-mega']{background-position:-740px -810px}
-.flair-regirock:before,a[href^='#ms-regirock']{background-position:-620px -390px}
-.flair-regice:before,a[href^='#ms-regice']{background-position:-650px -390px}
-.flair-registeel:before,a[href^='#ms-registeel']{background-position:-680px -390px}
-.flair-latias:before,a[href^='#ms-latias']{background-position:-710px -390px}
+.flair-regirock:before,{background-position:-620px -390px}
+.flair-regice:before,{background-position:-650px -390px}
+.flair-registeel:before,{background-position:-680px -390px}
+.flair-latias:before,{background-position:-710px -390px}
 .flair-latias-mega:before,a[href^='#ms-latias-mega']{background-position:-780px -810px}
-.flair-latios:before,a[href^='#ms-latios']{background-position:-740px -390px}
+.flair-latios:before,{background-position:-740px -390px}
 .flair-latios-mega:before,a[href^='#ms-latios-mega']{background-position:-820px -810px}
-.flair-kyogre:before,a[href^='#ms-kyogre']{background-position:-770px -390px}
+.flair-kyogre:before,{background-position:-770px -390px}
 .flair-kyogre-primal:before,a[href^='#ms-kyogre-primal']{background-position:-650px -840px}
-.flair-groudon:before,a[href^='#ms-groudon']{background-position:0 -420px}
+.flair-groudon:before,{background-position:0 -420px}
 .flair-groudon-primal:before,a[href^='#ms-groudon-primal']{background-position:-690px -840px}
-.flair-rayquaza:before,a[href^='#ms-rayquaza']{background-position:-40px -420px}
+.flair-rayquaza:before,{background-position:-40px -420px}
 .flair-rayquaza-mega:before,a[href^='#ms-rayquaza-mega']{background-position:-730px -840px}
-.flair-jirachi:before,a[href^='#ms-jirachi']{background-position:-810px -390px}
-.flair-deoxys:before,a[href^='#ms-deoxys']{background-position:-840px -390px}
+.flair-jirachi:before,{background-position:-810px -390px}
+.flair-deoxys:before,{background-position:-840px -390px}
 .flair-deoxys-attack:before,a[href^='#ms-deoxys-attack']{background-position:-870px -390px}
 .flair-deoxys-defense:before,a[href^='#ms-deoxys-defense']{background-position:-120px -420px}
 .flair-deoxys-speed:before,a[href^='#ms-deoxys-speed']{background-position:-150px -420px}
-.flair-turtwig:before,a[href^='#ms-turtwig']{background-position:-180px -420px}
-.flair-grotle:before,a[href^='#ms-grotle']{background-position:-210px -420px}
-.flair-torterra:before,a[href^='#ms-torterra']{background-position:-240px -420px}
-.flair-chimchar:before,a[href^='#ms-chimchar']{background-position:-270px -420px}
-.flair-monferno:before,a[href^='#ms-monferno']{background-position:-300px -420px}
-.flair-infernape:before,a[href^='#ms-infernape']{background-position:-330px -420px}
-.flair-piplup:before,a[href^='#ms-piplup']{background-position:-360px -420px}
-.flair-prinplup:before,a[href^='#ms-prinplup']{background-position:-390px -420px}
-.flair-empoleon:before,a[href^='#ms-empoleon']{background-position:-420px -420px}
-.flair-starly:before,a[href^='#ms-starly']{background-position:-450px -420px}
-.flair-staravia:before,a[href^='#ms-staravia']{background-position:-480px -420px}
-.flair-staraptor:before,a[href^='#ms-staraptor']{background-position:-510px -420px}
-.flair-bidoof:before,a[href^='#ms-bidoof']{background-position:-540px -420px}
-.flair-bibarel:before,a[href^='#ms-bibarel']{background-position:-570px -420px}
-.flair-kricketot:before,a[href^='#ms-kricketot']{background-position:-600px -420px}
-.flair-kricketune:before,a[href^='#ms-kricketune']{background-position:-630px -420px}
-.flair-shinx:before,a[href^='#ms-shinx']{background-position:-660px -420px}
-.flair-luxio:before,a[href^='#ms-luxio']{background-position:-690px -420px}
-.flair-luxray:before,a[href^='#ms-luxray']{background-position:-720px -420px}
-.flair-budew:before,a[href^='#ms-budew']{background-position:-750px -420px}
-.flair-roserade:before,a[href^='#ms-roserade']{background-position:-780px -420px}
-.flair-cranidos:before,a[href^='#ms-cranidos']{background-position:-810px -420px}
-.flair-rampardos:before,a[href^='#ms-rampardos']{background-position:-840px -420px}
-.flair-shieldon:before,a[href^='#ms-shieldon']{background-position:-870px -420px}
-.flair-bastiodon:before,a[href^='#ms-bastiodon']{background-position:0 -450px}
-.flair-burmy:before,a[href^='#ms-burmy']{background-position:-30px -450px}
+.flair-turtwig:before,{background-position:-180px -420px}
+.flair-grotle:before,{background-position:-210px -420px}
+.flair-torterra:before,{background-position:-240px -420px}
+.flair-chimchar:before,{background-position:-270px -420px}
+.flair-monferno:before,{background-position:-300px -420px}
+.flair-infernape:before,{background-position:-330px -420px}
+.flair-piplup:before,{background-position:-360px -420px}
+.flair-prinplup:before,{background-position:-390px -420px}
+.flair-empoleon:before,{background-position:-420px -420px}
+.flair-starly:before,{background-position:-450px -420px}
+.flair-staravia:before,{background-position:-480px -420px}
+.flair-staraptor:before,{background-position:-510px -420px}
+.flair-bidoof:before,{background-position:-540px -420px}
+.flair-bibarel:before,{background-position:-570px -420px}
+.flair-kricketot:before,{background-position:-600px -420px}
+.flair-kricketune:before,{background-position:-630px -420px}
+.flair-shinx:before,{background-position:-660px -420px}
+.flair-luxio:before,{background-position:-690px -420px}
+.flair-luxray:before,{background-position:-720px -420px}
+.flair-budew:before,{background-position:-750px -420px}
+.flair-roserade:before,{background-position:-780px -420px}
+.flair-cranidos:before,{background-position:-810px -420px}
+.flair-rampardos:before,{background-position:-840px -420px}
+.flair-shieldon:before,{background-position:-870px -420px}
+.flair-bastiodon:before,{background-position:0 -450px}
+.flair-burmy:before,{background-position:-30px -450px}
 .flair-burmy-sandy:before,a[href^='#ms-burmy-sandy']{background-position:-60px -450px}
 .flair-burmy-trash:before,a[href^='#ms-burmy-trash']{background-position:-90px -450px}
-.flair-wormadam:before,a[href^='#ms-wormadam']{background-position:-120px -450px}
+.flair-wormadam:before,{background-position:-120px -450px}
 .flair-wormadam-sandy:before,a[href^='#ms-wormadam-sandy']{background-position:-150px -450px}
 .flair-wormadam-trash:before,a[href^='#ms-wormadam-trash']{background-position:-180px -450px}
-.flair-mothim:before,a[href^='#ms-mothim']{background-position:-210px -450px}
-.flair-combee:before,a[href^='#ms-combee']{background-position:-240px -450px}
-.flair-vespiquen:before,a[href^='#ms-vespiquen']{background-position:-270px -450px}
-.flair-pachirisu:before,a[href^='#ms-pachirisu']{background-position:-300px -450px}
-.flair-buizel:before,a[href^='#ms-buizel']{background-position:-330px -450px}
-.flair-floatzel:before,a[href^='#ms-floatzel']{background-position:-360px -450px}
-.flair-cherubi:before,a[href^='#ms-cherubi']{background-position:-390px -450px}
-.flair-cherrim:before,a[href^='#ms-cherrim']{background-position:-420px -450px}
+.flair-mothim:before,{background-position:-210px -450px}
+.flair-combee:before,{background-position:-240px -450px}
+.flair-vespiquen:before,{background-position:-270px -450px}
+.flair-pachirisu:before,{background-position:-300px -450px}
+.flair-buizel:before,{background-position:-330px -450px}
+.flair-floatzel:before,{background-position:-360px -450px}
+.flair-cherubi:before,{background-position:-390px -450px}
+.flair-cherrim:before,{background-position:-420px -450px}
 .flair-cherrim-sunshine:before,a[href^='#ms-cherrim-sunshine']{background-position:-450px -450px}
-.flair-shellos:before,a[href^='#ms-shellos']{background-position:-480px -450px}
+.flair-shellos:before,{background-position:-480px -450px}
 .flair-shellos-east:before,a[href^='#ms-shellos-east']{background-position:-510px -450px}
-.flair-gastrodon:before,a[href^='#ms-gastrodon']{background-position:-540px -450px}
+.flair-gastrodon:before,{background-position:-540px -450px}
 .flair-gastrodon-east:before,a[href^='#ms-gastrodon-east']{background-position:-570px -450px}
-.flair-ambipom:before,a[href^='#ms-ambipom']{background-position:-600px -450px}
-.flair-drifloon:before,a[href^='#ms-drifloon']{background-position:-630px -450px}
-.flair-drifblim:before,a[href^='#ms-drifblim']{background-position:-660px -450px}
-.flair-buneary:before,a[href^='#ms-buneary']{background-position:-690px -450px}
-.flair-lopunny:before,a[href^='#ms-lopunny']{background-position:-720px -450px}
+.flair-ambipom:before,{background-position:-600px -450px}
+.flair-drifloon:before,{background-position:-630px -450px}
+.flair-drifblim:before,{background-position:-660px -450px}
+.flair-buneary:before,{background-position:-690px -450px}
+.flair-lopunny:before,{background-position:-720px -450px}
 .flair-lopunny-mega:before,a[href^='#ms-lopunny-mega']{background-position:-770px -840px}
-.flair-mismagius:before,a[href^='#ms-mismagius']{background-position:-750px -450px}
-.flair-honchkrow:before,a[href^='#ms-honchkrow']{background-position:-780px -450px}
-.flair-glameow:before,a[href^='#ms-glameow']{background-position:-810px -450px}
-.flair-purugly:before,a[href^='#ms-purugly']{background-position:-840px -450px}
-.flair-chingling:before,a[href^='#ms-chingling']{background-position:-870px -450px}
-.flair-stunky:before,a[href^='#ms-stunky']{background-position:0 -480px}
-.flair-skuntank:before,a[href^='#ms-skuntank']{background-position:-30px -480px}
-.flair-bronzor:before,a[href^='#ms-bronzor']{background-position:-60px -480px}
-.flair-bronzong:before,a[href^='#ms-bronzong']{background-position:-90px -480px}
-.flair-bonsly:before,a[href^='#ms-bonsly']{background-position:-120px -480px}
-.flair-mime:before,a[href^='#ms-mime']{background-position:-150px -480px}
-.flair-happiny:before,a[href^='#ms-happiny']{background-position:-180px -480px}
-.flair-chatot:before,a[href^='#ms-chatot']{background-position:-210px -480px}
-.flair-spiritomb:before,a[href^='#ms-spiritomb']{background-position:-240px -480px}
-.flair-gible:before,a[href^='#ms-gible']{background-position:-270px -480px}
-.flair-gabite:before,a[href^='#ms-gabite']{background-position:-300px -480px}
-.flair-garchomp:before,a[href^='#ms-garchomp']{background-position:-330px -480px}
+.flair-mismagius:before,{background-position:-750px -450px}
+.flair-honchkrow:before,{background-position:-780px -450px}
+.flair-glameow:before,{background-position:-810px -450px}
+.flair-purugly:before,{background-position:-840px -450px}
+.flair-chingling:before,{background-position:-870px -450px}
+.flair-stunky:before,{background-position:0 -480px}
+.flair-skuntank:before,{background-position:-30px -480px}
+.flair-bronzor:before,{background-position:-60px -480px}
+.flair-bronzong:before,{background-position:-90px -480px}
+.flair-bonsly:before,{background-position:-120px -480px}
+.flair-mime:before,{background-position:-150px -480px}
+.flair-happiny:before,{background-position:-180px -480px}
+.flair-chatot:before,{background-position:-210px -480px}
+.flair-spiritomb:before,{background-position:-240px -480px}
+.flair-gible:before,{background-position:-270px -480px}
+.flair-gabite:before,{background-position:-300px -480px}
+.flair-garchomp:before,{background-position:-330px -480px}
 .flair-garchomp-mega:before,a[href^='#ms-garchomp-mega']{background-position:-360px -480px}
-.flair-munchlax:before,a[href^='#ms-munchlax']{background-position:-390px -480px}
-.flair-riolu:before,a[href^='#ms-riolu']{background-position:-420px -480px}
-.flair-lucario:before,a[href^='#ms-lucario']{background-position:-450px -480px}
+.flair-munchlax:before,{background-position:-390px -480px}
+.flair-riolu:before,{background-position:-420px -480px}
+.flair-lucario:before,{background-position:-450px -480px}
 .flair-lucario-mega:before,a[href^='#ms-lucario-mega']{background-position:-480px -480px}
-.flair-hippopotas:before,a[href^='#ms-hippopotas']{background-position:-510px -480px}
-.flair-hippowdon:before,a[href^='#ms-hippowdon']{background-position:-540px -480px}
-.flair-skorupi:before,a[href^='#ms-skorupi']{background-position:-570px -480px}
-.flair-drapion:before,a[href^='#ms-drapion']{background-position:-600px -480px}
-.flair-croagunk:before,a[href^='#ms-croagunk']{background-position:-630px -480px}
-.flair-toxicroak:before,a[href^='#ms-toxicroak']{background-position:-660px -480px}
-.flair-carnivine:before,a[href^='#ms-carnivine']{background-position:-690px -480px}
-.flair-finneon:before,a[href^='#ms-finneon']{background-position:-720px -480px}
-.flair-lumineon:before,a[href^='#ms-lumineon']{background-position:-750px -480px}
-.flair-mantyke:before,a[href^='#ms-mantyke']{background-position:-780px -480px}
-.flair-snover:before,a[href^='#ms-snover']{background-position:-810px -480px}
-.flair-abomasnow:before,a[href^='#ms-abomasnow']{background-position:-840px -480px}
+.flair-hippopotas:before,{background-position:-510px -480px}
+.flair-hippowdon:before,{background-position:-540px -480px}
+.flair-skorupi:before,{background-position:-570px -480px}
+.flair-drapion:before,{background-position:-600px -480px}
+.flair-croagunk:before,{background-position:-630px -480px}
+.flair-toxicroak:before,{background-position:-660px -480px}
+.flair-carnivine:before,{background-position:-690px -480px}
+.flair-finneon:before,{background-position:-720px -480px}
+.flair-lumineon:before,{background-position:-750px -480px}
+.flair-mantyke:before,{background-position:-780px -480px}
+.flair-snover:before,{background-position:-810px -480px}
+.flair-abomasnow:before,{background-position:-840px -480px}
 .flair-abomasnow-mega:before,a[href^='#ms-abomasnow-mega']{background-position:-870px -480px}
-.flair-weavile:before,a[href^='#ms-weavile']{background-position:0 -510px}
-.flair-magnezone:before,a[href^='#ms-magnezone']{background-position:-30px -510px}
-.flair-lickilicky:before,a[href^='#ms-lickilicky']{background-position:-60px -510px}
-.flair-rhyperior:before,a[href^='#ms-rhyperior']{background-position:-90px -510px}
-.flair-tangrowth:before,a[href^='#ms-tangrowth']{background-position:-120px -510px}
-.flair-electivire:before,a[href^='#ms-electivire']{background-position:-150px -510px}
-.flair-magmortar:before,a[href^='#ms-magmortar']{background-position:-180px -510px}
-.flair-togekiss:before,a[href^='#ms-togekiss']{background-position:-210px -510px}
-.flair-yanmega:before,a[href^='#ms-yanmega']{background-position:-240px -510px}
-.flair-leafeon:before,a[href^='#ms-leafeon']{background-position:-270px -510px}
-.flair-glaceon:before,a[href^='#ms-glaceon']{background-position:-300px -510px}
-.flair-gliscor:before,a[href^='#ms-gliscor']{background-position:-80px -420px}
-.flair-mamoswine:before,a[href^='#ms-mamoswine']{background-position:-330px -510px}
+.flair-weavile:before,{background-position:0 -510px}
+.flair-magnezone:before,{background-position:-30px -510px}
+.flair-lickilicky:before,{background-position:-60px -510px}
+.flair-rhyperior:before,{background-position:-90px -510px}
+.flair-tangrowth:before,{background-position:-120px -510px}
+.flair-electivire:before,{background-position:-150px -510px}
+.flair-magmortar:before,{background-position:-180px -510px}
+.flair-togekiss:before,{background-position:-210px -510px}
+.flair-yanmega:before,{background-position:-240px -510px}
+.flair-leafeon:before,{background-position:-270px -510px}
+.flair-glaceon:before,{background-position:-300px -510px}
+.flair-gliscor:before,{background-position:-80px -420px}
+.flair-mamoswine:before,{background-position:-330px -510px}
 .flair-porygon-z:before,a[href^='#ms-porygon-z']{background-position:-360px -510px}
-.flair-gallade:before,a[href^='#ms-gallade']{background-position:-390px -510px}
+.flair-gallade:before,{background-position:-390px -510px}
 .flair-gallade-mega:before,a[href^='#ms-gallade-mega']{background-position:-810px -840px}
-.flair-probopass:before,a[href^='#ms-probopass']{background-position:-420px -510px}
-.flair-dusknoir:before,a[href^='#ms-dusknoir']{background-position:-450px -510px}
-.flair-froslass:before,a[href^='#ms-froslass']{background-position:-480px -510px}
-.flair-rotom:before,a[href^='#ms-rotom']{background-position:-510px -510px}
+.flair-probopass:before,{background-position:-420px -510px}
+.flair-dusknoir:before,{background-position:-450px -510px}
+.flair-froslass:before,{background-position:-480px -510px}
+.flair-rotom:before,{background-position:-510px -510px}
 .flair-rotom-heat:before,a[href^='#ms-rotom-heat']{background-position:-540px -510px}
 .flair-rotom-wash:before,a[href^='#ms-rotom-wash']{background-position:-570px -510px}
 .flair-rotom-frost:before,a[href^='#ms-rotom-frost']{background-position:-600px -510px}
 .flair-rotom-fan:before,a[href^='#ms-rotom-fan']{background-position:-630px -510px}
 .flair-rotom-mow:before,a[href^='#ms-rotom-mow']{background-position:-660px -510px}
-.flair-uxie:before,a[href^='#ms-uxie']{background-position:-690px -510px}
-.flair-mesprit:before,a[href^='#ms-mesprit']{background-position:-720px -510px}
-.flair-azelf:before,a[href^='#ms-azelf']{background-position:-750px -510px}
-.flair-dialga:before,a[href^='#ms-dialga']{background-position:-780px -510px}
-.flair-palkia:before,a[href^='#ms-palkia']{background-position:-810px -510px}
-.flair-heatran:before,a[href^='#ms-heatran']{background-position:0 -540px}
-.flair-regigigas:before,a[href^='#ms-regigigas']{background-position:-40px -540px}
-.flair-giratina:before,a[href^='#ms-giratina']{background-position:-840px -510px}
+.flair-uxie:before,{background-position:-690px -510px}
+.flair-mesprit:before,{background-position:-720px -510px}
+.flair-azelf:before,{background-position:-750px -510px}
+.flair-dialga:before,{background-position:-780px -510px}
+.flair-palkia:before,{background-position:-810px -510px}
+.flair-heatran:before,{background-position:0 -540px}
+.flair-regigigas:before,{background-position:-40px -540px}
+.flair-giratina:before,{background-position:-840px -510px}
 .flair-giratina-origin:before,a[href^='#ms-giratina-origin']{background-position:-870px -510px}
-.flair-cresselia:before,a[href^='#ms-cresselia']{background-position:-120px -540px}
-.flair-phione:before,a[href^='#ms-phione']{background-position:-150px -540px}
-.flair-manaphy:before,a[href^='#ms-manaphy']{background-position:-180px -540px}
-.flair-darkrai:before,a[href^='#ms-darkrai']{background-position:-80px -540px}
-.flair-shaymin:before,a[href^='#ms-shaymin']{background-position:-210px -540px}
+.flair-cresselia:before,{background-position:-120px -540px}
+.flair-phione:before,{background-position:-150px -540px}
+.flair-manaphy:before,{background-position:-180px -540px}
+.flair-darkrai:before,{background-position:-80px -540px}
+.flair-shaymin:before,{background-position:-210px -540px}
 .flair-shaymin-sky:before,a[href^='#ms-shaymin-sky']{background-position:-240px -540px}
-.flair-arceus:before,a[href^='#ms-arceus']{background-position:-270px -540px}
-.flair-victini:before,a[href^='#ms-victini']{background-position:-300px -540px}
-.flair-snivy:before,a[href^='#ms-snivy']{background-position:-330px -540px}
-.flair-servine:before,a[href^='#ms-servine']{background-position:-360px -540px}
-.flair-serperior:before,a[href^='#ms-serperior']{background-position:-390px -540px}
-.flair-tepig:before,a[href^='#ms-tepig']{background-position:-420px -540px}
-.flair-pignite:before,a[href^='#ms-pignite']{background-position:-450px -540px}
-.flair-emboar:before,a[href^='#ms-emboar']{background-position:-480px -540px}
-.flair-oshawott:before,a[href^='#ms-oshawott']{background-position:-510px -540px}
-.flair-dewott:before,a[href^='#ms-dewott']{background-position:-540px -540px}
-.flair-samurott:before,a[href^='#ms-samurott']{background-position:-570px -540px}
-.flair-patrat:before,a[href^='#ms-patrat']{background-position:-690px -540px}
-.flair-watchog:before,a[href^='#ms-watchog']{background-position:-720px -540px}
-.flair-lillipup:before,a[href^='#ms-lillipup']{background-position:-750px -540px}
-.flair-herdier:before,a[href^='#ms-herdier']{background-position:-780px -540px}
-.flair-stoutland:before,a[href^='#ms-stoutland']{background-position:-810px -540px}
-.flair-purrloin:before,a[href^='#ms-purrloin']{background-position:-840px -540px}
-.flair-liepard:before,a[href^='#ms-liepard']{background-position:-870px -540px}
-.flair-pansage:before,a[href^='#ms-pansage']{background-position:0 -570px}
-.flair-simisage:before,a[href^='#ms-simisage']{background-position:-30px -570px}
-.flair-pansear:before,a[href^='#ms-pansear']{background-position:-60px -570px}
-.flair-simisear:before,a[href^='#ms-simisear']{background-position:-90px -570px}
-.flair-panpour:before,a[href^='#ms-panpour']{background-position:-120px -570px}
-.flair-simipour:before,a[href^='#ms-simipour']{background-position:-150px -570px}
-.flair-munna:before,a[href^='#ms-munna']{background-position:-180px -570px}
-.flair-musharna:before,a[href^='#ms-musharna']{background-position:-210px -570px}
-.flair-pidove:before,a[href^='#ms-pidove']{background-position:-240px -570px}
-.flair-tranquill:before,a[href^='#ms-tranquill']{background-position:-270px -570px}
-.flair-unfezant:before,a[href^='#ms-unfezant']{background-position:-300px -570px}
+.flair-arceus:before,{background-position:-270px -540px}
+.flair-victini:before,{background-position:-300px -540px}
+.flair-snivy:before,{background-position:-330px -540px}
+.flair-servine:before,{background-position:-360px -540px}
+.flair-serperior:before,{background-position:-390px -540px}
+.flair-tepig:before,{background-position:-420px -540px}
+.flair-pignite:before,{background-position:-450px -540px}
+.flair-emboar:before,{background-position:-480px -540px}
+.flair-oshawott:before,{background-position:-510px -540px}
+.flair-dewott:before,{background-position:-540px -540px}
+.flair-samurott:before,{background-position:-570px -540px}
+.flair-patrat:before,{background-position:-690px -540px}
+.flair-watchog:before,{background-position:-720px -540px}
+.flair-lillipup:before,{background-position:-750px -540px}
+.flair-herdier:before,{background-position:-780px -540px}
+.flair-stoutland:before,{background-position:-810px -540px}
+.flair-purrloin:before,{background-position:-840px -540px}
+.flair-liepard:before,{background-position:-870px -540px}
+.flair-pansage:before,{background-position:0 -570px}
+.flair-simisage:before,{background-position:-30px -570px}
+.flair-pansear:before,{background-position:-60px -570px}
+.flair-simisear:before,{background-position:-90px -570px}
+.flair-panpour:before,{background-position:-120px -570px}
+.flair-simipour:before,{background-position:-150px -570px}
+.flair-munna:before,{background-position:-180px -570px}
+.flair-musharna:before,{background-position:-210px -570px}
+.flair-pidove:before,{background-position:-240px -570px}
+.flair-tranquill:before,{background-position:-270px -570px}
+.flair-unfezant:before,{background-position:-300px -570px}
 .flair-unfezant-male:before,a[href^='#ms-unfezant-male']{background-position:-330px -570px}
-.flair-blitzle:before,a[href^='#ms-blitzle']{background-position:-360px -570px}
-.flair-zebstrika:before,a[href^='#ms-zebstrika']{background-position:-390px -570px}
-.flair-roggenrola:before,a[href^='#ms-roggenrola']{background-position:-420px -570px}
-.flair-boldore:before,a[href^='#ms-boldore']{background-position:-450px -570px}
-.flair-gigalith:before,a[href^='#ms-gigalith']{background-position:-480px -570px}
-.flair-woobat:before,a[href^='#ms-woobat']{background-position:-510px -570px}
-.flair-swoobat:before,a[href^='#ms-swoobat']{background-position:-540px -570px}
-.flair-drilbur:before,a[href^='#ms-drilbur']{background-position:-570px -570px}
-.flair-excadrill:before,a[href^='#ms-excadrill']{background-position:-600px -570px}
-.flair-audino:before,a[href^='#ms-audino']{background-position:-630px -570px}
+.flair-blitzle:before,{background-position:-360px -570px}
+.flair-zebstrika:before,{background-position:-390px -570px}
+.flair-roggenrola:before,{background-position:-420px -570px}
+.flair-boldore:before,{background-position:-450px -570px}
+.flair-gigalith:before,{background-position:-480px -570px}
+.flair-woobat:before,{background-position:-510px -570px}
+.flair-swoobat:before,{background-position:-540px -570px}
+.flair-drilbur:before,{background-position:-570px -570px}
+.flair-excadrill:before,{background-position:-600px -570px}
+.flair-audino:before,{background-position:-630px -570px}
 .flair-audino-mega:before,a[href^='#ms-audino-mega']{background-position:-840px -840px}
-.flair-timburr:before,a[href^='#ms-timburr']{background-position:-660px -570px}
-.flair-gurdurr:before,a[href^='#ms-gurdurr']{background-position:-690px -570px}
-.flair-conkeldurr:before,a[href^='#ms-conkeldurr']{background-position:-610px -540px}
-.flair-tympole:before,a[href^='#ms-tympole']{background-position:-720px -570px}
-.flair-palpitoad:before,a[href^='#ms-palpitoad']{background-position:-750px -570px}
-.flair-seismitoad:before,a[href^='#ms-seismitoad']{background-position:-780px -570px}
-.flair-throh:before,a[href^='#ms-throh']{background-position:-810px -570px}
-.flair-sawk:before,a[href^='#ms-sawk']{background-position:-840px -570px}
-.flair-sewaddle:before,a[href^='#ms-sewaddle']{background-position:-870px -570px}
-.flair-swadloon:before,a[href^='#ms-swadloon']{background-position:0 -600px}
-.flair-leavanny:before,a[href^='#ms-leavanny']{background-position:-30px -600px}
-.flair-venipede:before,a[href^='#ms-venipede']{background-position:-60px -600px}
-.flair-whirlipede:before,a[href^='#ms-whirlipede']{background-position:-90px -600px}
-.flair-scolipede:before,a[href^='#ms-scolipede']{background-position:-120px -600px}
-.flair-cottonee:before,a[href^='#ms-cottonee']{background-position:-150px -600px}
-.flair-whimsicott:before,a[href^='#ms-whimsicott']{background-position:-180px -600px}
-.flair-petilil:before,a[href^='#ms-petilil']{background-position:-210px -600px}
-.flair-lilligant:before,a[href^='#ms-lilligant']{background-position:-240px -600px}
-.flair-basculin:before,a[href^='#ms-basculin']{background-position:-270px -600px}
+.flair-timburr:before,{background-position:-660px -570px}
+.flair-gurdurr:before,{background-position:-690px -570px}
+.flair-conkeldurr:before,{background-position:-610px -540px}
+.flair-tympole:before,{background-position:-720px -570px}
+.flair-palpitoad:before,{background-position:-750px -570px}
+.flair-seismitoad:before,{background-position:-780px -570px}
+.flair-throh:before,{background-position:-810px -570px}
+.flair-sawk:before,{background-position:-840px -570px}
+.flair-sewaddle:before,{background-position:-870px -570px}
+.flair-swadloon:before,{background-position:0 -600px}
+.flair-leavanny:before,{background-position:-30px -600px}
+.flair-venipede:before,{background-position:-60px -600px}
+.flair-whirlipede:before,{background-position:-90px -600px}
+.flair-scolipede:before,{background-position:-120px -600px}
+.flair-cottonee:before,{background-position:-150px -600px}
+.flair-whimsicott:before,{background-position:-180px -600px}
+.flair-petilil:before,{background-position:-210px -600px}
+.flair-lilligant:before,{background-position:-240px -600px}
+.flair-basculin:before,{background-position:-270px -600px}
 .flair-basculin-blue-striped:before,a[href^='#ms-basculin-blue-striped']{background-position:-300px -600px}
-.flair-sandile:before,a[href^='#ms-sandile']{background-position:-330px -600px}
-.flair-krokorok:before,a[href^='#ms-krokorok']{background-position:-360px -600px}
-.flair-krookodile:before,a[href^='#ms-krookodile']{background-position:-390px -600px}
-.flair-darumaka:before,a[href^='#ms-darumaka']{background-position:-420px -600px}
-.flair-darmanitan:before,a[href^='#ms-darmanitan']{background-position:-450px -600px}
+.flair-sandile:before,{background-position:-330px -600px}
+.flair-krokorok:before,{background-position:-360px -600px}
+.flair-krookodile:before,{background-position:-390px -600px}
+.flair-darumaka:before,{background-position:-420px -600px}
+.flair-darmanitan:before,{background-position:-450px -600px}
 .flair-darmanitan-zen:before,a[href^='#ms-darmanitan-zen']{background-position:-480px -600px}
-.flair-maractus:before,a[href^='#ms-maractus']{background-position:-510px -600px}
-.flair-dwebble:before,a[href^='#ms-dwebble']{background-position:-540px -600px}
-.flair-crustle:before,a[href^='#ms-crustle']{background-position:-570px -600px}
-.flair-scraggy:before,a[href^='#ms-scraggy']{background-position:-600px -600px}
-.flair-scrafty:before,a[href^='#ms-scrafty']{background-position:-630px -600px}
-.flair-sigilyph:before,a[href^='#ms-sigilyph']{background-position:-660px -600px}
-.flair-yamask:before,a[href^='#ms-yamask']{background-position:-690px -600px}
-.flair-cofagrigus:before,a[href^='#ms-cofagrigus']{background-position:-720px -600px}
-.flair-tirtouga:before,a[href^='#ms-tirtouga']{background-position:-750px -600px}
-.flair-carracosta:before,a[href^='#ms-carracosta']{background-position:-780px -600px}
-.flair-archen:before,a[href^='#ms-archen']{background-position:-810px -600px}
-.flair-archeops:before,a[href^='#ms-archeops']{background-position:-840px -600px}
-.flair-trubbish:before,a[href^='#ms-trubbish']{background-position:-870px -600px}
-.flair-garbodor:before,a[href^='#ms-garbodor']{background-position:0 -630px}
-.flair-zorua:before,a[href^='#ms-zorua']{background-position:-30px -630px}
-.flair-zoroark:before,a[href^='#ms-zoroark']{background-position:-60px -630px}
-.flair-minccino:before,a[href^='#ms-minccino']{background-position:-90px -630px}
-.flair-cinccino:before,a[href^='#ms-cinccino']{background-position:-120px -630px}
-.flair-gothita:before,a[href^='#ms-gothita']{background-position:-150px -630px}
-.flair-gothorita:before,a[href^='#ms-gothorita']{background-position:-180px -630px}
-.flair-gothitelle:before,a[href^='#ms-gothitelle']{background-position:-210px -630px}
-.flair-solosis:before,a[href^='#ms-solosis']{background-position:-240px -630px}
-.flair-duosion:before,a[href^='#ms-duosion']{background-position:-270px -630px}
-.flair-reuniclus:before,a[href^='#ms-reuniclus']{background-position:-300px -630px}
-.flair-ducklett:before,a[href^='#ms-ducklett']{background-position:-330px -630px}
-.flair-swanna:before,a[href^='#ms-swanna']{background-position:-360px -630px}
-.flair-vanillite:before,a[href^='#ms-vanillite']{background-position:-390px -630px}
-.flair-vanillish:before,a[href^='#ms-vanillish']{background-position:-420px -630px}
-.flair-vanilluxe:before,a[href^='#ms-vanilluxe']{background-position:-450px -630px}
-.flair-deerling:before,a[href^='#ms-deerling']{background-position:-480px -630px}
+.flair-maractus:before,{background-position:-510px -600px}
+.flair-dwebble:before,{background-position:-540px -600px}
+.flair-crustle:before,{background-position:-570px -600px}
+.flair-scraggy:before,{background-position:-600px -600px}
+.flair-scrafty:before,{background-position:-630px -600px}
+.flair-sigilyph:before,{background-position:-660px -600px}
+.flair-yamask:before,{background-position:-690px -600px}
+.flair-cofagrigus:before,{background-position:-720px -600px}
+.flair-tirtouga:before,{background-position:-750px -600px}
+.flair-carracosta:before,{background-position:-780px -600px}
+.flair-archen:before,{background-position:-810px -600px}
+.flair-archeops:before,{background-position:-840px -600px}
+.flair-trubbish:before,{background-position:-870px -600px}
+.flair-garbodor:before,{background-position:0 -630px}
+.flair-zorua:before,{background-position:-30px -630px}
+.flair-zoroark:before,{background-position:-60px -630px}
+.flair-minccino:before,{background-position:-90px -630px}
+.flair-cinccino:before,{background-position:-120px -630px}
+.flair-gothita:before,{background-position:-150px -630px}
+.flair-gothorita:before,{background-position:-180px -630px}
+.flair-gothitelle:before,{background-position:-210px -630px}
+.flair-solosis:before,{background-position:-240px -630px}
+.flair-duosion:before,{background-position:-270px -630px}
+.flair-reuniclus:before,{background-position:-300px -630px}
+.flair-ducklett:before,{background-position:-330px -630px}
+.flair-swanna:before,{background-position:-360px -630px}
+.flair-vanillite:before,{background-position:-390px -630px}
+.flair-vanillish:before,{background-position:-420px -630px}
+.flair-vanilluxe:before,{background-position:-450px -630px}
+.flair-deerling:before,{background-position:-480px -630px}
 .flair-deerling-summer:before,a[href^='#ms-deerling-summer']{background-position:-510px -630px}
 .flair-deerling-autumn:before,a[href^='#ms-deerling-autumn']{background-position:-540px -630px}
 .flair-deerling-winter:before,a[href^='#ms-deerling-winter']{background-position:-570px -630px}
-.flair-sawsbuck:before,a[href^='#ms-sawsbuck']{background-position:-600px -630px}
+.flair-sawsbuck:before,{background-position:-600px -630px}
 .flair-sawsbuck-summer:before,a[href^='#ms-sawsbuck-summer']{background-position:-630px -630px}
 .flair-sawsbuck-autumn:before,a[href^='#ms-sawsbuck-autumn']{background-position:-660px -630px}
 .flair-sawsbuck-winter:before,a[href^='#ms-sawsbuck-winter']{background-position:-690px -630px}
-.flair-emolga:before,a[href^='#ms-emolga']{background-position:-720px -630px}
-.flair-karrablast:before,a[href^='#ms-karrablast']{background-position:-750px -630px}
-.flair-escavalier:before,a[href^='#ms-escavalier']{background-position:-780px -630px}
-.flair-foongus:before,a[href^='#ms-foongus']{background-position:-810px -630px}
-.flair-amoonguss:before,a[href^='#ms-amoonguss']{background-position:-840px -630px}
-.flair-frillish:before,a[href^='#ms-frillish']{background-position:-870px -630px}
+.flair-emolga:before,{background-position:-720px -630px}
+.flair-karrablast:before,{background-position:-750px -630px}
+.flair-escavalier:before,{background-position:-780px -630px}
+.flair-foongus:before,{background-position:-810px -630px}
+.flair-amoonguss:before,{background-position:-840px -630px}
+.flair-frillish:before,{background-position:-870px -630px}
 .flair-frillish-male:before,a[href^='#ms-frillish-male']{background-position:0 -660px}
-.flair-jellicent:before,a[href^='#ms-jellicent']{background-position:-30px -660px}
+.flair-jellicent:before,{background-position:-30px -660px}
 .flair-jellicent-male:before,a[href^='#ms-jellicent-male']{background-position:-60px -660px}
-.flair-alomomola:before,a[href^='#ms-alomomola']{background-position:-90px -660px}
-.flair-joltik:before,a[href^='#ms-joltik']{background-position:-120px -660px}
-.flair-galvantula:before,a[href^='#ms-galvantula']{background-position:-150px -660px}
-.flair-ferroseed:before,a[href^='#ms-ferroseed']{background-position:-180px -660px}
-.flair-ferrothorn:before,a[href^='#ms-ferrothorn']{background-position:-210px -660px}
-.flair-klink:before,a[href^='#ms-klink']{background-position:-240px -660px}
-.flair-klang:before,a[href^='#ms-klang']{background-position:-270px -660px}
-.flair-klinklang:before,a[href^='#ms-klinklang']{background-position:-300px -660px}
-.flair-tynamo:before,a[href^='#ms-tynamo']{background-position:-330px -660px}
-.flair-eelektrik:before,a[href^='#ms-eelektrik']{background-position:-360px -660px}
-.flair-eelektross:before,a[href^='#ms-eelektross']{background-position:-390px -660px}
-.flair-elgyem:before,a[href^='#ms-elgyem']{background-position:-420px -660px}
-.flair-beheeyem:before,a[href^='#ms-beheeyem']{background-position:-450px -660px}
-.flair-litwick:before,a[href^='#ms-litwick']{background-position:-480px -660px}
-.flair-lampent:before,a[href^='#ms-lampent']{background-position:-510px -660px}
-.flair-chandelure:before,a[href^='#ms-chandelure']{background-position:-540px -660px}
-.flair-axew:before,a[href^='#ms-axew']{background-position:-570px -660px}
-.flair-fraxure:before,a[href^='#ms-fraxure']{background-position:-600px -660px}
-.flair-haxorus:before,a[href^='#ms-haxorus']{background-position:-630px -660px}
-.flair-cubchoo:before,a[href^='#ms-cubchoo']{background-position:-660px -660px}
-.flair-beartic:before,a[href^='#ms-beartic']{background-position:-690px -660px}
-.flair-cryogonal:before,a[href^='#ms-cryogonal']{background-position:-720px -660px}
-.flair-shelmet:before,a[href^='#ms-shelmet']{background-position:-750px -660px}
-.flair-accelgor:before,a[href^='#ms-accelgor']{background-position:-780px -660px}
-.flair-stunfisk:before,a[href^='#ms-stunfisk']{background-position:-810px -660px}
-.flair-mienfoo:before,a[href^='#ms-mienfoo']{background-position:-840px -660px}
-.flair-mienshao:before,a[href^='#ms-mienshao']{background-position:-870px -660px}
-.flair-druddigon:before,a[href^='#ms-druddigon']{background-position:0 -690px}
-.flair-golett:before,a[href^='#ms-golett']{background-position:-30px -690px}
-.flair-golurk:before,a[href^='#ms-golurk']{background-position:-60px -690px}
-.flair-pawniard:before,a[href^='#ms-pawniard']{background-position:-90px -690px}
-.flair-bisharp:before,a[href^='#ms-bisharp']{background-position:-120px -690px}
-.flair-bouffalant:before,a[href^='#ms-bouffalant']{background-position:-150px -690px}
-.flair-rufflet:before,a[href^='#ms-rufflet']{background-position:-180px -690px}
-.flair-braviary:before,a[href^='#ms-braviary']{background-position:-210px -690px}
-.flair-vullaby:before,a[href^='#ms-vullaby']{background-position:-240px -690px}
-.flair-mandibuzz:before,a[href^='#ms-mandibuzz']{background-position:-270px -690px}
-.flair-heatmor:before,a[href^='#ms-heatmor']{background-position:-300px -690px}
-.flair-durant:before,a[href^='#ms-durant']{background-position:-330px -690px}
-.flair-deino:before,a[href^='#ms-deino']{background-position:-360px -690px}
-.flair-zweilous:before,a[href^='#ms-zweilous']{background-position:-390px -690px}
-.flair-hydreigon:before,a[href^='#ms-hydreigon']{background-position:-420px -690px}
-.flair-larvesta:before,a[href^='#ms-larvesta']{background-position:-450px -690px}
-.flair-volcarona:before,a[href^='#ms-volcarona']{background-position:-480px -690px}
-.flair-cobalion:before,a[href^='#ms-cobalion']{background-position:-510px -690px}
-.flair-terrakion:before,a[href^='#ms-terrakion']{background-position:-540px -690px}
-.flair-virizion:before,a[href^='#ms-virizion']{background-position:-570px -690px}
-.flair-tornadus:before,a[href^='#ms-tornadus']{background-position:-600px -690px}
+.flair-alomomola:before,{background-position:-90px -660px}
+.flair-joltik:before,{background-position:-120px -660px}
+.flair-galvantula:before,{background-position:-150px -660px}
+.flair-ferroseed:before,{background-position:-180px -660px}
+.flair-ferrothorn:before,{background-position:-210px -660px}
+.flair-klink:before,{background-position:-240px -660px}
+.flair-klang:before,{background-position:-270px -660px}
+.flair-klinklang:before,{background-position:-300px -660px}
+.flair-tynamo:before,{background-position:-330px -660px}
+.flair-eelektrik:before,{background-position:-360px -660px}
+.flair-eelektross:before,{background-position:-390px -660px}
+.flair-elgyem:before,{background-position:-420px -660px}
+.flair-beheeyem:before,{background-position:-450px -660px}
+.flair-litwick:before,{background-position:-480px -660px}
+.flair-lampent:before,{background-position:-510px -660px}
+.flair-chandelure:before,{background-position:-540px -660px}
+.flair-axew:before,{background-position:-570px -660px}
+.flair-fraxure:before,{background-position:-600px -660px}
+.flair-haxorus:before,{background-position:-630px -660px}
+.flair-cubchoo:before,{background-position:-660px -660px}
+.flair-beartic:before,{background-position:-690px -660px}
+.flair-cryogonal:before,{background-position:-720px -660px}
+.flair-shelmet:before,{background-position:-750px -660px}
+.flair-accelgor:before,{background-position:-780px -660px}
+.flair-stunfisk:before,{background-position:-810px -660px}
+.flair-mienfoo:before,{background-position:-840px -660px}
+.flair-mienshao:before,{background-position:-870px -660px}
+.flair-druddigon:before,{background-position:0 -690px}
+.flair-golett:before,{background-position:-30px -690px}
+.flair-golurk:before,{background-position:-60px -690px}
+.flair-pawniard:before,{background-position:-90px -690px}
+.flair-bisharp:before,{background-position:-120px -690px}
+.flair-bouffalant:before,{background-position:-150px -690px}
+.flair-rufflet:before,{background-position:-180px -690px}
+.flair-braviary:before,{background-position:-210px -690px}
+.flair-vullaby:before,{background-position:-240px -690px}
+.flair-mandibuzz:before,{background-position:-270px -690px}
+.flair-heatmor:before,{background-position:-300px -690px}
+.flair-durant:before,{background-position:-330px -690px}
+.flair-deino:before,{background-position:-360px -690px}
+.flair-zweilous:before,{background-position:-390px -690px}
+.flair-hydreigon:before,{background-position:-420px -690px}
+.flair-larvesta:before,{background-position:-450px -690px}
+.flair-volcarona:before,{background-position:-480px -690px}
+.flair-cobalion:before,{background-position:-510px -690px}
+.flair-terrakion:before,{background-position:-540px -690px}
+.flair-virizion:before,{background-position:-570px -690px}
+.flair-tornadus:before,{background-position:-600px -690px}
 .flair-tornadus-therian:before,a[href^='#ms-tornadus-therian']{background-position:-630px -690px}
-.flair-thundurus:before,a[href^='#ms-thundurus']{background-position:-650px -540px}
+.flair-thundurus:before,{background-position:-650px -540px}
 .flair-thundurus-therian:before,a[href^='#ms-thundurus-therian']{background-position:-660px -690px}
-.flair-reshiram:before,a[href^='#ms-reshiram']{background-position:-700px -690px}
-.flair-zekrom:before,a[href^='#ms-zekrom']{background-position:-740px -690px}
-.flair-landorus:before,a[href^='#ms-landorus']{background-position:-770px -690px}
+.flair-reshiram:before,{background-position:-700px -690px}
+.flair-zekrom:before,{background-position:-740px -690px}
+.flair-landorus:before,{background-position:-770px -690px}
 .flair-landorus-therian:before,a[href^='#ms-landorus-therian']{background-position:-810px -690px}
-.flair-kyurem:before,a[href^='#ms-kyurem']{background-position:0 -720px}
+.flair-kyurem:before,{background-position:0 -720px}
 .flair-kyurem-black:before,a[href^='#ms-kyurem-black']{background-position:-40px -720px}
 .flair-kyurem-white:before,a[href^='#ms-kyurem-white']{background-position:-80px -720px}
-.flair-keldeo:before,a[href^='#ms-keldeo']{background-position:-840px -690px}
+.flair-keldeo:before,{background-position:-840px -690px}
 .flair-keldeo-resolute:before,a[href^='#ms-keldeo-resolute']{background-position:-870px -690px}
-.flair-meloetta:before,a[href^='#ms-meloetta']{background-position:-120px -720px}
+.flair-meloetta:before,{background-position:-120px -720px}
 .flair-meloetta-pirouette:before{background-position:-150px -720px}
-.flair-genesect:before,a[href^='#ms-genesect']{background-position:-180px -720px}
-.flair-chespin:before,a[href^='#ms-chespin']{background-position:-210px -720px}
-.flair-quilladin:before,a[href^='#ms-quilladin']{background-position:-240px -720px}
-.flair-chesnaught:before,a[href^='#ms-chesnaught']{background-position:-270px -720px}
-.flair-fennekin:before,a[href^='#ms-fennekin']{background-position:-300px -720px}
-.flair-braixen:before,a[href^='#ms-braixen']{background-position:-330px -720px}
-.flair-delphox:before,a[href^='#ms-delphox']{background-position:-360px -720px}
-.flair-froakie:before,a[href^='#ms-froakie']{background-position:-390px -720px}
-.flair-frogadier:before,a[href^='#ms-frogadier']{background-position:-420px -720px}
-.flair-greninja:before,a[href^='#ms-greninja']{background-position:-450px -720px}
-.flair-bunnelby:before,a[href^='#ms-bunnelby']{background-position:-480px -720px}
-.flair-diggersby:before,a[href^='#ms-diggersby']{background-position:-510px -720px}
-.flair-fletchling:before,a[href^='#ms-fletchling']{background-position:-540px -720px}
-.flair-fletchinder:before,a[href^='#ms-fletchinder']{background-position:-570px -720px}
-.flair-talonflame:before,a[href^='#ms-talonflame']{background-position:-600px -720px}
-.flair-scatterbug:before,a[href^='#ms-scatterbug']{background-position:-630px -720px}
-.flair-spewpa:before,a[href^='#ms-spewpa']{background-position:-660px -720px}
-.flair-vivillon:before,a[href^='#ms-vivillon']{background-position:-690px -720px}
+.flair-genesect:before,{background-position:-180px -720px}
+.flair-chespin:before,{background-position:-210px -720px}
+.flair-quilladin:before,{background-position:-240px -720px}
+.flair-chesnaught:before,{background-position:-270px -720px}
+.flair-fennekin:before,{background-position:-300px -720px}
+.flair-braixen:before,{background-position:-330px -720px}
+.flair-delphox:before,{background-position:-360px -720px}
+.flair-froakie:before,{background-position:-390px -720px}
+.flair-frogadier:before,{background-position:-420px -720px}
+.flair-greninja:before,{background-position:-450px -720px}
+.flair-bunnelby:before,{background-position:-480px -720px}
+.flair-diggersby:before,{background-position:-510px -720px}
+.flair-fletchling:before,{background-position:-540px -720px}
+.flair-fletchinder:before,{background-position:-570px -720px}
+.flair-talonflame:before,{background-position:-600px -720px}
+.flair-scatterbug:before,{background-position:-630px -720px}
+.flair-spewpa:before,{background-position:-660px -720px}
+.flair-vivillon:before,{background-position:-690px -720px}
 .flair-vivillon-archipelago:before,a[href^='#ms-vivillon-archipelago']{background-position:-720px -720px}
 .flair-vivillon-continental:before,a[href^='#ms-vivillon-continental']{background-position:-750px -720px}
 .flair-vivillon-elegant:before,a[href^='#ms-vivillon-elegant']{background-position:-810px -720px}
@@ -1256,17 +927,17 @@ color:#ecedeb
 .flair-vivillon-tundra:before,a[href^='#ms-vivillon-tundra']{background-position:-360px -750px}
 .flair-vivillon-poke-ball:before,a[href^='#ms-vivillon-poke-ball']{background-position:-180px -750px}
 .flair-vivillon-fancy:before,a[href^='#ms-vivillon-fancy']{background-position:-780px -720px}
-.flair-litleo:before,a[href^='#ms-litleo']{background-position:-390px -750px}
-.flair-pyroar:before,a[href^='#ms-pyroar']{background-position:-420px -750px}
+.flair-litleo:before,{background-position:-390px -750px}
+.flair-pyroar:before,{background-position:-420px -750px}
 .flair-pyroar-male:before,a[href^='#ms-pyroar-male']{background-position:-450px -750px}
-.flair-flabebe:before,a[href^='#ms-flabebe']{background-position:-570px -750px}
-.flair-floette:before,a[href^='#ms-floette']{background-position:-600px -750px}
-.flair-florges:before,a[href^='#ms-florges']{background-position:-630px -750px}
-.flair-skiddo:before,a[href^='#ms-skiddo']{background-position:-660px -750px}
-.flair-gogoat:before,a[href^='#ms-gogoat']{background-position:-690px -750px}
-.flair-pancham:before,a[href^='#ms-pancham']{background-position:-720px -750px}
-.flair-pangoro:before,a[href^='#ms-pangoro']{background-position:-750px -750px}
-.flair-furfrou:before,a[href^='#ms-furfrou']{background-position:-780px -750px}
+.flair-flabebe:before,{background-position:-570px -750px}
+.flair-floette:before,{background-position:-600px -750px}
+.flair-florges:before,{background-position:-630px -750px}
+.flair-skiddo:before,{background-position:-660px -750px}
+.flair-gogoat:before,{background-position:-690px -750px}
+.flair-pancham:before,{background-position:-720px -750px}
+.flair-pangoro:before,{background-position:-750px -750px}
+.flair-furfrou:before,{background-position:-780px -750px}
 .flair-furfrou-heart:before,a[href^='#ms-furfrou-heart']{background-position:-810px -750px}
 .flair-furfrou-diamond:before,a[href^='#ms-furfrou-diamond']{background-position:-840px -750px}
 .flair-furfrou-star:before,a[href^='#ms-furfrou-star']{background-position:-870px -750px}
@@ -1276,108 +947,109 @@ color:#ecedeb
 .flair-furfrou-matron:before,a[href^='#ms-furfrou-matron']{background-position:-90px -780px}
 .flair-furfrou-dandy:before,a[href^='#ms-furfrou-dandy']{background-position:-120px -780px}
 .flair-furfrou-debutante:before,a[href^='#ms-furfrou-debutante']{background-position:-150px -780px}
-.flair-espurr:before,a[href^='#ms-espurr']{background-position:-180px -780px}
-.flair-meowstic:before,a[href^='#ms-meowstic']{background-position:-210px -780px}
+.flair-espurr:before,{background-position:-180px -780px}
+.flair-meowstic:before,{background-position:-210px -780px}
 .flair-meowstic-male:before,a[href^='#ms-meowstic-male']{background-position:-240px -780px}
-.flair-honedge:before,a[href^='#ms-honedge']{background-position:-270px -780px}
-.flair-doublade:before,a[href^='#ms-doublade']{background-position:-490px -750px}
-.flair-aegislash:before,a[href^='#ms-aegislash']{background-position:-300px -780px}
+.flair-honedge:before,{background-position:-270px -780px}
+.flair-doublade:before,{background-position:-490px -750px}
+.flair-aegislash:before,{background-position:-300px -780px}
 .flair-aegislash-blade:before,a[href^='#ms-aegislash-blade']{background-position:-530px -750px}
-.flair-spritzee:before,a[href^='#ms-spritzee']{background-position:-330px -780px}
-.flair-aromatisse:before,a[href^='#ms-aromatisse']{background-position:-360px -780px}
-.flair-swirlix:before,a[href^='#ms-swirlix']{background-position:-390px -780px}
-.flair-slurpuff:before,a[href^='#ms-slurpuff']{background-position:-420px -780px}
-.flair-inkay:before,a[href^='#ms-inkay']{background-position:-450px -780px}
-.flair-malamar:before,a[href^='#ms-malamar']{background-position:-480px -780px}
-.flair-binacle:before,a[href^='#ms-binacle']{background-position:-510px -780px}
-.flair-barbaracle:before,a[href^='#ms-barbaracle']{background-position:-540px -780px}
-.flair-skrelp:before,a[href^='#ms-skrelp']{background-position:-570px -780px}
-.flair-dragalge:before,a[href^='#ms-dragalge']{background-position:-600px -780px}
-.flair-clauncher:before,a[href^='#ms-clauncher']{background-position:-640px -780px}
-.flair-clawitzer:before,a[href^='#ms-clawitzer']{background-position:-670px -780px}
-.flair-helioptile:before,a[href^='#ms-helioptile']{background-position:-750px -780px}
-.flair-heliolisk:before,a[href^='#ms-heliolisk']{background-position:-780px -780px}
-.flair-tyrunt:before,a[href^='#ms-tyrunt']{background-position:-810px -780px}
-.flair-tyrantrum:before,a[href^='#ms-tyrantrum']{background-position:-840px -780px}
-.flair-amaura:before,a[href^='#ms-amaura']{background-position:-870px -780px}
-.flair-aurorus:before,a[href^='#ms-aurorus']{background-position:0 -810px}
-.flair-sylveon:before,a[href^='#ms-sylveon']{background-position:-30px -810px}
-.flair-hawlucha:before,a[href^='#ms-hawlucha']{background-position:-60px -810px}
-.flair-dedenne:before,a[href^='#ms-dedenne']{background-position:-90px -810px}
-.flair-carbink:before,a[href^='#ms-carbink']{background-position:-120px -810px}
-.flair-goomy:before,a[href^='#ms-goomy']{background-position:-150px -810px}
-.flair-sliggoo:before,a[href^='#ms-sliggoo']{background-position:-180px -810px}
-.flair-goodra:before,a[href^='#ms-goodra']{background-position:-210px -810px}
-.flair-klefki:before,a[href^='#ms-klefki']{background-position:-240px -810px}
-.flair-phantump:before,a[href^='#ms-phantump']{background-position:-270px -810px}
-.flair-trevenant:before,a[href^='#ms-trevenant']{background-position:-300px -810px}
-.flair-pumpkaboo:before,a[href^='#ms-pumpkaboo']{background-position:-330px -810px}
-.flair-gourgeist:before,a[href^='#ms-gourgeist']{background-position:-360px -810px}
-.flair-bergmite:before,a[href^='#ms-bergmite']{background-position:-390px -810px}
-.flair-avalugg:before,a[href^='#ms-avalugg']{background-position:-420px -810px}
-.flair-noibat:before,a[href^='#ms-noibat']{background-position:-450px -810px}
-.flair-noivern:before,a[href^='#ms-noivern']{background-position:-480px -810px}
-.flair-xerneas:before,a[href^='#ms-xerneas']{background-position:-510px -810px}
-.flair-yveltal:before,a[href^='#ms-yveltal']{background-position:-540px -810px}
-.flair-zygarde:before,a[href^='#ms-zygarde']{background-position:-570px -810px}
-.flair-diancie:before,a[href^='#ms-diancie']{background-position:-600px -810px}
+.flair-spritzee:before,{background-position:-330px -780px}
+.flair-aromatisse:before,{background-position:-360px -780px}
+.flair-swirlix:before,{background-position:-390px -780px}
+.flair-slurpuff:before,{background-position:-420px -780px}
+.flair-inkay:before,{background-position:-450px -780px}
+.flair-malamar:before,{background-position:-480px -780px}
+.flair-binacle:before,{background-position:-510px -780px}
+.flair-barbaracle:before,{background-position:-540px -780px}
+.flair-skrelp:before,{background-position:-570px -780px}
+.flair-dragalge:before,{background-position:-600px -780px}
+.flair-clauncher:before,{background-position:-640px -780px}
+.flair-clawitzer:before,{background-position:-670px -780px}
+.flair-helioptile:before,{background-position:-750px -780px}
+.flair-heliolisk:before,{background-position:-780px -780px}
+.flair-tyrunt:before,{background-position:-810px -780px}
+.flair-tyrantrum:before,{background-position:-840px -780px}
+.flair-amaura:before,{background-position:-870px -780px}
+.flair-aurorus:before,{background-position:0 -810px}
+.flair-sylveon:before,{background-position:-30px -810px}
+.flair-hawlucha:before,{background-position:-60px -810px}
+.flair-dedenne:before,{background-position:-90px -810px}
+.flair-carbink:before,{background-position:-120px -810px}
+.flair-goomy:before,{background-position:-150px -810px}
+.flair-sliggoo:before,{background-position:-180px -810px}
+.flair-goodra:before,{background-position:-210px -810px}
+.flair-klefki:before,{background-position:-240px -810px}
+.flair-phantump:before,{background-position:-270px -810px}
+.flair-trevenant:before,{background-position:-300px -810px}
+.flair-pumpkaboo:before,{background-position:-330px -810px}
+.flair-gourgeist:before,{background-position:-360px -810px}
+.flair-bergmite:before,{background-position:-390px -810px}
+.flair-avalugg:before,{background-position:-420px -810px}
+.flair-noibat:before,{background-position:-450px -810px}
+.flair-noivern:before,{background-position:-480px -810px}
+.flair-xerneas:before,{background-position:-510px -810px}
+.flair-yveltal:before,{background-position:-540px -810px}
+.flair-zygarde:before,{background-position:-570px -810px}
+.flair-diancie:before,{background-position:-600px -810px}
 .flair-diancie-mega:before,a[href^='#ms-diancie-mega']{background-position:-870px -840px}
-.flair-hoopa:before,a[href^='#ms-hoopa']{background-position:0 -840px}
+.flair-hoopa:before,{background-position:0 -840px}
 .flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{background-position:0 -870px}
-.flair-volcanion:before,a[href^='#ms-volcanion']{background-position:-30px -840px}
+.flair-volcanion:before,{background-position:-30px -840px}
 
-.flair-charizard:before,a[href^='#ms-charizard'],
+.flair-charizard:before,
 .flair-charizard-mega-x:before,
 .flair-charizard-mega-y:before,
 .flair-pidgeot-mega:before,a[href^='#ms-pidgeot-mega'],
-.flair-nidoking:before,a[href^='#ms-nidoking'],
+.flair-nidoking:before,
 .flair-alakazam:before,a[href='#ms-alakazam'],a[href='#ms-alakazam-shiny'],
 .flair-gengar-mega:before,a[href^='#ms-gengar-mega'],
 .flair-pinsir-mega:before,a[href^='#ms-pinsir-mega'],
 .flair-aerodactyl-mega:before,a[href^='#ms-aerodactyl-mega'],
-.flair-feraligatr:before,a[href^='#ms-feraligatr'],
-.flair-steelix:before,a[href^='#ms-steelix'],
+.flair-feraligatr:before,
+.flair-steelix:before,
 .flair-steelix-mega:before,
 .flair-heracross-mega:before,a[href^='#ms-heracross-mega'],
-.flair-lugia:before,a[href^='#ms-lugia'],
+.flair-lugia:before,
 .flair-sceptile-mega:before,a[href^='#ms-sceptile-mega'],
 .flair-blaziken-mega:before,a[href^='#ms-blaziken-mega'],
 .flair-swampert-mega:before,a[href^='#ms-swampert-mega'],
 .flair-aggron-mega:before,a[href^='#ms-aggron-mega'],
 .flair-camerupt-mega:before,a[href^='#ms-camerupt-mega'],
-.flair-tropius:before,a[href^='#ms-tropius'],
-.flair-salamence:before,a[href^='#ms-salamence'],
+.flair-tropius:before,
+.flair-salamence:before,
 .flair-salamence-mega:before,
-.flair-metagross:before,a[href^='#ms-metagross'],
+.flair-metagross:before,
 .flair-metagross-mega:before,
-.flair-kyogre:before,a[href^='#ms-kyogre'],
+.flair-kyogre:before,
 .flair-kyogre-primal:before,
-.flair-groudon:before,a[href^='#ms-groudon'],
+.flair-groudon:before,
 .flair-groudon-primal:before,
-.flair-rayquaza:before,a[href^='#ms-rayquaza'],
+.flair-rayquaza:before,
 .flair-rayquaza-mega:before,
 .flair-latias-mega:before,a[href^='#ms-latias-mega'],
 .flair-latios-mega:before,a[href^='#ms-latios-mega'],
 .flair-lopunny-mega:before,a[href^='#ms-lopunny-mega'],
-.flair-gliscor:before,a[href^='#ms-gliscor'],
-.flair-heatran:before,a[href^='#ms-heatran'],
-.flair-regigigas:before,a[href^='#ms-regigigas'],
-.flair-darkrai:before,a[href^='#ms-darkrai'],
-.flair-samurott:before,a[href^='#ms-samurott'],
-.flair-conkeldurr:before,a[href^='#ms-conkeldurr'],
-.flair-thundurus:before,a[href^='#ms-thundurus'],
+.flair-gliscor:before,
+.flair-heatran:before,
+.flair-regigigas:before,
+.flair-darkrai:before,
+.flair-samurott:before,
+.flair-conkeldurr:before,
+.flair-thundurus:before,
 .flair-thundurus-therian:before,
-.flair-reshiram:before,a[href^='#ms-reshiram'],
+.flair-reshiram:before,
 .flair-landorus:before,a[href='#ms-landorus'],a[href='#ms-landorus-shiny'],
-.flair-kyurem:before,a[href^='#ms-kyurem'],
+.flair-kyurem:before,
 .flair-kyurem-black:before,
 .flair-kyurem-white:before,
 .flair-pyroar-male:before,a[href^='#ms-pyroar-male'],
-.flair-doublade:before,a[href^='#ms-doublade'],
+.flair-doublade:before,
 .flair-aegislash-blade:before,a[href^='#ms-aegislash-blade'],
-.flair-dragalge:before,a[href^='#ms-dragalge'],
-.flair-clawitzer:before,a[href^='#ms-clawitzer'],
+.flair-dragalge:before,
+.flair-clawitzer:before,
 .flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{width:40px;margin:0}
+
 .flair-charizard-mega-x:before,a[href^='#ms-charizard-mega'],
 .flair-charizard-mega-y:before,
 .flair-steelix-mega:before,a[href^='#ms-steelix-mega'],
@@ -1386,143 +1058,34 @@ color:#ecedeb
 .flair-kyogre-primal:before,a[href^='#ms-kyogre-primal'],
 .flair-groudon-primal:before,a[href^='#ms-groudon-primal'],
 .flair-rayquaza-mega:before,a[href^='#ms-rayquaza-mega'],
-.flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{margin:0 2px}
+.flair-hoopa-unbound:before,a[href^='#ms-hoopa-unbound']{margin:0 4px 0 0}
 
-del a[href^="#ms-"],del a[href^="#ps-"]{
-  opacity:0.5
-}
-
-/* Miscellaneous
-========================================================================== */
-
-.comment .child, .comment .showreplies{border-color:#ddd}
-
-.toggle.unmarknsfw-button .togglebutton:before,.toggle.marknsfw-button .togglebutton:before{
-  display:inline-block;
-  content:'open trade';
-  color:#888;
-  font-size:x-small;
-  font-weight:bold
-}
-.linkflair-mod-post .toggle.unmarknsfw-button .togglebutton:before,
-.linkflair-info-post .toggle.unmarknsfw-button .togglebutton:before,
-.linkflair-question .toggle.unmarknsfw-button .togglebutton:before{
-  content:'open thread'
-}
-.linkflair-giveaway .toggle.unmarknsfw-button .togglebutton:before{
-  content:'open giveaway'
-}
-.linkflair-battle .toggle.unmarknsfw-button .togglebutton:before{
-  content:'open battle'
-}
-.toggle.marknsfw-button .togglebutton:before{
-  content:'mark as completed'
-}
-.toggle.marknsfw-button .option:hover .togglebutton:before,
-.toggle.unmarknsfw-button .option:hover .togglebutton:before{
-  text-decoration:underline
-}
-.toggle.marknsfw-button .togglebutton,.toggle.unmarknsfw-button .togglebutton{
-  font-size:0
+/* Mobile devices */
+@media only screen 
+and (max-width : 42.5em) {
+	article {
+		width: 100%;
+        margin: 1em 0;
+        padding: 0;
+	}
+    h1{
+        word-wrap: break-word;
+        margin: 1em;
+    }
+    [type=submit]{
+        margin: 0 1em 0 0;
+        float: right
+    }
+    #preview{
+        margin:1em 0 1em 1em;
+        float: none;
+    }
 }
 
-span.gilded-icon:before{
-  background-image:url(%%icons%%);
-  background-position:-120px -63px;
-  display:inline-block;
-  width:14px;
-  cursor:default;
-}
-
-a[href^='#ps-']{
-  background-image:url(%%icons%%);
-  width:24px;height:24px
-}
-a[href^='#ms-'],a[href^='#ps-']{
-  text-indent:-999em;
-  cursor:auto
-}
-a[href$='-shiny']:after{
-  background:url(%%icons%%) -134px -63px no-repeat;
-  width:9px;height:9px
-}
-a[href='#ps-master']{background-position:0 0}
-a[href='#ps-ultra']{background-position:-24px 0}
-a[href='#ps-great']{background-position:-48px 0}
-a[href='#ps-poke']{background-position:-72px 0}
-a[href='#ps-safari']{background-position:-96px 0}
-a[href='#ps-net']{background-position:0 -24px}
-a[href='#ps-dive']{background-position:-24px -24px}
-a[href='#ps-nest']{background-position:-48px -24px}
-a[href='#ps-repeat']{background-position:-72px -24px}
-a[href='#ps-timer']{background-position:-96px -24px}
-a[href='#ps-luxury']{background-position:0 -48px}
-a[href='#ps-premier']{background-position:-24px -48px}
-a[href='#ps-dusk']{background-position:-48px -48px}
-a[href='#ps-heal']{background-position:-72px -48px}
-a[href='#ps-quick']{background-position:-96px -48px}
-a[href='#ps-cherish']{background-position:0 -72px}
-a[href='#ps-fast']{background-position:-24px -72px}
-a[href='#ps-level']{background-position:-48px -72px}
-a[href='#ps-lure']{background-position:-72px -72px}
-a[href='#ps-heavy']{background-position:-96px -72px}
-a[href='#ps-love']{background-position:0 -96px}
-a[href='#ps-friend']{background-position:-24px -96px}
-a[href='#ps-moon']{background-position:-48px -96px}
-a[href='#ps-sport']{background-position:-72px -96px}
-a[href='#ps-dream']{background-position:-96px -96px}
-
-/* Wiki */
-
-.wiki-page .wiki-page-content .md.wiki h1{font-size:1.6em}
-.wiki-page .wiki-page-content .md.wiki h2{font-size:1.4em}
-.wiki-page .wiki-page-content .md.wiki h3{font-size:1.3em}
-.wiki-page .wiki-page-content .md.wiki h4{font-size:1.2em}
-.wiki-page .wiki-page-content .md.wiki h5{font-size:1.1em}
-.wiki-page .wiki-page-content .md.wiki h6{font-size:1em}
-.wiki-page .wiki-page-content .md.wiki hr{margin:0 0 12px}
-.wiki-page .wiki-page-content .md.wiki table{width:70%}
-.wiki-page .wiki-page-content .md.wiki th{background:#89c2d3;text-align:center}
-.wiki-page-formatting .wiki-page-content .md.wiki th{width:50%}
-#wiki_link_flairs + p + ul{
-  margin:10px 0 20px;
-  list-style:none
-}
-#wiki_link_flairs + p + ul li{
-  margin:0 0 10px
-}
-#wiki_faq ~ blockquote{
-  padding:0;
-  border:0;
-  margin:10px
-}
-#wiki_faq ~ blockquote blockquote{
-  border-left: 2px solid #369;
-}
-#wiki_faq ~ blockquote blockquote ul:first-child{
-  margin:0;
-  list-style:none
-}
-
-/* Old Feel Theme */
-
-#header:lang(at) {
-  height:168px;
-  background-image:url(%%cpt-banner%%);
-}
-
-.submit-text div:lang(at),
-.side .md ul:first-child a:lang(at),
-.submit-text div:lang(at):hover:before {
-  background:#5b92fa;
-}
-.submit-text div:lang(at):hover {
-  background:#7ba8ff
-}
-
-.side .md h2:lang(at),
-#wiki_headings + p + p strong:lang(at),
-.side .md h3:lang(at),
-.single-page .content .md h2:lang(at){
-  background:#3863b6
+/* Desktop */
+@media only screen
+and (min-width : 42.5em) {
+	article {
+		margin: 5em auto;
+	}
 }
