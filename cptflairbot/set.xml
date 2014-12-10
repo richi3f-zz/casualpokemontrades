@@ -64,6 +64,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Beedrill</Name>
+      <Form>
+        <Name>Mega Beedrill</Name>
+        <Class>beedrill-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Pidgey</Name>
@@ -73,6 +77,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Pidgeot</Name>
+      <Form>
+        <Name>Mega Pidgeot</Name>
+        <Class>pidgeot-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Rattata</Name>
@@ -265,6 +273,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Slowbro</Name>
+      <Form>
+        <Name>Mega Slowbro</Name>
+        <Class>slowbro-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Magnemite</Name>
@@ -274,7 +286,7 @@
     </Pkmn>
     <Pkmn>
       <Name>Farfetch'd</Name>
-      <Class>farfectchd</Class>
+      <Class>farfetchd</Class>
     </Pkmn>
     <Pkmn>
       <Name>Doduo</Name>
@@ -683,6 +695,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Steelix</Name>
+      <Form>
+        <Name>Mega Steelix</Name>
+        <Class>steelix-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Snubbull</Name>
@@ -841,6 +857,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Sceptile</Name>
+      <Form>
+        <Name>Mega Sceptile</Name>
+        <Class>sceptile-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Torchic</Name>
@@ -863,6 +883,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Swampert</Name>
+      <Form>
+        <Name>Mega Swampert</Name>
+        <Class>swampert-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Poochyena</Name>
@@ -993,6 +1017,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Sableye</Name>
+      <Form>
+        <Name>Mega Sableye</Name>
+        <Class>sableye-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Mawile</Name>
@@ -1060,6 +1088,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Sharpedo</Name>
+      <Form>
+        <Name>Mega Sharpedo</Name>
+        <Class>sharpedo-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Wailmer</Name>
@@ -1072,6 +1104,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Camerupt</Name>
+      <Form>
+        <Name>Mega Camerupt</Name>
+        <Class>camerupt-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Torkoal</Name>
@@ -1105,6 +1141,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Altaria</Name>
+      <Form>
+        <Name>Mega Altaria</Name>
+        <Class>altaria-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Zangoose</Name>
@@ -1210,6 +1250,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Glalie</Name>
+      <Form>
+        <Name>Mega Glalie</Name>
+        <Class>glalie-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Spheal</Name>
@@ -1243,6 +1287,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Salamence</Name>
+      <Form>
+        <Name>Mega Salamence</Name>
+        <Class>salamence-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Beldum</Name>
@@ -1252,6 +1300,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Metagross</Name>
+      <Form>
+        <Name>Mega Metagross</Name>
+        <Class>metagross-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Regirock</Name>
@@ -1264,18 +1316,38 @@
     </Pkmn>
     <Pkmn>
       <Name>Latias</Name>
+      <Form>
+        <Name>Mega Latias</Name>
+        <Class>latias-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Latios</Name>
+      <Form>
+        <Name>Mega Latios</Name>
+        <Class>latios-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Kyogre</Name>
+      <Form>
+        <Name>Primal Kyogre</Name>
+        <Class>kyogre-primal</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Groudon</Name>
+      <Form>
+        <Name>Primal Groudon</Name>
+        <Class>groudon-primal</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Rayquaza</Name>
+      <Form>
+        <Name>Mega Rayquaza</Name>
+        <Class>rayquaza-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Jirachi</Name>
@@ -1458,6 +1530,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Lopunny</Name>
+      <Form>
+        <Name>Mega Lopunny</Name>
+        <Class>lopunny-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Mismagius</Name>
@@ -1608,6 +1684,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Gallade</Name>
+      <Form>
+        <Name>Mega Gallade</Name>
+        <Class>gallade-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Probopass</Name>
@@ -1816,6 +1896,10 @@
     </Pkmn>
     <Pkmn>
       <Name>Audino</Name>
+      <Form>
+        <Name>Mega Audino</Name>
+        <Class>audino-mega</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Timburr</Name>
@@ -2382,6 +2466,7 @@
     </Pkmn>
     <Pkmn>
       <Name>Flabébé</Name>
+      <Class>flabebe</Class>
     </Pkmn>
     <Pkmn>
       <Name>Floette</Name>
@@ -2579,6 +2664,21 @@
     </Pkmn>
     <Pkmn>
       <Name>Diancie</Name>
+      <Form>
+        <Name>Mega Diancie</Name>
+        <Class>diancie-mega</Class>
+      </Form>
+    </Pkmn>
+    <Pkmn>
+      <Name>Hoopa (Confined Forme)</Name>
+      <Class>hoopa</Class>
+      <Form>
+        <Name>Hoopa (Unbound Forme)</Name>
+        <Class>hoopa-unbound</Class>
+      </Form>
+    </Pkmn>
+    <Pkmn>
+      <Name>Volcanion</Name>
     </Pkmn>
   </Generation>
 </PkmnDbData>
