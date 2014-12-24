@@ -102,6 +102,30 @@
     </Pkmn>
     <Pkmn>
       <Name>Pikachu</Name>
+      <Form>
+        <Name>Cosplay Pikachu</Name>
+        <Class>pikachu-cosplay</Class>
+      </Form>
+      <Form>
+        <Name>Pikachu Rock Star</Name>
+        <Class>pikachu-cool</Class>
+      </Form>
+      <Form>
+        <Name>Pikachu Belle</Name>
+        <Class>pikachu-beautiful</Class>
+      </Form>
+      <Form>
+        <Name>Pikachu Pop Star</Name>
+        <Class>pikachu-cute</Class>
+      </Form>
+      <Form>
+        <Name>Pikachu, Ph. D.</Name>
+        <Class>pikachu-clever</Class>
+      </Form>
+      <Form>
+        <Name>Pikachu Libre</Name>
+        <Class>pikachu-libre</Class>
+      </Form>
     </Pkmn>
     <Pkmn>
       <Name>Raichu</Name>
