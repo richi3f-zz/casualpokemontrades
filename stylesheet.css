@@ -514,6 +514,12 @@ color:#ecedeb
 .flair-ekans:before,a[href^='#ms-ekans']{background-position:-840px 0}
 .flair-arbok:before,a[href^='#ms-arbok']{background-position:-870px 0}
 .flair-pikachu:before,a[href^='#ms-pikachu']{background-position:0 -30px}
+.flair-pikachu-cosplay:before,a[href^='#ms-pikachu-cosplay']{background-position:0 -300px}
+.flair-pikachu-cool:before,a[href^='#ms-pikachu-cool']{background-position:-80px -870px}
+.flair-pikachu-beautiful:before,a[href^='#ms-pikachu-beautiful']{background-position:-110px -870px}
+.flair-pikachu-cute:before,a[href^='#ms-pikachu-cute']{background-position:-140px -870px}
+.flair-pikachu-clever:before,a[href^='#ms-pikachu-clever']{background-position:-170px -870px}
+.flair-pikachu-tough:before,a[href^='#ms-pikachu-tough']{background-position:-200px -870px}
 .flair-raichu:before,a[href^='#ms-raichu']{background-position:-30px -30px}
 .flair-sandshrew:before,a[href^='#ms-sandshrew']{background-position:-60px -30px}
 .flair-sandslash:before,a[href^='#ms-sandslash']{background-position:-90px -30px}
@@ -781,7 +787,7 @@ color:#ecedeb
 .flair-ludicolo:before,a[href^='#ms-ludicolo']{background-position:-810px -270px}
 .flair-seedot:before,a[href^='#ms-seedot']{background-position:-840px -270px}
 .flair-nuzleaf:before,a[href^='#ms-nuzleaf']{background-position:-870px -270px}
-.flair-shiftry:before,a[href^='#ms-shiftry']{background-position:0 -300px}
+.flair-shiftry:before,a[href^='#ms-shiftry']{background-position:-40px -870px}
 .flair-taillow:before,a[href^='#ms-taillow']{background-position:-30px -300px}
 .flair-swellow:before,a[href^='#ms-swellow']{background-position:-60px -300px}
 .flair-wingull:before,a[href^='#ms-wingull']{background-position:-90px -300px}
@@ -1343,6 +1349,7 @@ color:#ecedeb
 .flair-sceptile-mega:before,a[href^='#ms-sceptile-mega'],
 .flair-blaziken-mega:before,a[href^='#ms-blaziken-mega'],
 .flair-swampert-mega:before,a[href^='#ms-swampert-mega'],
+.flair-shiftry:before,a[href^='#ms-shiftry'],
 .flair-aggron-mega:before,a[href^='#ms-aggron-mega'],
 .flair-camerupt-mega:before,a[href^='#ms-camerupt-mega'],
 .flair-tropius:before,a[href^='#ms-tropius'],
